@@ -300,43 +300,43 @@ Public Class CsvOutPutForm
             ' 書込ファイル名の設定
             Dim strOutPutFileName As String = ""
 
-            If ChkAdp.Checked = True Then
-                ' ADP用ファイル名の作成
-                'strOutPutFileName = IncludeTrailingPathDelimiter(PubConstClass.imgPath) & "DAY_" & Date.Now.ToString("yyyyMMdd") & "_ADP用.csv"
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & "DAY_" & Date.Now.ToString("yyyyMMdd") & "_ADP用.csv"
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & "DAY_" & DateTimePicker1.Value.ToString("yyyyMMdd") & "_ADP用.csv"
-                '// 2017.09.29 Ver.B08e hayakawa 変更↓ここから
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & _
-                '                    "TOPPAN_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
-                strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & _
+            ' ADP用ファイル名の作成
+            strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) &
                                     "DAY_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
-                '// 2017.09.29 Ver.B08e hayakawa 変更↑ここまで
 
-                ' 追記する前に該当ファイルを削除する
-                System.IO.File.Delete(strOutPutFileName)
-                blnIsHeaderWrite = False
-                ' ＡＤＰ集計システム用
-                CsvDataOutPut(True, strOutPutFileName)
-            End If
+            ' 追記する前に該当ファイルを削除する
+            System.IO.File.Delete(strOutPutFileName)
+            blnIsHeaderWrite = False
+            ' ＡＤＰ集計システム用
+            CsvDataOutPut(True, strOutPutFileName)
 
-            If ChkMitsubishi.Checked = True Then
-                ' 三菱電機集計用ファイル名の作成
-                'strOutPutFileName = IncludeTrailingPathDelimiter(PubConstClass.imgPath) & "DAY_" & Date.Now.ToString("yyyyMMdd") & ".csv"
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & "DAY_" & Date.Now.ToString("yyyyMMdd") & ".csv"
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & "DAY_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
-                '// 2017.09.29 Ver.B08e hayakawa 変更↓ここから
-                'strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & _
-                '                    "DAY_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
-                strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) & _
-                    "TOPPAN_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
-                '// 2017.09.29 Ver.B08e hayakawa 変更↑ここまで
+            'If ChkAdp.Checked = True Then
+            '    ' ADP用ファイル名の作成
+            '    '// 2017.09.29 Ver.B08e hayakawa 変更↓ここから
+            '    strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) &
+            '                        "DAY_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
+            '    '// 2017.09.29 Ver.B08e hayakawa 変更↑ここまで
 
-                ' 追記する前に該当ファイルを削除する
-                System.IO.File.Delete(strOutPutFileName)
-                blnIsHeaderWrite = False
-                ' 三菱電機集計システム用
-                CsvDataOutPut(False, strOutPutFileName)
-            End If
+            '    ' 追記する前に該当ファイルを削除する
+            '    System.IO.File.Delete(strOutPutFileName)
+            '    blnIsHeaderWrite = False
+            '    ' ＡＤＰ集計システム用
+            '    CsvDataOutPut(True, strOutPutFileName)
+            'End If
+
+            'If ChkMitsubishi.Checked = True Then
+            '    ' 三菱電機集計用ファイル名の作成
+            '    '// 2017.09.29 Ver.B08e hayakawa 変更↓ここから
+            '    strOutPutFileName = IncludeTrailingPathDelimiter(strSaveFolder) &
+            '        "TOPPAN_" & DateTimePicker1.Value.ToString("yyyyMMdd") & ".csv"
+            '    '// 2017.09.29 Ver.B08e hayakawa 変更↑ここまで
+
+            '    ' 追記する前に該当ファイルを削除する
+            '    System.IO.File.Delete(strOutPutFileName)
+            '    blnIsHeaderWrite = False
+            '    ' 三菱電機集計システム用
+            '    CsvDataOutPut(False, strOutPutFileName)
+            'End If
 
             MsgBox("ＣＳＶ出力処理が完了しました", CType(MsgBoxStyle.Question + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
 

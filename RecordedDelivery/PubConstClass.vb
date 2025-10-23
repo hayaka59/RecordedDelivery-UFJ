@@ -34,7 +34,7 @@
 
 #Region "定数定義"
     ''' <summary> バージョン情報</summary>
-    Public Const DEF_VERSION = "Ver.B08f【大型機／料金改訂対応】"
+    Public Const DEF_VERSION = "Ver.0.a.2.3【大型機／リプレース】"
     ''' <summary> 暗号化用オープンキー</summary>
     Public Const DEF_OPEN_KEY = "SSKINOSHITASS"
     Public Const USR_JOB_NAME As String = "業務名"
