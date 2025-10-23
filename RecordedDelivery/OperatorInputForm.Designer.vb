@@ -29,7 +29,7 @@ Partial Class OperatorInputForm
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
         Me.BtnPassword = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnLogin = New System.Windows.Forms.Button()
         Me.BtnCansel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -111,18 +111,18 @@ Partial Class OperatorInputForm
         Me.BtnPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnPassword.UseVisualStyleBackColor = True
         '
-        'Button1
+        'BtnLogin
         '
-        Me.Button1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Button1.Image = Global.RecordedDelivery.My.Resources.Resources.login
-        Me.Button1.Location = New System.Drawing.Point(42, 159)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(181, 41)
-        Me.Button1.TabIndex = 145
-        Me.Button1.Text = "ログイン"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnLogin.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnLogin.Image = Global.RecordedDelivery.My.Resources.Resources.login
+        Me.BtnLogin.Location = New System.Drawing.Point(42, 159)
+        Me.BtnLogin.Name = "BtnLogin"
+        Me.BtnLogin.Size = New System.Drawing.Size(180, 45)
+        Me.BtnLogin.TabIndex = 145
+        Me.BtnLogin.Text = "ログイン"
+        Me.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnLogin.UseVisualStyleBackColor = True
         '
         'BtnCansel
         '
@@ -130,7 +130,7 @@ Partial Class OperatorInputForm
         Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.exit_icon_small
         Me.BtnCansel.Location = New System.Drawing.Point(249, 159)
         Me.BtnCansel.Name = "BtnCansel"
-        Me.BtnCansel.Size = New System.Drawing.Size(181, 41)
+        Me.BtnCansel.Size = New System.Drawing.Size(180, 45)
         Me.BtnCansel.TabIndex = 8
         Me.BtnCansel.Text = "終了"
         Me.BtnCansel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -145,7 +145,7 @@ Partial Class OperatorInputForm
         Me.ClientSize = New System.Drawing.Size(483, 220)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnPassword)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.lblCurrentDate)
         Me.Controls.Add(Me.TxtPassword)
         Me.Controls.Add(Me.TxtOperator)
@@ -172,6 +172,6 @@ Partial Class OperatorInputForm
     Friend WithEvents TxtOperator As System.Windows.Forms.TextBox
     Friend WithEvents TxtPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblCurrentDate As System.Windows.Forms.Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnLogin As Button
     Friend WithEvents BtnPassword As Button
 End Class

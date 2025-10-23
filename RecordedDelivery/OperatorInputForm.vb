@@ -99,26 +99,39 @@ Public Class OperatorInputForm
         Try
             ' 「Enter」キーで入力値をチェックしフォーカスを移動する
             If e.KeyCode = Keys.Return Then
-
-                If TxtOperator.Text = "" Then
-                    MsgBox("オペレータコードが入力されていません", CType(MsgBoxStyle.Information + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
-                    Exit Sub
-                End If
-
-                If TxtPassword.Text = "" Then
-                    MsgBox("パスワードが入力されていません", CType(MsgBoxStyle.Information + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
-                    Exit Sub
-                End If
-
-                PubConstClass.pblIsOkayFlag = ConFirmOperator()
-                If PubConstClass.pblIsOkayFlag = True Then
-                    Me.Dispose()
-                End If
-
+                ' 入力データのチェック
+                CheckInputData()
             End If
 
         Catch ex As Exception
             MsgBox("【TxtPassword_KeyDown】" & ex.Message)
+        End Try
+
+    End Sub
+
+    ''' <summary>
+    ''' 入力データのチェック
+    ''' </summary>
+    Private Sub CheckInputData()
+
+        Try
+            If TxtOperator.Text = "" Then
+                MsgBox("オペレータコードが入力されていません", CType(MsgBoxStyle.Information + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                Exit Sub
+            End If
+
+            If TxtPassword.Text = "" Then
+                MsgBox("パスワードが入力されていません", CType(MsgBoxStyle.Information + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                Exit Sub
+            End If
+
+            PubConstClass.pblIsOkayFlag = ConFirmOperator()
+            If PubConstClass.pblIsOkayFlag = True Then
+                Me.Dispose()
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "【CheckInputData】", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
@@ -237,6 +250,13 @@ Public Class OperatorInputForm
         Catch ex As Exception
             MessageBox.Show(ex.Message, "【BtnPassword_Click】", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+
+    End Sub
+
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
+
+        ' 入力データのチェック
+        CheckInputData()
 
     End Sub
 
