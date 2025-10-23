@@ -30,8 +30,6 @@ Partial Class CsvOutPutForm
         Me.lblCurrentDate = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lstGetDataView = New System.Windows.Forms.ListView()
-        Me.ChkMitsubishi = New System.Windows.Forms.CheckBox()
-        Me.ChkAdp = New System.Windows.Forms.CheckBox()
         Me.BtnRef = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -117,36 +115,13 @@ Partial Class CsvOutPutForm
         Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstGetDataView.FullRowSelect = True
         Me.lstGetDataView.GridLines = True
+        Me.lstGetDataView.HideSelection = False
         Me.lstGetDataView.Location = New System.Drawing.Point(3, 200)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
         Me.lstGetDataView.Size = New System.Drawing.Size(600, 264)
         Me.lstGetDataView.TabIndex = 165
         Me.lstGetDataView.UseCompatibleStateImageBehavior = False
-        '
-        'ChkMitsubishi
-        '
-        Me.ChkMitsubishi.AutoSize = True
-        Me.ChkMitsubishi.Checked = True
-        Me.ChkMitsubishi.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkMitsubishi.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ChkMitsubishi.Location = New System.Drawing.Point(58, 129)
-        Me.ChkMitsubishi.Name = "ChkMitsubishi"
-        Me.ChkMitsubishi.Size = New System.Drawing.Size(205, 28)
-        Me.ChkMitsubishi.TabIndex = 168
-        Me.ChkMitsubishi.Text = "三菱電機集計システム用"
-        Me.ChkMitsubishi.UseVisualStyleBackColor = True
-        '
-        'ChkAdp
-        '
-        Me.ChkAdp.AutoSize = True
-        Me.ChkAdp.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ChkAdp.Location = New System.Drawing.Point(58, 157)
-        Me.ChkAdp.Name = "ChkAdp"
-        Me.ChkAdp.Size = New System.Drawing.Size(189, 28)
-        Me.ChkAdp.TabIndex = 169
-        Me.ChkAdp.Text = "ＡＤＰ集計システム用"
-        Me.ChkAdp.UseVisualStyleBackColor = True
         '
         'BtnRef
         '
@@ -165,8 +140,6 @@ Partial Class CsvOutPutForm
         Me.ClientSize = New System.Drawing.Size(604, 467)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnRef)
-        Me.Controls.Add(Me.ChkAdp)
-        Me.Controls.Add(Me.ChkMitsubishi)
         Me.Controls.Add(Me.lstGetDataView)
         Me.Controls.Add(Me.LblOperatorName)
         Me.Controls.Add(Me.lblTitle)
@@ -184,7 +157,6 @@ Partial Class CsvOutPutForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CSV出力"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents LblOperatorName As System.Windows.Forms.Label
@@ -195,7 +167,5 @@ Partial Class CsvOutPutForm
     Friend WithEvents lblCurrentDate As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents lstGetDataView As System.Windows.Forms.ListView
-    Friend WithEvents ChkMitsubishi As System.Windows.Forms.CheckBox
-    Friend WithEvents ChkAdp As System.Windows.Forms.CheckBox
     Friend WithEvents BtnRef As System.Windows.Forms.Button
 End Class
