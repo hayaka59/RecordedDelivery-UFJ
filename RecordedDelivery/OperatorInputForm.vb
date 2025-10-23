@@ -224,4 +224,20 @@ Public Class OperatorInputForm
 
     End Sub
 
+    Private Sub BtnPassword_Click(sender As Object, e As EventArgs) Handles BtnPassword.Click
+
+        Try
+            If TxtPassword.PasswordChar.ToString() = "*" Then
+                TxtPassword.PasswordChar = ChrW(0)
+                BtnPassword.Image = My.Resources.password_close
+            Else
+                TxtPassword.PasswordChar = "*"c
+                BtnPassword.Image = My.Resources.password_open
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "【BtnPassword_Click】", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+
+    End Sub
+
 End Class

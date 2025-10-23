@@ -22,24 +22,16 @@ Partial Class OperatorInputForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnCansel = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtOperator = New System.Windows.Forms.TextBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
+        Me.BtnPassword = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnCansel = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'BtnCansel
-        '
-        Me.BtnCansel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCansel.Location = New System.Drawing.Point(155, 156)
-        Me.BtnCansel.Name = "BtnCansel"
-        Me.BtnCansel.Size = New System.Drawing.Size(181, 41)
-        Me.BtnCansel.TabIndex = 8
-        Me.BtnCansel.Text = "キャンセル"
-        Me.BtnCansel.UseVisualStyleBackColor = True
         '
         'lblTitle
         '
@@ -57,7 +49,7 @@ Partial Class OperatorInputForm
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(39, 65)
+        Me.Label1.Location = New System.Drawing.Point(32, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(183, 26)
         Me.Label1.TabIndex = 10
@@ -67,7 +59,7 @@ Partial Class OperatorInputForm
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(39, 109)
+        Me.Label2.Location = New System.Drawing.Point(32, 109)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(183, 26)
         Me.Label2.TabIndex = 11
@@ -76,19 +68,23 @@ Partial Class OperatorInputForm
         '
         'TxtOperator
         '
+        Me.TxtOperator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtOperator.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtOperator.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.TxtOperator.Location = New System.Drawing.Point(245, 63)
+        Me.TxtOperator.Location = New System.Drawing.Point(214, 63)
         Me.TxtOperator.Name = "TxtOperator"
-        Me.TxtOperator.Size = New System.Drawing.Size(132, 31)
+        Me.TxtOperator.Size = New System.Drawing.Size(188, 36)
         Me.TxtOperator.TabIndex = 12
         '
         'TxtPassword
         '
+        Me.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TxtPassword.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtPassword.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.TxtPassword.Location = New System.Drawing.Point(245, 107)
+        Me.TxtPassword.Location = New System.Drawing.Point(214, 105)
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(132, 31)
+        Me.TxtPassword.Size = New System.Drawing.Size(188, 36)
         Me.TxtPassword.TabIndex = 13
         '
         'lblCurrentDate
@@ -103,6 +99,44 @@ Partial Class OperatorInputForm
         Me.lblCurrentDate.Text = "lblCurrentDate"
         Me.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'BtnPassword
+        '
+        Me.BtnPassword.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPassword.Image = Global.RecordedDelivery.My.Resources.Resources.password_open
+        Me.BtnPassword.Location = New System.Drawing.Point(408, 104)
+        Me.BtnPassword.Name = "BtnPassword"
+        Me.BtnPassword.Size = New System.Drawing.Size(65, 40)
+        Me.BtnPassword.TabIndex = 146
+        Me.BtnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPassword.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.Image = Global.RecordedDelivery.My.Resources.Resources.login
+        Me.Button1.Location = New System.Drawing.Point(42, 159)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(181, 41)
+        Me.Button1.TabIndex = 145
+        Me.Button1.Text = "ログイン"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'BtnCansel
+        '
+        Me.BtnCansel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.exit_icon_small
+        Me.BtnCansel.Location = New System.Drawing.Point(249, 159)
+        Me.BtnCansel.Name = "BtnCansel"
+        Me.BtnCansel.Size = New System.Drawing.Size(181, 41)
+        Me.BtnCansel.TabIndex = 8
+        Me.BtnCansel.Text = "終了"
+        Me.BtnCansel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCansel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCansel.UseVisualStyleBackColor = True
+        '
         'OperatorInputForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
@@ -110,6 +144,8 @@ Partial Class OperatorInputForm
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(483, 220)
         Me.ControlBox = False
+        Me.Controls.Add(Me.BtnPassword)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblCurrentDate)
         Me.Controls.Add(Me.TxtPassword)
         Me.Controls.Add(Me.TxtOperator)
@@ -136,4 +172,6 @@ Partial Class OperatorInputForm
     Friend WithEvents TxtOperator As System.Windows.Forms.TextBox
     Friend WithEvents TxtPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblCurrentDate As System.Windows.Forms.Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BtnPassword As Button
 End Class
