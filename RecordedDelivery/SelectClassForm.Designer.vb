@@ -42,6 +42,8 @@ Partial Class SelectClassForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Rdo8Face = New System.Windows.Forms.RadioButton()
         Me.Rdo15Face = New System.Windows.Forms.RadioButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,7 +53,7 @@ Partial Class SelectClassForm
         Me.CmbClassification.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CmbClassification.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.CmbClassification.FormattingEnabled = True
-        Me.CmbClassification.Location = New System.Drawing.Point(219, 200)
+        Me.CmbClassification.Location = New System.Drawing.Point(232, 251)
         Me.CmbClassification.Name = "CmbClassification"
         Me.CmbClassification.Size = New System.Drawing.Size(273, 32)
         Me.CmbClassification.TabIndex = 3
@@ -60,7 +62,7 @@ Partial Class SelectClassForm
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.Control
         Me.Label5.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label5.Location = New System.Drawing.Point(337, 243)
+        Me.Label5.Location = New System.Drawing.Point(350, 294)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 31)
         Me.Label5.TabIndex = 98
@@ -71,7 +73,7 @@ Partial Class SelectClassForm
         '
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label4.Location = New System.Drawing.Point(41, 241)
+        Me.Label4.Location = New System.Drawing.Point(54, 292)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 31)
         Me.Label4.TabIndex = 97
@@ -82,7 +84,7 @@ Partial Class SelectClassForm
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 167)
+        Me.Label3.Location = New System.Drawing.Point(54, 218)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(196, 31)
         Me.Label3.TabIndex = 96
@@ -92,7 +94,7 @@ Partial Class SelectClassForm
         'BtnSearch
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnSearch.Location = New System.Drawing.Point(381, 128)
+        Me.BtnSearch.Location = New System.Drawing.Point(394, 179)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(101, 36)
         Me.BtnSearch.TabIndex = 2
@@ -102,7 +104,7 @@ Partial Class SelectClassForm
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(220, 90)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(233, 90)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(198, 31)
         Me.DateTimePicker1.TabIndex = 10
@@ -111,7 +113,7 @@ Partial Class SelectClassForm
         '
         Me.TxtBranchCd.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtBranchCd.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.TxtBranchCd.Location = New System.Drawing.Point(220, 129)
+        Me.TxtBranchCd.Location = New System.Drawing.Point(233, 180)
         Me.TxtBranchCd.MaxLength = 4
         Me.TxtBranchCd.Name = "TxtBranchCd"
         Me.TxtBranchCd.Size = New System.Drawing.Size(132, 31)
@@ -123,7 +125,7 @@ Partial Class SelectClassForm
         '
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(41, 129)
+        Me.Label2.Location = New System.Drawing.Point(54, 180)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(178, 31)
         Me.Label2.TabIndex = 92
@@ -145,7 +147,7 @@ Partial Class SelectClassForm
         'TxtTranCnt
         '
         Me.TxtTranCnt.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtTranCnt.Location = New System.Drawing.Point(220, 241)
+        Me.TxtTranCnt.Location = New System.Drawing.Point(233, 292)
         Me.TxtTranCnt.MaxLength = 6
         Me.TxtTranCnt.Name = "TxtTranCnt"
         Me.TxtTranCnt.Size = New System.Drawing.Size(114, 31)
@@ -156,7 +158,7 @@ Partial Class SelectClassForm
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 90)
+        Me.Label1.Location = New System.Drawing.Point(54, 90)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(178, 31)
         Me.Label1.TabIndex = 89
@@ -168,7 +170,7 @@ Partial Class SelectClassForm
         Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LblOperatorName.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LblOperatorName.ForeColor = System.Drawing.Color.White
-        Me.LblOperatorName.Location = New System.Drawing.Point(347, 2)
+        Me.LblOperatorName.Location = New System.Drawing.Point(352, 2)
         Me.LblOperatorName.Name = "LblOperatorName"
         Me.LblOperatorName.Size = New System.Drawing.Size(224, 33)
         Me.LblOperatorName.TabIndex = 88
@@ -183,7 +185,7 @@ Partial Class SelectClassForm
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(575, 36)
+        Me.lblTitle.Size = New System.Drawing.Size(580, 36)
         Me.lblTitle.TabIndex = 87
         Me.lblTitle.Text = "　支店選択"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -192,18 +194,18 @@ Partial Class SelectClassForm
         '
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label6.Location = New System.Drawing.Point(41, 200)
+        Me.Label6.Location = New System.Drawing.Point(54, 251)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(178, 31)
         Me.Label6.TabIndex = 101
-        Me.Label6.Text = "種別"
+        Me.Label6.Text = "種別②"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LblBranchName
         '
         Me.LblBranchName.BackColor = System.Drawing.SystemColors.Control
         Me.LblBranchName.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.LblBranchName.Location = New System.Drawing.Point(222, 167)
+        Me.LblBranchName.Location = New System.Drawing.Point(235, 218)
         Me.LblBranchName.Name = "LblBranchName"
         Me.LblBranchName.Size = New System.Drawing.Size(271, 31)
         Me.LblBranchName.TabIndex = 102
@@ -212,7 +214,7 @@ Partial Class SelectClassForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(365, 372)
+        Me.BtnBack.Location = New System.Drawing.Point(378, 426)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(150, 40)
         Me.BtnBack.TabIndex = 9
@@ -222,7 +224,7 @@ Partial Class SelectClassForm
         'BtnNext
         '
         Me.BtnNext.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnNext.Location = New System.Drawing.Point(202, 371)
+        Me.BtnNext.Location = New System.Drawing.Point(215, 425)
         Me.BtnNext.Name = "BtnNext"
         Me.BtnNext.Size = New System.Drawing.Size(150, 40)
         Me.BtnNext.TabIndex = 8
@@ -234,7 +236,7 @@ Partial Class SelectClassForm
         Me.GroupBox1.Controls.Add(Me.Rdo8Face)
         Me.GroupBox1.Controls.Add(Me.Rdo15Face)
         Me.GroupBox1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(45, 286)
+        Me.GroupBox1.Location = New System.Drawing.Point(58, 340)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(306, 64)
         Me.GroupBox1.TabIndex = 5
@@ -261,12 +263,36 @@ Partial Class SelectClassForm
         Me.Rdo15Face.Text = "15面"
         Me.Rdo15Face.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label7.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label7.Location = New System.Drawing.Point(53, 135)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(178, 31)
+        Me.Label7.TabIndex = 104
+        Me.Label7.Text = "種別①"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.ComboBox1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(231, 135)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(273, 32)
+        Me.ComboBox1.TabIndex = 103
+        '
         'SelectClassForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(574, 453)
+        Me.ClientSize = New System.Drawing.Size(580, 507)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnBack)
         Me.Controls.Add(Me.BtnNext)
@@ -318,4 +344,6 @@ Partial Class SelectClassForm
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Rdo8Face As System.Windows.Forms.RadioButton
     Friend WithEvents Rdo15Face As System.Windows.Forms.RadioButton
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
