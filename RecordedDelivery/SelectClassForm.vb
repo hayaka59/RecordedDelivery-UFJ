@@ -36,8 +36,10 @@ Public Class SelectClassForm
     Private Sub SelectClassForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Try
+            OutPutLogFile($"【{Me.Text}】（{PubConstClass.pblOperatorCode}：{PubConstClass.pblOperatorName}）")
+
             ' 現在の年月日を取得する
-            lblCurrentDate.Text = GetCurrentDate()
+            LblCurrentDate.Text = GetCurrentDate()
 
             ' 支店コードの設定
             TxtBranchCd.Text = ""

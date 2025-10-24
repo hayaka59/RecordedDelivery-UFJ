@@ -6,8 +6,8 @@ Public Class MainForm
     Inherits System.Windows.Forms.Form
 
     Public blnEndFlag As Boolean
-
     Private intIconNumber As Integer
+    Private iCallScreenType As Integer
 
     ''' <summary>
     ''' 「終了」ボタン処理
@@ -75,12 +75,12 @@ Public Class MainForm
     Private Sub mainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Try
-            PubConstClass.objSyncHist = New Object  ' 操作履歴書込み用
-            PubConstClass.objSyncRec = New Object   ' メンテナンス画面用
+            'PubConstClass.objSyncHist = New Object  ' 操作履歴書込み用
+            'PubConstClass.objSyncRec = New Object   ' メンテナンス画面用
 
             ' 操作ログの書き込み
-            OutPutLogFile("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓")
-            OutPutLogFile("【" + Me.Text + "】プログラム起動（" & PubConstClass.DEF_VERSION & "）")
+            'OutPutLogFile("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓")
+            OutPutLogFile($"【メインメニュー表示】（{PubConstClass.pblOperatorCode}：{PubConstClass.pblOperatorName}）")
 
             '二重起動のチェック
             If Diagnostics.Process.GetProcessesByName( _
@@ -112,16 +112,19 @@ Public Class MainForm
             'PubConstClass.intTokuALLCount = 0            ' 特定郵便累計
             'PubConstClass.intMailALLCount = 0            ' ゆうメール累計
 
-            ' エラー情報の取得
-            Call getErrorInformation()
-            ' 支店マスター情報の取得
-            Call GetBranchMasterFile()
-            ' 種別データ情報の取得
-            Call GetClassDataFile()
-            ' 引受番号データ取得処理
-            Call GetUnderWritingNumber()
-            ' INIファイルから設定値を取得する
-            Call getSystemIniFile()
+
+#Region "ログイン画面で呼び出すように変更"
+            '' エラー情報の取得
+            'Call getErrorInformation()
+            '' 支店マスター情報の取得
+            'Call GetBranchMasterFile()
+            '' 種別データ情報の取得
+            'Call GetClassDataFile()
+            '' 引受番号データ取得処理
+            'Call GetUnderWritingNumber()
+            '' INIファイルから設定値を取得する
+            'Call getSystemIniFile()
+#End Region
 
             Dim strIniFilePath As String = IncludeTrailingPathDelimiter(Application.StartupPath) & PubConstClass.DEF_INI_FILENAME
             ' 作業日
@@ -1472,6 +1475,7 @@ Public Class MainForm
     Private Sub BtnMaintenance_Click(sender As System.Object, e As System.EventArgs) Handles BtnMaintenance.Click
 
         Try
+            OperatorInputForm.bIsCloseFlag = False
             ' オペレータ入力画面表示
             OperatorInputForm.ShowDialog()
 
@@ -1525,36 +1529,62 @@ Public Class MainForm
     Private Sub BtnReceipPublish_Click(sender As System.Object, e As System.EventArgs) Handles BtnReceipPublish.Click
 
         Try
-            ' オペレータ入力画面表示
-            OperatorInputForm.ShowDialog()
+
+            ' シリアルポートのオープン
+            SerialPort.Open()
+
+            ' シリアルポートにデータ送信（起動コマンド）
+            Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(PubConstClass.CMD_ACK & vbCr)
+
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+
+            ' シリアルポートのクローズ
+            SerialPort.Close()
+            OutPutLogFile("〓「支店選択画面」呼び出し〓")
+            ' 運用記録ログ格納
+            Call OutPutUseLogFile(LblOperatorName.Text & ":「支店選択画面」呼び出し")
+
+            SelectClassForm.ShowDialog()
 
             If PubConstClass.pblIsOkayFlag = True Then
-
-                ' シリアルポートのオープン
-                SerialPort.Open()
-
-                ' シリアルポートにデータ送信（起動コマンド）
-                Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(PubConstClass.CMD_ACK & vbCr)
-
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-
-                ' シリアルポートのクローズ
-                SerialPort.Close()
-                OutPutLogFile("〓「支店選択画面」呼び出し〓")
-                ' 運用記録ログ格納
-                Call OutPutUseLogFile(LblOperatorName.Text & ":「支店選択画面」呼び出し")
-
-                SelectClassForm.ShowDialog()
-
-                If PubConstClass.pblIsOkayFlag = True Then
-                    'OutPutLogFile("〓「運転画面」呼び出し〓")
-                    'DrivingForm.Show()
-                    'Me.Hide()
-                End If
-
+                'OutPutLogFile("〓「運転画面」呼び出し〓")
+                'DrivingForm.Show()
+                'Me.Hide()
             End If
+
+
+            '' オペレータ入力画面表示
+            'OperatorInputForm.ShowDialog()
+
+            'If PubConstClass.pblIsOkayFlag = True Then
+
+            '    ' シリアルポートのオープン
+            '    SerialPort.Open()
+
+            '    ' シリアルポートにデータ送信（起動コマンド）
+            '    Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(PubConstClass.CMD_ACK & vbCr)
+
+            '    SerialPort.Write(dat, 0, dat.GetLength(0))
+            '    SerialPort.Write(dat, 0, dat.GetLength(0))
+            '    SerialPort.Write(dat, 0, dat.GetLength(0))
+
+            '    ' シリアルポートのクローズ
+            '    SerialPort.Close()
+            '    OutPutLogFile("〓「支店選択画面」呼び出し〓")
+            '    ' 運用記録ログ格納
+            '    Call OutPutUseLogFile(LblOperatorName.Text & ":「支店選択画面」呼び出し")
+
+            '    SelectClassForm.ShowDialog()
+
+            '    If PubConstClass.pblIsOkayFlag = True Then
+            '        'OutPutLogFile("〓「運転画面」呼び出し〓")
+            '        'DrivingForm.Show()
+            '        'Me.Hide()
+            '    End If
+
+            'End If
 
         Catch ex As Exception
             MsgBox("【BtnReceipPublish_Click】" & ex.Message)
@@ -1572,18 +1602,25 @@ Public Class MainForm
     Private Sub BtnListReport_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnListReport.Click
 
         Try
-            ' オペレータ入力画面表示
-            OperatorInputForm.ShowDialog()
+            OutPutLogFile("〓「リスト・レポート印刷画面」呼び出し〓")
+            ' 運用記録ログ格納
+            Call OutPutUseLogFile(LblOperatorName.Text & ":「リスト・レポート印刷画面」呼び出し")
 
-            If PubConstClass.pblIsOkayFlag = True Then
-                OutPutLogFile("〓「リスト・レポート印刷画面」呼び出し〓")
-                ' 運用記録ログ格納
-                Call OutPutUseLogFile(LblOperatorName.Text & ":「リスト・レポート印刷画面」呼び出し")
+            ListMenuForm.Show()
+            Me.Hide()
 
-                ListMenuForm.Show()
-                Me.Hide()
+            '' オペレータ入力画面表示
+            'OperatorInputForm.ShowDialog()
 
-            End If
+            'If PubConstClass.pblIsOkayFlag = True Then
+            '    OutPutLogFile("〓「リスト・レポート印刷画面」呼び出し〓")
+            '    ' 運用記録ログ格納
+            '    Call OutPutUseLogFile(LblOperatorName.Text & ":「リスト・レポート印刷画面」呼び出し")
+
+            '    ListMenuForm.Show()
+            '    Me.Hide()
+
+            'End If
 
         Catch ex As Exception
             MsgBox("【BtnListReport_Click】" & ex.Message)
@@ -1601,26 +1638,40 @@ Public Class MainForm
     Private Sub BtnMasterMent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnMasterMent.Click
 
         Try
-            ' オペレータ入力画面表示
-            OperatorInputForm.ShowDialog()
+            If PubConstClass.pblOperatorAuthorityh = "一般" Then
+                OutPutLogFile("■「一般」の権限ではマスターメンテナンスは操作できません")
+                MsgBox("「一般」の権限ではマスターメンテナンスは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                Exit Sub
+            Else
+                ' 管理者または保守員が操作可能
+                OutPutLogFile("〓「マスターメンテナンス画面」呼び出し〓")
+                ' 運用記録ログ格納
+                Call OutPutUseLogFile(LblOperatorName.Text & ":「マスターメンテナンス画面」呼び出し")
 
-            If PubConstClass.pblIsOkayFlag = True Then
-
-                If PubConstClass.pblOperatorAuthorityh = "一般" Then
-                    OutPutLogFile("■「一般」の権限ではマスターメンテナンスは操作できません")
-                    MsgBox("「一般」の権限ではマスターメンテナンスは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
-                    Exit Sub
-                Else
-                    ' 管理者または保守員が操作可能
-                    OutPutLogFile("〓「マスターメンテナンス画面」呼び出し〓")
-                    ' 運用記録ログ格納
-                    Call OutPutUseLogFile(LblOperatorName.Text & ":「マスターメンテナンス画面」呼び出し")
-
-                    MasterMaintForm.Show()
-                    Me.Hide()
-                End If
-
+                MasterMaintForm.Show()
+                Me.Hide()
             End If
+
+            '' オペレータ入力画面表示
+            'OperatorInputForm.ShowDialog()
+
+            'If PubConstClass.pblIsOkayFlag = True Then
+
+            '    If PubConstClass.pblOperatorAuthorityh = "一般" Then
+            '        OutPutLogFile("■「一般」の権限ではマスターメンテナンスは操作できません")
+            '        MsgBox("「一般」の権限ではマスターメンテナンスは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+            '        Exit Sub
+            '    Else
+            '        ' 管理者または保守員が操作可能
+            '        OutPutLogFile("〓「マスターメンテナンス画面」呼び出し〓")
+            '        ' 運用記録ログ格納
+            '        Call OutPutUseLogFile(LblOperatorName.Text & ":「マスターメンテナンス画面」呼び出し")
+
+            '        MasterMaintForm.Show()
+            '        Me.Hide()
+            '    End If
+
+            'End If
 
         Catch ex As Exception
             MsgBox("【BtnMasterMent_Click】" & ex.Message)
@@ -1638,16 +1689,22 @@ Public Class MainForm
     Private Sub BtnDataCheck_Click(sender As System.Object, e As System.EventArgs) Handles BtnDataCheck.Click
 
         Try
-            ' オペレータ入力画面表示
-            OperatorInputForm.ShowDialog()
+            OutPutLogFile("〓「データ確認・抜取り画面」呼び出し〓")
+            ' 運用記録ログ格納
+            Call OutPutUseLogFile(LblOperatorName.Text & ":「データ確認・抜取り画面」呼び出し")
 
-            If PubConstClass.pblIsOkayFlag = True Then
-                OutPutLogFile("〓「データ確認・抜取り画面」呼び出し〓")
-                ' 運用記録ログ格納
-                Call OutPutUseLogFile(LblOperatorName.Text & ":「データ確認・抜取り画面」呼び出し")
+            DataCheckForm.ShowDialog()
 
-                DataCheckForm.ShowDialog()
-            End If
+            '' オペレータ入力画面表示
+            'OperatorInputForm.ShowDialog()
+
+            'If PubConstClass.pblIsOkayFlag = True Then
+            '    OutPutLogFile("〓「データ確認・抜取り画面」呼び出し〓")
+            '    ' 運用記録ログ格納
+            '    Call OutPutUseLogFile(LblOperatorName.Text & ":「データ確認・抜取り画面」呼び出し")
+
+            '    DataCheckForm.ShowDialog()
+            'End If
 
         Catch ex As Exception
             MsgBox("【BtnDataCheck_Click】" & ex.Message)
@@ -1704,4 +1761,14 @@ Public Class MainForm
 
     End Sub
 
+    Private Sub BtnLogOut_Click(sender As Object, e As EventArgs) Handles BtnLogOut.Click
+        Try
+            Me.Hide()
+            OperatorInputForm.bIsCloseFlag = True
+            OperatorInputForm.Show()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

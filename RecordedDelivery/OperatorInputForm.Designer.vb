@@ -115,7 +115,7 @@ Partial Class OperatorInputForm
         '
         Me.BtnLogin.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnLogin.Image = Global.RecordedDelivery.My.Resources.Resources.login
-        Me.BtnLogin.Location = New System.Drawing.Point(42, 159)
+        Me.BtnLogin.Location = New System.Drawing.Point(41, 164)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(180, 45)
         Me.BtnLogin.TabIndex = 145
@@ -127,8 +127,8 @@ Partial Class OperatorInputForm
         'BtnCansel
         '
         Me.BtnCansel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.exit_icon_small
-        Me.BtnCansel.Location = New System.Drawing.Point(249, 159)
+        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.power_small
+        Me.BtnCansel.Location = New System.Drawing.Point(248, 164)
         Me.BtnCansel.Name = "BtnCansel"
         Me.BtnCansel.Size = New System.Drawing.Size(180, 45)
         Me.BtnCansel.TabIndex = 8
@@ -142,7 +142,7 @@ Partial Class OperatorInputForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(483, 220)
+        Me.ClientSize = New System.Drawing.Size(480, 237)
         Me.ControlBox = False
         Me.Controls.Add(Me.BtnPassword)
         Me.Controls.Add(Me.BtnLogin)
