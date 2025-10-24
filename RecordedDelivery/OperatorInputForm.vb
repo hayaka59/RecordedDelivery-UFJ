@@ -38,8 +38,28 @@ Public Class OperatorInputForm
 
         Try
 
+            PubConstClass.objSyncHist = New Object  ' 操作履歴書込み用
+            PubConstClass.objSyncRec = New Object   ' メンテナンス画面用
+
             ' 現在の年月日を取得する
             lblCurrentDate.Text = GetCurrentDate()
+
+            OutPutLogFile("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓")
+            OutPutLogFile($"【プログラム起動（{PubConstClass.DEF_VERSION}）】")
+            OutPutLogFile($"【{Me.Text}】")
+
+#Region "MainForm画面で呼び出していた処理を実行する"
+            ' エラー情報の取得
+            Call getErrorInformation()
+            ' 支店マスター情報の取得
+            Call GetBranchMasterFile()
+            ' 種別データ情報の取得
+            Call GetClassDataFile()
+            ' 引受番号データ取得処理
+            Call GetUnderWritingNumber()
+            ' INIファイルから設定値を取得する
+            Call getSystemIniFile()
+#End Region
 
         Catch ex As Exception
             MsgBox("【OperatorInputForm_Load】" & ex.Message)
@@ -127,7 +147,12 @@ Public Class OperatorInputForm
 
             PubConstClass.pblIsOkayFlag = ConFirmOperator()
             If PubConstClass.pblIsOkayFlag = True Then
-                Me.Dispose()
+                ' ログイン成功
+                TxtOperator.Text = ""
+                TxtPassword.Text = ""
+                MainForm.Show()
+                'Me.Dispose()
+                Me.Hide()
             End If
 
         Catch ex As Exception

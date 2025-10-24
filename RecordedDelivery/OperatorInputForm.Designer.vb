@@ -127,7 +127,7 @@ Partial Class OperatorInputForm
         'BtnCansel
         '
         Me.BtnCansel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.exit_icon_small
+        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.power_small
         Me.BtnCansel.Location = New System.Drawing.Point(249, 159)
         Me.BtnCansel.Name = "BtnCansel"
         Me.BtnCansel.Size = New System.Drawing.Size(180, 45)
