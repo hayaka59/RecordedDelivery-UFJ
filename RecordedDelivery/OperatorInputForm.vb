@@ -3,6 +3,8 @@ Option Strict On
 
 Public Class OperatorInputForm
 
+    Public bIsCloseFlag As Boolean = True
+
     ''' <summary>
     ''' フォームアクティブ処理
     ''' </summary>
@@ -258,7 +260,14 @@ Public Class OperatorInputForm
     Private Sub BtnCansel_Click(sender As System.Object, e As System.EventArgs) Handles BtnCansel.Click
 
         PubConstClass.pblIsOkayFlag = False
-        Me.Dispose()
+
+        If bIsCloseFlag = True Then
+            ' プログラム終了
+            Application.Exit()
+            'Me.Dispose()
+        Else
+            Me.Hide()
+        End If
 
     End Sub
 
