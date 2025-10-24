@@ -41,6 +41,7 @@ Partial Class MainForm
         Me.BtnListReport = New System.Windows.Forms.Button()
         Me.BtnReceipPublish = New System.Windows.Forms.Button()
         Me.btnEnd = New System.Windows.Forms.Button()
+        Me.BtnLogOut = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -60,7 +61,7 @@ Partial Class MainForm
         'lblVersion
         '
         Me.lblVersion.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(1525, 984)
+        Me.lblVersion.Location = New System.Drawing.Point(1540, 1011)
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(359, 32)
@@ -82,9 +83,9 @@ Partial Class MainForm
         '
         Me.BtnDataCheck.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnDataCheck.Image = Global.RecordedDelivery.My.Resources.Resources.check
-        Me.BtnDataCheck.Location = New System.Drawing.Point(205, 355)
+        Me.BtnDataCheck.Location = New System.Drawing.Point(205, 359)
         Me.BtnDataCheck.Name = "BtnDataCheck"
-        Me.BtnDataCheck.Size = New System.Drawing.Size(700, 180)
+        Me.BtnDataCheck.Size = New System.Drawing.Size(700, 200)
         Me.BtnDataCheck.TabIndex = 12
         Me.BtnDataCheck.Text = "データ確認・抜取り"
         Me.BtnDataCheck.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -139,9 +140,9 @@ Partial Class MainForm
         Me.BtnMaintenance.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnMaintenance.Image = Global.RecordedDelivery.My.Resources.Resources.maintenance_icon
         Me.BtnMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnMaintenance.Location = New System.Drawing.Point(205, 711)
+        Me.BtnMaintenance.Location = New System.Drawing.Point(980, 567)
         Me.BtnMaintenance.Name = "BtnMaintenance"
-        Me.BtnMaintenance.Size = New System.Drawing.Size(700, 180)
+        Me.BtnMaintenance.Size = New System.Drawing.Size(700, 200)
         Me.BtnMaintenance.TabIndex = 15
         Me.BtnMaintenance.Text = "保守メニュー"
         Me.BtnMaintenance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -152,9 +153,9 @@ Partial Class MainForm
         '
         Me.BtnMasterMent.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnMasterMent.Image = Global.RecordedDelivery.My.Resources.Resources.database
-        Me.BtnMasterMent.Location = New System.Drawing.Point(980, 355)
+        Me.BtnMasterMent.Location = New System.Drawing.Point(980, 359)
         Me.BtnMasterMent.Name = "BtnMasterMent"
-        Me.BtnMasterMent.Size = New System.Drawing.Size(700, 180)
+        Me.BtnMasterMent.Size = New System.Drawing.Size(700, 200)
         Me.BtnMasterMent.TabIndex = 14
         Me.BtnMasterMent.Text = "マスターメンテナンス"
         Me.BtnMasterMent.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -168,7 +169,7 @@ Partial Class MainForm
         Me.BtnListReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnListReport.Location = New System.Drawing.Point(980, 151)
         Me.BtnListReport.Name = "BtnListReport"
-        Me.BtnListReport.Size = New System.Drawing.Size(700, 180)
+        Me.BtnListReport.Size = New System.Drawing.Size(700, 200)
         Me.BtnListReport.TabIndex = 13
         Me.BtnListReport.Text = "リスト・レポート印刷"
         Me.BtnListReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -181,7 +182,7 @@ Partial Class MainForm
         Me.BtnReceipPublish.Image = Global.RecordedDelivery.My.Resources.Resources.camera
         Me.BtnReceipPublish.Location = New System.Drawing.Point(205, 151)
         Me.BtnReceipPublish.Name = "BtnReceipPublish"
-        Me.BtnReceipPublish.Size = New System.Drawing.Size(700, 180)
+        Me.BtnReceipPublish.Size = New System.Drawing.Size(700, 200)
         Me.BtnReceipPublish.TabIndex = 11
         Me.BtnReceipPublish.Text = "受領証発行処理"
         Me.BtnReceipPublish.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -192,16 +193,30 @@ Partial Class MainForm
         '
         Me.btnEnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnEnd.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnEnd.Image = Global.RecordedDelivery.My.Resources.Resources._exit
+        Me.btnEnd.Image = Global.RecordedDelivery.My.Resources.Resources.power_big
         Me.btnEnd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnEnd.Location = New System.Drawing.Point(980, 711)
+        Me.btnEnd.Location = New System.Drawing.Point(980, 773)
         Me.btnEnd.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
         Me.btnEnd.Name = "btnEnd"
-        Me.btnEnd.Size = New System.Drawing.Size(700, 180)
+        Me.btnEnd.Size = New System.Drawing.Size(700, 200)
         Me.btnEnd.TabIndex = 0
         Me.btnEnd.Text = "終　了"
         Me.btnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEnd.UseVisualStyleBackColor = False
+        '
+        'BtnLogOut
+        '
+        Me.BtnLogOut.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnLogOut.Image = Global.RecordedDelivery.My.Resources.Resources._exit
+        Me.BtnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnLogOut.Location = New System.Drawing.Point(205, 773)
+        Me.BtnLogOut.Name = "BtnLogOut"
+        Me.BtnLogOut.Size = New System.Drawing.Size(700, 200)
+        Me.BtnLogOut.TabIndex = 34
+        Me.BtnLogOut.Text = "ログアウト"
+        Me.BtnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnLogOut.UseCompatibleTextRendering = True
+        Me.BtnLogOut.UseVisualStyleBackColor = True
         '
         'MainForm
         '
@@ -209,6 +224,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1914, 1052)
+        Me.Controls.Add(Me.BtnLogOut)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
@@ -253,5 +269,5 @@ Partial Class MainForm
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-
+    Friend WithEvents BtnLogOut As Button
 End Class
