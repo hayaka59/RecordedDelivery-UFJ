@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class OperatorInputForm
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class OperatorInputForm
     'メモ: 以下のプロシージャは Windows フォーム デザイナーで必要です。
     'Windows フォーム デザイナーを使用して変更できます。  
     'コード エディターを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -74,7 +74,7 @@ Partial Class OperatorInputForm
         Me.TxtOperator.Location = New System.Drawing.Point(214, 63)
         Me.TxtOperator.Name = "TxtOperator"
         Me.TxtOperator.Size = New System.Drawing.Size(188, 36)
-        Me.TxtOperator.TabIndex = 12
+        Me.TxtOperator.TabIndex = 1
         '
         'TxtPassword
         '
@@ -85,7 +85,7 @@ Partial Class OperatorInputForm
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.Size = New System.Drawing.Size(188, 36)
-        Me.TxtPassword.TabIndex = 13
+        Me.TxtPassword.TabIndex = 2
         '
         'lblCurrentDate
         '
@@ -106,7 +106,7 @@ Partial Class OperatorInputForm
         Me.BtnPassword.Location = New System.Drawing.Point(408, 104)
         Me.BtnPassword.Name = "BtnPassword"
         Me.BtnPassword.Size = New System.Drawing.Size(65, 40)
-        Me.BtnPassword.TabIndex = 146
+        Me.BtnPassword.TabIndex = 3
         Me.BtnPassword.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnPassword.UseVisualStyleBackColor = True
@@ -118,7 +118,7 @@ Partial Class OperatorInputForm
         Me.BtnLogin.Location = New System.Drawing.Point(41, 164)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(180, 45)
-        Me.BtnLogin.TabIndex = 145
+        Me.BtnLogin.TabIndex = 4
         Me.BtnLogin.Text = "ログイン"
         Me.BtnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -131,7 +131,7 @@ Partial Class OperatorInputForm
         Me.BtnCansel.Location = New System.Drawing.Point(248, 164)
         Me.BtnCansel.Name = "BtnCansel"
         Me.BtnCansel.Size = New System.Drawing.Size(180, 45)
-        Me.BtnCansel.TabIndex = 8
+        Me.BtnCansel.TabIndex = 5
         Me.BtnCansel.Text = "終了"
         Me.BtnCansel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnCansel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
