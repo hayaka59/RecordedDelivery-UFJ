@@ -127,12 +127,12 @@ Partial Class OperatorInputForm
         'BtnCansel
         '
         Me.BtnCansel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.power_small
+        Me.BtnCansel.Image = Global.RecordedDelivery.My.Resources.Resources.cancel
         Me.BtnCansel.Location = New System.Drawing.Point(248, 164)
         Me.BtnCansel.Name = "BtnCansel"
         Me.BtnCansel.Size = New System.Drawing.Size(180, 45)
         Me.BtnCansel.TabIndex = 5
-        Me.BtnCansel.Text = "終了"
+        Me.BtnCansel.Text = "キャンセル"
         Me.BtnCansel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnCansel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCansel.UseVisualStyleBackColor = True

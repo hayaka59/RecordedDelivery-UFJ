@@ -17,8 +17,10 @@ Public Class OperatorInputForm
         Try
             If bIsCloseFlag = True Then
                 BtnCansel.Text = "終了"
+                BtnCansel.Image = My.Resources.Resources.power_small
             Else
                 BtnCansel.Text = "キャンセル"
+                BtnCansel.Image = My.Resources.Resources.cancel
             End If
 
             TxtOperator.Focus()
