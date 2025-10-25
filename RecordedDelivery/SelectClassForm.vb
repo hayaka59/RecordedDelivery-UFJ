@@ -47,6 +47,12 @@ Public Class SelectClassForm
             TxtBranchCd.ImeMode = ImeMode.Off
             TxtBranchCd.MaxLength = 10
 
+            ' 種別ファイルフィルターの設定
+            CmbClassFilter.Items.Clear()
+            CmbClassFilter.Items.Add("簡易書留")
+            CmbClassFilter.Items.Add("特定記録")
+            CmbClassFilter.Items.Add("ゆうメール簡易")
+
             ' 種別ファイルの表示
             CmbClassification.Items.Clear()
             For N = 0 To PubConstClass.pblClassDataIndex - 1

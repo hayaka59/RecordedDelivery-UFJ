@@ -43,7 +43,7 @@ Partial Class SelectClassForm
         Me.Rdo8Face = New System.Windows.Forms.RadioButton()
         Me.Rdo15Face = New System.Windows.Forms.RadioButton()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CmbClassFilter = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -274,16 +274,16 @@ Partial Class SelectClassForm
         Me.Label7.Text = "種別①"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'ComboBox1
+        'CmbClassFilter
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.ComboBox1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(231, 135)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(273, 32)
-        Me.ComboBox1.TabIndex = 103
+        Me.CmbClassFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbClassFilter.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.CmbClassFilter.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.CmbClassFilter.FormattingEnabled = True
+        Me.CmbClassFilter.Location = New System.Drawing.Point(231, 135)
+        Me.CmbClassFilter.Name = "CmbClassFilter"
+        Me.CmbClassFilter.Size = New System.Drawing.Size(273, 32)
+        Me.CmbClassFilter.TabIndex = 103
         '
         'SelectClassForm
         '
@@ -292,7 +292,7 @@ Partial Class SelectClassForm
         Me.ClientSize = New System.Drawing.Size(580, 507)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.CmbClassFilter)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.BtnBack)
         Me.Controls.Add(Me.BtnNext)
@@ -345,5 +345,5 @@ Partial Class SelectClassForm
     Friend WithEvents Rdo8Face As System.Windows.Forms.RadioButton
     Friend WithEvents Rdo15Face As System.Windows.Forms.RadioButton
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CmbClassFilter As ComboBox
 End Class

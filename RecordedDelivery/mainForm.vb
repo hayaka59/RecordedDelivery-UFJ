@@ -1549,11 +1549,11 @@ Public Class MainForm
 
             SelectClassForm.ShowDialog()
 
-            If PubConstClass.pblIsOkayFlag = True Then
-                'OutPutLogFile("〓「運転画面」呼び出し〓")
-                'DrivingForm.Show()
-                'Me.Hide()
-            End If
+            'If PubConstClass.pblIsOkayFlag = True Then
+            '    'OutPutLogFile("〓「運転画面」呼び出し〓")
+            '    'DrivingForm.Show()
+            '    'Me.Hide()
+            'End If
 
 
             '' オペレータ入力画面表示
