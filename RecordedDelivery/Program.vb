@@ -4,7 +4,8 @@
         ' 任意のフォームを起動
         Application.EnableVisualStyles()
         Application.SetCompatibleTextRenderingDefault(False)
-        Application.Run(New OperatorInputForm()) ' ← 起動したいフォームに変更
+        ' 最初に起動するフォーム
+        Application.Run(New OperatorInputForm())
     End Sub
 
 End Module
