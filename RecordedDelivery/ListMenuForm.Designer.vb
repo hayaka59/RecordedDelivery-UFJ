@@ -23,15 +23,15 @@ Partial Class ListMenuForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.ReceiptReprint = New System.Windows.Forms.Button()
-        Me.BtnJobDayReport = New System.Windows.Forms.Button()
-        Me.BtnBranchTotal = New System.Windows.Forms.Button()
-        Me.BtnJobRecordList = New System.Windows.Forms.Button()
-        Me.BtnCsvOutPut = New System.Windows.Forms.Button()
         Me.BtnConfirmKetuban = New System.Windows.Forms.Button()
-        Me.BtnCsvInPut = New System.Windows.Forms.Button()
-        Me.BtnBack = New System.Windows.Forms.Button()
         Me.LblOperatorName = New System.Windows.Forms.Label()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnCsvInPut = New System.Windows.Forms.Button()
+        Me.BtnCsvOutPut = New System.Windows.Forms.Button()
+        Me.BtnJobRecordList = New System.Windows.Forms.Button()
+        Me.BtnBranchTotal = New System.Windows.Forms.Button()
+        Me.BtnJobDayReport = New System.Windows.Forms.Button()
+        Me.ReceiptReprint = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblTitle
@@ -47,88 +47,18 @@ Partial Class ListMenuForm
         Me.lblTitle.Text = "リスト・レポート印刷メニュー"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'ReceiptReprint
-        '
-        Me.ReceiptReprint.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.ReceiptReprint.Location = New System.Drawing.Point(205, 151)
-        Me.ReceiptReprint.Name = "ReceiptReprint"
-        Me.ReceiptReprint.Size = New System.Drawing.Size(700, 180)
-        Me.ReceiptReprint.TabIndex = 12
-        Me.ReceiptReprint.Text = "受　領　証　再　発　行"
-        Me.ReceiptReprint.UseVisualStyleBackColor = True
-        '
-        'BtnJobDayReport
-        '
-        Me.BtnJobDayReport.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnJobDayReport.Location = New System.Drawing.Point(980, 151)
-        Me.BtnJobDayReport.Name = "BtnJobDayReport"
-        Me.BtnJobDayReport.Size = New System.Drawing.Size(700, 180)
-        Me.BtnJobDayReport.TabIndex = 13
-        Me.BtnJobDayReport.Text = "作　業　日　報"
-        Me.BtnJobDayReport.UseVisualStyleBackColor = True
-        '
-        'BtnBranchTotal
-        '
-        Me.BtnBranchTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnBranchTotal.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBranchTotal.Location = New System.Drawing.Point(205, 353)
-        Me.BtnBranchTotal.Name = "BtnBranchTotal"
-        Me.BtnBranchTotal.Size = New System.Drawing.Size(700, 180)
-        Me.BtnBranchTotal.TabIndex = 14
-        Me.BtnBranchTotal.Text = "支　店　集　計　表"
-        Me.BtnBranchTotal.UseVisualStyleBackColor = False
-        '
-        'BtnJobRecordList
-        '
-        Me.BtnJobRecordList.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnJobRecordList.Location = New System.Drawing.Point(980, 353)
-        Me.BtnJobRecordList.Name = "BtnJobRecordList"
-        Me.BtnJobRecordList.Size = New System.Drawing.Size(700, 180)
-        Me.BtnJobRecordList.TabIndex = 15
-        Me.BtnJobRecordList.Text = "運　用　記　録　リ　ス　ト"
-        Me.BtnJobRecordList.UseVisualStyleBackColor = True
-        '
-        'BtnCsvOutPut
-        '
-        Me.BtnCsvOutPut.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.BtnCsvOutPut.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCsvOutPut.Location = New System.Drawing.Point(205, 555)
-        Me.BtnCsvOutPut.Name = "BtnCsvOutPut"
-        Me.BtnCsvOutPut.Size = New System.Drawing.Size(700, 180)
-        Me.BtnCsvOutPut.TabIndex = 16
-        Me.BtnCsvOutPut.Text = "集　計　Ｃ　Ｓ　Ｖ　出　力"
-        Me.BtnCsvOutPut.UseVisualStyleBackColor = False
-        '
         'BtnConfirmKetuban
         '
-        Me.BtnConfirmKetuban.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnConfirmKetuban.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnConfirmKetuban.Image = Global.RecordedDelivery.My.Resources.Resources.keybord
         Me.BtnConfirmKetuban.Location = New System.Drawing.Point(980, 555)
         Me.BtnConfirmKetuban.Name = "BtnConfirmKetuban"
         Me.BtnConfirmKetuban.Size = New System.Drawing.Size(700, 180)
         Me.BtnConfirmKetuban.TabIndex = 21
-        Me.BtnConfirmKetuban.Text = "欠　番　確　認　表"
+        Me.BtnConfirmKetuban.Text = "欠番確認表"
+        Me.BtnConfirmKetuban.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnConfirmKetuban.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnConfirmKetuban.UseVisualStyleBackColor = True
-        '
-        'BtnCsvInPut
-        '
-        Me.BtnCsvInPut.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCsvInPut.Location = New System.Drawing.Point(205, 758)
-        Me.BtnCsvInPut.Name = "BtnCsvInPut"
-        Me.BtnCsvInPut.Size = New System.Drawing.Size(700, 180)
-        Me.BtnCsvInPut.TabIndex = 20
-        Me.BtnCsvInPut.Text = "集　計　C　S　V　取　込"
-        Me.BtnCsvInPut.UseVisualStyleBackColor = True
-        Me.BtnCsvInPut.Visible = False
-        '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(980, 758)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(700, 180)
-        Me.BtnBack.TabIndex = 22
-        Me.BtnBack.Text = "戻　　　　る"
-        Me.BtnBack.UseVisualStyleBackColor = True
         '
         'LblOperatorName
         '
@@ -141,6 +71,100 @@ Partial Class ListMenuForm
         Me.LblOperatorName.TabIndex = 23
         Me.LblOperatorName.Text = "LblOperatorName"
         Me.LblOperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_big
+        Me.BtnBack.Location = New System.Drawing.Point(980, 758)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(700, 180)
+        Me.BtnBack.TabIndex = 22
+        Me.BtnBack.Text = "戻　る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnCsvInPut
+        '
+        Me.BtnCsvInPut.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCsvInPut.Image = Global.RecordedDelivery.My.Resources.Resources.document
+        Me.BtnCsvInPut.Location = New System.Drawing.Point(205, 758)
+        Me.BtnCsvInPut.Name = "BtnCsvInPut"
+        Me.BtnCsvInPut.Size = New System.Drawing.Size(700, 180)
+        Me.BtnCsvInPut.TabIndex = 20
+        Me.BtnCsvInPut.Text = "集計CSV取込"
+        Me.BtnCsvInPut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCsvInPut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCsvInPut.UseVisualStyleBackColor = True
+        Me.BtnCsvInPut.Visible = False
+        '
+        'BtnCsvOutPut
+        '
+        Me.BtnCsvOutPut.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnCsvOutPut.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCsvOutPut.Image = Global.RecordedDelivery.My.Resources.Resources.document
+        Me.BtnCsvOutPut.Location = New System.Drawing.Point(205, 555)
+        Me.BtnCsvOutPut.Name = "BtnCsvOutPut"
+        Me.BtnCsvOutPut.Size = New System.Drawing.Size(700, 180)
+        Me.BtnCsvOutPut.TabIndex = 16
+        Me.BtnCsvOutPut.Text = "集計ＣＳＶ出力"
+        Me.BtnCsvOutPut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCsvOutPut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCsvOutPut.UseVisualStyleBackColor = False
+        '
+        'BtnJobRecordList
+        '
+        Me.BtnJobRecordList.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnJobRecordList.Image = Global.RecordedDelivery.My.Resources.Resources.printer
+        Me.BtnJobRecordList.Location = New System.Drawing.Point(980, 353)
+        Me.BtnJobRecordList.Name = "BtnJobRecordList"
+        Me.BtnJobRecordList.Size = New System.Drawing.Size(700, 180)
+        Me.BtnJobRecordList.TabIndex = 15
+        Me.BtnJobRecordList.Text = "運用記録リスト"
+        Me.BtnJobRecordList.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnJobRecordList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnJobRecordList.UseVisualStyleBackColor = True
+        '
+        'BtnBranchTotal
+        '
+        Me.BtnBranchTotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.BtnBranchTotal.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBranchTotal.Image = Global.RecordedDelivery.My.Resources.Resources.printer
+        Me.BtnBranchTotal.Location = New System.Drawing.Point(205, 353)
+        Me.BtnBranchTotal.Name = "BtnBranchTotal"
+        Me.BtnBranchTotal.Size = New System.Drawing.Size(700, 180)
+        Me.BtnBranchTotal.TabIndex = 14
+        Me.BtnBranchTotal.Text = "支店集計表"
+        Me.BtnBranchTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBranchTotal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBranchTotal.UseVisualStyleBackColor = False
+        '
+        'BtnJobDayReport
+        '
+        Me.BtnJobDayReport.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnJobDayReport.Image = Global.RecordedDelivery.My.Resources.Resources.printer
+        Me.BtnJobDayReport.Location = New System.Drawing.Point(980, 151)
+        Me.BtnJobDayReport.Name = "BtnJobDayReport"
+        Me.BtnJobDayReport.Size = New System.Drawing.Size(700, 180)
+        Me.BtnJobDayReport.TabIndex = 13
+        Me.BtnJobDayReport.Text = "作業日報"
+        Me.BtnJobDayReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnJobDayReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnJobDayReport.UseVisualStyleBackColor = True
+        '
+        'ReceiptReprint
+        '
+        Me.ReceiptReprint.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ReceiptReprint.Image = Global.RecordedDelivery.My.Resources.Resources.printer
+        Me.ReceiptReprint.Location = New System.Drawing.Point(205, 151)
+        Me.ReceiptReprint.Name = "ReceiptReprint"
+        Me.ReceiptReprint.Size = New System.Drawing.Size(700, 180)
+        Me.ReceiptReprint.TabIndex = 12
+        Me.ReceiptReprint.Text = "受領証再発行"
+        Me.ReceiptReprint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ReceiptReprint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.ReceiptReprint.UseVisualStyleBackColor = True
         '
         'ListMenuForm
         '
