@@ -25,15 +25,12 @@ Partial Class ReceiptReprintForm
         Me.TxtYoteiTusu = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.BtnBack = New System.Windows.Forms.Button()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.LblOperatorName = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.BtnPrint = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TxtBranch = New System.Windows.Forms.TextBox()
-        Me.BtnSearch = New System.Windows.Forms.Button()
         Me.lstRePrintView = New System.Windows.Forms.ListView()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
@@ -50,6 +47,9 @@ Partial Class ReceiptReprintForm
         Me.RdoSasidasi = New System.Windows.Forms.RadioButton()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.lstGetDataView = New System.Windows.Forms.ListView()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.BtnPrint = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
         Me.GroupBox12.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -88,22 +88,12 @@ Partial Class ReceiptReprintForm
         Me.Label14.Text = "処理日"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(394, 441)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(190, 68)
-        Me.BtnBack.TabIndex = 14
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
         'lblCurrentDate
         '
         Me.lblCurrentDate.BackColor = System.Drawing.SystemColors.Control
         Me.lblCurrentDate.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lblCurrentDate.ForeColor = System.Drawing.Color.Black
-        Me.lblCurrentDate.Location = New System.Drawing.Point(503, 47)
+        Me.lblCurrentDate.Location = New System.Drawing.Point(616, 39)
         Me.lblCurrentDate.Name = "lblCurrentDate"
         Me.lblCurrentDate.Size = New System.Drawing.Size(265, 36)
         Me.lblCurrentDate.TabIndex = 119
@@ -123,7 +113,7 @@ Partial Class ReceiptReprintForm
         Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.LblOperatorName.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LblOperatorName.ForeColor = System.Drawing.Color.White
-        Me.LblOperatorName.Location = New System.Drawing.Point(568, 2)
+        Me.LblOperatorName.Location = New System.Drawing.Point(657, 1)
         Me.LblOperatorName.Name = "LblOperatorName"
         Me.LblOperatorName.Size = New System.Drawing.Size(224, 33)
         Me.LblOperatorName.TabIndex = 124
@@ -138,20 +128,10 @@ Partial Class ReceiptReprintForm
         Me.lblTitle.Location = New System.Drawing.Point(-2, -1)
         Me.lblTitle.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(795, 36)
+        Me.lblTitle.Size = New System.Drawing.Size(883, 36)
         Me.lblTitle.TabIndex = 123
         Me.lblTitle.Text = "　受領証再発行"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'BtnPrint
-        '
-        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnPrint.Location = New System.Drawing.Point(27, 440)
-        Me.BtnPrint.Name = "BtnPrint"
-        Me.BtnPrint.Size = New System.Drawing.Size(190, 68)
-        Me.BtnPrint.TabIndex = 13
-        Me.BtnPrint.Text = "印刷"
-        Me.BtnPrint.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -176,25 +156,16 @@ Partial Class ReceiptReprintForm
         Me.TxtBranch.Text = "1234567890"
         Me.TxtBranch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnSearch
-        '
-        Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnSearch.Location = New System.Drawing.Point(394, 118)
-        Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(190, 68)
-        Me.BtnSearch.TabIndex = 2
-        Me.BtnSearch.Text = "検索"
-        Me.BtnSearch.UseVisualStyleBackColor = True
-        '
         'lstRePrintView
         '
         Me.lstRePrintView.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstRePrintView.FullRowSelect = True
         Me.lstRePrintView.GridLines = True
+        Me.lstRePrintView.HideSelection = False
         Me.lstRePrintView.Location = New System.Drawing.Point(27, 216)
         Me.lstRePrintView.MultiSelect = False
         Me.lstRePrintView.Name = "lstRePrintView"
-        Me.lstRePrintView.Size = New System.Drawing.Size(557, 207)
+        Me.lstRePrintView.Size = New System.Drawing.Size(618, 762)
         Me.lstRePrintView.TabIndex = 5
         Me.lstRePrintView.UseCompatibleStateImageBehavior = False
         '
@@ -203,7 +174,7 @@ Partial Class ReceiptReprintForm
         Me.GroupBox12.Controls.Add(Me.RadioButton1)
         Me.GroupBox12.Controls.Add(Me.Rdo15FacePerPage)
         Me.GroupBox12.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox12.Location = New System.Drawing.Point(603, 323)
+        Me.GroupBox12.Location = New System.Drawing.Point(674, 323)
         Me.GroupBox12.Name = "GroupBox12"
         Me.GroupBox12.Size = New System.Drawing.Size(167, 100)
         Me.GroupBox12.TabIndex = 141
@@ -235,7 +206,7 @@ Partial Class ReceiptReprintForm
         Me.Label1.BackColor = System.Drawing.SystemColors.Control
         Me.Label1.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(593, 436)
+        Me.Label1.Location = New System.Drawing.Point(671, 435)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 35)
         Me.Label1.TabIndex = 144
@@ -245,7 +216,7 @@ Partial Class ReceiptReprintForm
         'TxtFromPage
         '
         Me.TxtFromPage.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtFromPage.Location = New System.Drawing.Point(663, 434)
+        Me.TxtFromPage.Location = New System.Drawing.Point(741, 433)
         Me.TxtFromPage.MaxLength = 3
         Me.TxtFromPage.Name = "TxtFromPage"
         Me.TxtFromPage.Size = New System.Drawing.Size(78, 36)
@@ -254,7 +225,7 @@ Partial Class ReceiptReprintForm
         'TxtToPage
         '
         Me.TxtToPage.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtToPage.Location = New System.Drawing.Point(663, 477)
+        Me.TxtToPage.Location = New System.Drawing.Point(741, 476)
         Me.TxtToPage.MaxLength = 3
         Me.TxtToPage.Name = "TxtToPage"
         Me.TxtToPage.Size = New System.Drawing.Size(78, 36)
@@ -265,7 +236,7 @@ Partial Class ReceiptReprintForm
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(593, 476)
+        Me.Label2.Location = New System.Drawing.Point(671, 475)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 35)
         Me.Label2.TabIndex = 142
@@ -277,7 +248,7 @@ Partial Class ReceiptReprintForm
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(740, 435)
+        Me.Label3.Location = New System.Drawing.Point(818, 434)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 35)
         Me.Label3.TabIndex = 147
@@ -289,7 +260,7 @@ Partial Class ReceiptReprintForm
         Me.Label4.BackColor = System.Drawing.SystemColors.Control
         Me.Label4.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(742, 478)
+        Me.Label4.Location = New System.Drawing.Point(820, 477)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(35, 35)
         Me.Label4.TabIndex = 146
@@ -302,9 +273,9 @@ Partial Class ReceiptReprintForm
         Me.GroupBox1.Controls.Add(Me.RdoZyuryo)
         Me.GroupBox1.Controls.Add(Me.RdoSasidasi)
         Me.GroupBox1.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(605, 201)
+        Me.GroupBox1.Location = New System.Drawing.Point(676, 201)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(153, 113)
+        Me.GroupBox1.Size = New System.Drawing.Size(163, 113)
         Me.GroupBox1.TabIndex = 148
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "印刷選択"
@@ -344,21 +315,63 @@ Partial Class ReceiptReprintForm
         Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstGetDataView.FullRowSelect = True
         Me.lstGetDataView.GridLines = True
-        Me.lstGetDataView.Location = New System.Drawing.Point(2, 519)
+        Me.lstGetDataView.HideSelection = False
+        Me.lstGetDataView.Location = New System.Drawing.Point(2, 956)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
-        Me.lstGetDataView.Size = New System.Drawing.Size(790, 249)
+        Me.lstGetDataView.Size = New System.Drawing.Size(879, 92)
         Me.lstGetDataView.TabIndex = 149
         Me.lstGetDataView.UseCompatibleStateImageBehavior = False
         Me.lstGetDataView.Visible = False
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
+        Me.BtnSearch.Location = New System.Drawing.Point(394, 118)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(190, 68)
+        Me.BtnSearch.TabIndex = 2
+        Me.BtnSearch.Text = "検索"
+        Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'BtnPrint
+        '
+        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
+        Me.BtnPrint.Location = New System.Drawing.Point(668, 538)
+        Me.BtnPrint.Name = "BtnPrint"
+        Me.BtnPrint.Size = New System.Drawing.Size(190, 68)
+        Me.BtnPrint.TabIndex = 13
+        Me.BtnPrint.Text = "印刷"
+        Me.BtnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPrint.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_arrow
+        Me.BtnBack.Location = New System.Drawing.Point(668, 910)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(190, 68)
+        Me.BtnBack.TabIndex = 14
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
         '
         'ReceiptReprintForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(790, 532)
+        Me.ClientSize = New System.Drawing.Size(880, 1007)
         Me.ControlBox = False
+        Me.Controls.Add(Me.BtnBack)
+        Me.Controls.Add(Me.lstRePrintView)
         Me.Controls.Add(Me.lstGetDataView)
         Me.Controls.Add(Me.TxtFromPage)
         Me.Controls.Add(Me.GroupBox1)
@@ -368,7 +381,6 @@ Partial Class ReceiptReprintForm
         Me.Controls.Add(Me.TxtToPage)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox12)
-        Me.Controls.Add(Me.lstRePrintView)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.TxtBranch)
         Me.Controls.Add(Me.BtnSearch)
@@ -377,7 +389,6 @@ Partial Class ReceiptReprintForm
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.lblCurrentDate)
-        Me.Controls.Add(Me.BtnBack)
         Me.Controls.Add(Me.TxtYoteiTusu)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label14)

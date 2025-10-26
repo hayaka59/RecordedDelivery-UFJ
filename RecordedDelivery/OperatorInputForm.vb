@@ -13,7 +13,21 @@ Public Class OperatorInputForm
     ''' <remarks></remarks>
     Private Sub OperatorInputForm_Activated(sender As Object, e As System.EventArgs) Handles Me.Activated
 
-        TxtOperator.Focus()
+
+        Try
+            If bIsCloseFlag = True Then
+                BtnCansel.Text = "終了"
+                BtnCansel.Image = My.Resources.Resources.power_small
+            Else
+                BtnCansel.Text = "キャンセル"
+                BtnCansel.Image = My.Resources.Resources.cancel
+            End If
+
+            TxtOperator.Focus()
+
+        Catch ex As Exception
+            MsgBox("【OperatorInputForm_Load】" & ex.Message)
+        End Try
 
     End Sub
 
@@ -263,9 +277,12 @@ Public Class OperatorInputForm
 
         If bIsCloseFlag = True Then
             ' プログラム終了
-            Application.Exit()
-            'Me.Dispose()
+            OutPutLogFile("■プログラム終了")
+            'Application.Exit()
+            Me.Dispose()
+            End
         Else
+            OutPutLogFile("■オペレータ入力画面を閉じる")
             Me.Hide()
         End If
 

@@ -83,7 +83,7 @@ Public Class MainForm
             OutPutLogFile($"【メインメニュー表示】（{PubConstClass.pblOperatorCode}：{PubConstClass.pblOperatorName}）")
 
             '二重起動のチェック
-            If Diagnostics.Process.GetProcessesByName( _
+            If Diagnostics.Process.GetProcessesByName(
                 Diagnostics.Process.GetCurrentProcess.ProcessName).Length > 1 Then
                 'すでに起動していると判断する
                 OutPutLogFile("二重起動はできません。")
@@ -330,11 +330,11 @@ Public Class MainForm
             ' ヘッダー１行目
             intTatePos = intHdrYPos * 3     '（３）
             e.Graphics.DrawString(dtNow.ToString("yyyy年 MM月 dd日 hh：mm：ss"), f, Brushes.Black, 450, intTatePos)
-            e.Graphics.DrawString("Page " & (PubConstClass.lngPrintIndexKan + _
-                                             PubConstClass.lngPrintIndexTok + _
-                                             PubConstClass.lngPrintIndexYou + _
-                                             PubConstClass.lngPrintIndexKanNuk + _
-                                             PubConstClass.lngPrintIndexTokNuk + _
+            e.Graphics.DrawString("Page " & (PubConstClass.lngPrintIndexKan +
+                                             PubConstClass.lngPrintIndexTok +
+                                             PubConstClass.lngPrintIndexYou +
+                                             PubConstClass.lngPrintIndexKanNuk +
+                                             PubConstClass.lngPrintIndexTokNuk +
                                              PubConstClass.lngPrintIndexYouNuk + 1).ToString, f, Brushes.Black, 700, intTatePos)
             ' ヘッダー２行目
             intTatePos = intTatePos + intHdrYPos    '（４）
@@ -504,11 +504,11 @@ Public Class MainForm
             ' ヘッダー１行目
             intTatePos = intHdrYPos * 3     '（３）
             e.Graphics.DrawString(dtNow.ToString("yyyy年MM月dd日 HH時mm分ss秒"), f, Brushes.Black, 450, intTatePos)
-            e.Graphics.DrawString("Page " & (PubConstClass.lngPrintIndexKan + _
-                                             PubConstClass.lngPrintIndexTok + _
-                                             PubConstClass.lngPrintIndexYou + _
-                                             PubConstClass.lngPrintIndexKanNuk + _
-                                             PubConstClass.lngPrintIndexTokNuk + _
+            e.Graphics.DrawString("Page " & (PubConstClass.lngPrintIndexKan +
+                                             PubConstClass.lngPrintIndexTok +
+                                             PubConstClass.lngPrintIndexYou +
+                                             PubConstClass.lngPrintIndexKanNuk +
+                                             PubConstClass.lngPrintIndexTokNuk +
                                              PubConstClass.lngPrintIndexYouNuk + 1).ToString, f, Brushes.Black, 700, intTatePos)
             ' ヘッダー２行目
             intTatePos = intTatePos + intHdrYPos    '（４）
@@ -573,7 +573,7 @@ Public Class MainForm
                     intTatePos = intTatePos + intHdrYPos + intHdrYPos + intHdrYPos  '（１１）
                     e.Graphics.DrawString("処理件数：なし", h, Brushes.Black, intHdrXPos, intTatePos)
                     PubConstClass.lngPrintIndexKan = PubConstClass.lngPrintIndexKan + 1
-                    e.HasMorePages = True                    
+                    e.HasMorePages = True
                     Exit Sub
                 End If
             End If
@@ -684,7 +684,7 @@ Public Class MainForm
                     intTatePos = intTatePos + intHdrYPos + intHdrYPos + intHdrYPos  '（１１）
                     e.Graphics.DrawString("処理件数：なし", h, Brushes.Black, intHdrXPos, intTatePos)
                     PubConstClass.lngPrintIndexTok = PubConstClass.lngPrintIndexTok + 1
-                    e.HasMorePages = True                    
+                    e.HasMorePages = True
                     Exit Sub
                 End If
             End If
@@ -909,7 +909,7 @@ Public Class MainForm
             e.Graphics.DrawString("重複件数　　：　" & PubConstClass.intReceiptDispDupIndex.ToString & " 件", f, Brushes.Black, intHdrXPos, intHdrYPos * 18)
 
             e.Graphics.DrawString("重複引受番号", f, Brushes.Black, intHdrXPos, intHdrYPos * 20)
-            e.Graphics.DrawString("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓", _
+            e.Graphics.DrawString("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓",
                                   f, Brushes.Black, intHdrXPos, intHdrYPos * 21)
 
             ' 重複引受番号の印刷
@@ -1103,8 +1103,8 @@ Public Class MainForm
 
             ' 画像格納フォルダ内の全てのフォルダを取得する
             strGetFile = ""
-            For Each tempFile As String In _
-                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) & _
+            For Each tempFile As String In
+                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) &
                                              DateTime.Now.ToString("yyyyMMdd"))
                 Call OutPutLogFile("取得したフォルダ：" & tempFile)
                 strGetFile = strGetFile & tempFile & Constants.vbCr
@@ -1174,8 +1174,8 @@ Public Class MainForm
 
             ' 画像格納フォルダ内の全てのフォルダを取得する
             strGetFile = ""
-            For Each tempFile As String In _
-                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) & _
+            For Each tempFile As String In
+                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) &
                                              DateTime.Now.ToString("yyyyMMdd"))
                 'Call OutPutLogFile("取得したフォルダ：" & tempFile)
                 strGetFile = strGetFile & tempFile & Constants.vbCr
@@ -1260,8 +1260,8 @@ Public Class MainForm
             arTokDupList.Clear()
             arYouDupList.Clear()
 
-            For Each strGetFile As String In _
-                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) & _
+            For Each strGetFile As String In
+                System.IO.Directory.GetFiles(IncludeTrailingPathDelimiter(PubConstClass.imgPath) &
                                              DateTime.Now.ToString("yyyyMMdd"))
                 Call OutPutLogFile("【checkDuplication】取得したファイル：" & strGetFile)
 
@@ -1507,8 +1507,9 @@ Public Class MainForm
                 Call OutPutUseLogFile(LblOperatorName.Text & ":「保守メニュー」呼び出し")
 
                 MaintenanceForm.Show()
-                Me.Hide()
-
+                'Me.Hide()
+            Else
+                'Me.Activate()
             End If
 
 
@@ -1548,11 +1549,11 @@ Public Class MainForm
 
             SelectClassForm.ShowDialog()
 
-            If PubConstClass.pblIsOkayFlag = True Then
-                'OutPutLogFile("〓「運転画面」呼び出し〓")
-                'DrivingForm.Show()
-                'Me.Hide()
-            End If
+            'If PubConstClass.pblIsOkayFlag = True Then
+            '    'OutPutLogFile("〓「運転画面」呼び出し〓")
+            '    'DrivingForm.Show()
+            '    'Me.Hide()
+            'End If
 
 
             '' オペレータ入力画面表示
@@ -1763,12 +1764,13 @@ Public Class MainForm
 
     Private Sub BtnLogOut_Click(sender As Object, e As EventArgs) Handles BtnLogOut.Click
         Try
-            Me.Hide()
+            'Me.Hide()
+            Me.Dispose()
             OperatorInputForm.bIsCloseFlag = True
             OperatorInputForm.Show()
 
         Catch ex As Exception
-
+            MsgBox("【BtnLogOut_Click】" & ex.Message)
         End Try
     End Sub
 End Class
