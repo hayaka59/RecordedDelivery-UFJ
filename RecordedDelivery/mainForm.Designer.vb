@@ -193,7 +193,7 @@ Partial Class MainForm
         '
         Me.btnEnd.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnEnd.Font = New System.Drawing.Font("メイリオ", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnEnd.Image = Global.RecordedDelivery.My.Resources.Resources.power_big
+        Me.btnEnd.Image = Global.RecordedDelivery.My.Resources.Resources.power_large
         Me.btnEnd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnEnd.Location = New System.Drawing.Point(980, 773)
         Me.btnEnd.Margin = New System.Windows.Forms.Padding(6, 7, 6, 7)
