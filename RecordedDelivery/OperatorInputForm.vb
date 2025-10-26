@@ -233,7 +233,8 @@ Public Class OperatorInputForm
                                 Return False
                             Else
                                 OutPutLogFile("■パスワード有効期限切れ")
-                                Me.Dispose()
+                                'Me.Dispose()
+                                'Me.Hide()
                                 OperatorEntryForm.ShowDialog()
                                 Return False
                             End If
