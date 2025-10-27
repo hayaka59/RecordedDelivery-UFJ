@@ -52,6 +52,7 @@ Public Class SelectClassForm
             CmbClassFilter.Items.Add("簡易書留")
             CmbClassFilter.Items.Add("特定記録")
             CmbClassFilter.Items.Add("ゆうメール簡易")
+            CmbClassFilter.SelectedIndex = 0
 
             ' 種別ファイルの表示
             CmbClassification.Items.Clear()

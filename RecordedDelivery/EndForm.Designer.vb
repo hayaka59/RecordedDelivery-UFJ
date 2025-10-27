@@ -30,10 +30,10 @@ Partial Class EndForm
         '
         'lblMessage
         '
-        Me.lblMessage.Font = New System.Drawing.Font("メイリオ", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMessage.Font = New System.Drawing.Font("メイリオ", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lblMessage.Location = New System.Drawing.Point(42, 26)
         Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(542, 44)
+        Me.lblMessage.Size = New System.Drawing.Size(542, 49)
         Me.lblMessage.TabIndex = 0
         Me.lblMessage.Text = "lblMessage"
         Me.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -41,21 +41,27 @@ Partial Class EndForm
         'btnEnd
         '
         Me.btnEnd.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnEnd.Location = New System.Drawing.Point(48, 87)
+        Me.btnEnd.Image = Global.RecordedDelivery.My.Resources.Resources.power_small
+        Me.btnEnd.Location = New System.Drawing.Point(48, 104)
         Me.btnEnd.Name = "btnEnd"
-        Me.btnEnd.Size = New System.Drawing.Size(200, 50)
+        Me.btnEnd.Size = New System.Drawing.Size(200, 55)
         Me.btnEnd.TabIndex = 5
         Me.btnEnd.Text = "終了実行"
+        Me.btnEnd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnEnd.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
         Me.btnCancel.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnCancel.Location = New System.Drawing.Point(384, 87)
+        Me.btnCancel.Image = Global.RecordedDelivery.My.Resources.Resources.cancel
+        Me.btnCancel.Location = New System.Drawing.Point(384, 104)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(200, 50)
+        Me.btnCancel.Size = New System.Drawing.Size(200, 55)
         Me.btnCancel.TabIndex = 6
         Me.btnCancel.Text = "キャンセル"
+        Me.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'EndForm
