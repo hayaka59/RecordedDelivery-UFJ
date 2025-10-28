@@ -48,18 +48,24 @@ Public Class SelectClassForm
             TxtBranchCd.MaxLength = 10
 
             ' 種別ファイルフィルターの設定
+            Dim sAray() As String
             CmbClassFilter.Items.Clear()
-            CmbClassFilter.Items.Add("簡易書留")
-            CmbClassFilter.Items.Add("特定記録")
-            CmbClassFilter.Items.Add("ゆうメール簡易")
+            For Each sData In PubConstClass.sClassGroupList
+                sAray = sData.Split(","c)
+                CmbClassFilter.Items.Add(sAray(0))
+            Next
+            'CmbClassFilter.Items.Add("簡易書留")
+            'CmbClassFilter.Items.Add("特定記録")
+            'CmbClassFilter.Items.Add("ゆうメール簡易")
+            'CmbClassFilter.Items.Add("一般書留・配達証明")
             CmbClassFilter.SelectedIndex = 0
 
-            ' 種別ファイルの表示
-            CmbClassification.Items.Clear()
-            For N = 0 To PubConstClass.pblClassDataIndex - 1
-                CmbClassification.Items.Add(PubConstClass.pblClassData(N))
-            Next
-            CmbClassification.SelectedIndex = 0
+            '' 種別ファイルの表示
+            'CmbClassification.Items.Clear()
+            'For N = 0 To PubConstClass.pblClassDataIndex - 1
+            '    CmbClassification.Items.Add(PubConstClass.pblClassData(N))
+            'Next
+            'CmbClassification.SelectedIndex = 0
 
         Catch ex As Exception
             MsgBox("【SelectClassForm_Load】" & ex.Message)
@@ -67,6 +73,14 @@ Public Class SelectClassForm
 
     End Sub
 
+
+
+
+
+
+    Private Sub GetClassGroupFile()
+
+    End Sub
 
     ''' <summary>
     ''' 「戻る」ボタン処理
@@ -345,6 +359,23 @@ Public Class SelectClassForm
             MsgBox("【TxtBranchCd_LostFocus】" & ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub CmbClassFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbClassFilter.SelectedIndexChanged
+
+        Dim sAray As String()
+
+        Try
+            sAray = PubConstClass.sClassGroupList(CmbClassFilter.SelectedIndex).Split(","c)
+            CmbClassification.Items.Clear()
+            For N = 1 To sAray.Length - 1
+                CmbClassification.Items.Add(sAray(N))
+            Next
+            CmbClassification.SelectedIndex = 0
+
+        Catch ex As Exception
+            MsgBox("【CmbClassFilter_SelectedIndexChanged】" & ex.Message)
+        End Try
     End Sub
 
 End Class
