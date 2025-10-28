@@ -29,8 +29,6 @@ Partial Class MngNumberForm
         Me.BtnSearch = New System.Windows.Forms.Button()
         Me.TxtClassName = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.BtnUpdate = New System.Windows.Forms.Button()
-        Me.BtnBack = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -48,6 +46,8 @@ Partial Class MngNumberForm
         Me.TxtStNum1 = New System.Windows.Forms.TextBox()
         Me.CmbMasterItem = New System.Windows.Forms.ComboBox()
         Me.BtnNewEntry = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblOperatorName
@@ -102,11 +102,14 @@ Partial Class MngNumberForm
         'BtnSearch
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
         Me.BtnSearch.Location = New System.Drawing.Point(357, 74)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(120, 50)
         Me.BtnSearch.TabIndex = 166
         Me.BtnSearch.Text = "検索"
+        Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnSearch.UseVisualStyleBackColor = True
         Me.BtnSearch.Visible = False
         '
@@ -130,26 +133,6 @@ Partial Class MngNumberForm
         Me.Label20.TabIndex = 162
         Me.Label20.Text = "種別（表示用）"
         Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnUpdate
-        '
-        Me.BtnUpdate.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnUpdate.Location = New System.Drawing.Point(213, 356)
-        Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(120, 50)
-        Me.BtnUpdate.TabIndex = 167
-        Me.BtnUpdate.Text = "更新"
-        Me.BtnUpdate.UseVisualStyleBackColor = True
-        '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(357, 356)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(120, 50)
-        Me.BtnBack.TabIndex = 168
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -334,6 +317,32 @@ Partial Class MngNumberForm
         Me.BtnNewEntry.Text = "新規登録"
         Me.BtnNewEntry.UseVisualStyleBackColor = True
         Me.BtnNewEntry.Visible = False
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_arrow
+        Me.BtnBack.Location = New System.Drawing.Point(357, 356)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(120, 50)
+        Me.BtnBack.TabIndex = 168
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnUpdate.Image = Global.RecordedDelivery.My.Resources.Resources.update
+        Me.BtnUpdate.Location = New System.Drawing.Point(213, 356)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(120, 50)
+        Me.BtnUpdate.TabIndex = 167
+        Me.BtnUpdate.Text = "更新"
+        Me.BtnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnUpdate.UseVisualStyleBackColor = True
         '
         'MngNumberForm
         '
