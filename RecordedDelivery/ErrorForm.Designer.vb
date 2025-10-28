@@ -52,11 +52,14 @@ Partial Class ErrorForm
         'btnOK
         '
         Me.btnOK.Font = New System.Drawing.Font("メイリオ", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btnOK.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
         Me.btnOK.Location = New System.Drawing.Point(280, 195)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(308, 65)
         Me.btnOK.TabIndex = 2
         Me.btnOK.Text = "ＯＫ"
+        Me.btnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnOK.UseVisualStyleBackColor = True
         '
         'ErrorForm
