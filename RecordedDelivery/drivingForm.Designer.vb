@@ -29,8 +29,6 @@ Partial Class DrivingForm
         Me.SerialPort = New System.IO.Ports.SerialPort(Me.components)
         Me.lstGetDataView = New System.Windows.Forms.ListView()
         Me.RcvTextBox = New System.Windows.Forms.TextBox()
-        Me.Pic_View = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.lblImageFileName = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblSaveLogFileName = New System.Windows.Forms.Label()
@@ -76,8 +74,6 @@ Partial Class DrivingForm
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.BtnBack = New System.Windows.Forms.Button()
-        Me.btnReceive = New System.Windows.Forms.Button()
         Me.lblYear = New System.Windows.Forms.Label()
         Me.lblCurrentTime = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -86,10 +82,7 @@ Partial Class DrivingForm
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.TimSendCom = New System.Windows.Forms.Timer(Me.components)
-        Me.Btn_Device = New System.Windows.Forms.Button()
-        Me.Btn_Snap = New System.Windows.Forms.Button()
         Me.SerialWeightPort = New System.IO.Ports.SerialPort(Me.components)
-        Me.BtnHandTran = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -133,7 +126,6 @@ Partial Class DrivingForm
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TxtPosYFeeder = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.BtnOnePage = New System.Windows.Forms.Button()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.Rdo8Face = New System.Windows.Forms.RadioButton()
         Me.Rdo15Face = New System.Windows.Forms.RadioButton()
@@ -163,8 +155,14 @@ Partial Class DrivingForm
         Me.TimSnapDelay = New System.Windows.Forms.Timer(Me.components)
         Me.ChkPositiveDirection = New System.Windows.Forms.CheckBox()
         Me.LblPositiveDirection = New System.Windows.Forms.Label()
-        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnOnePage = New System.Windows.Forms.Button()
+        Me.BtnHandTran = New System.Windows.Forms.Button()
+        Me.Pic_View = New System.Windows.Forms.PictureBox()
+        Me.Btn_Device = New System.Windows.Forms.Button()
+        Me.Btn_Snap = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnReceive = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -180,6 +178,8 @@ Partial Class DrivingForm
         Me.Pnl_Format.SuspendLayout()
         Me.Pnl_Pin.SuspendLayout()
         Me.Pnl_Filter.SuspendLayout()
+        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblVersion
@@ -213,6 +213,7 @@ Partial Class DrivingForm
         Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstGetDataView.FullRowSelect = True
         Me.lstGetDataView.GridLines = True
+        Me.lstGetDataView.HideSelection = False
         Me.lstGetDataView.Location = New System.Drawing.Point(112, 720)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
@@ -233,27 +234,6 @@ Partial Class DrivingForm
         Me.RcvTextBox.TabIndex = 15
         Me.RcvTextBox.Text = "RcvTextBox"
         Me.RcvTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Pic_View
-        '
-        Me.Pic_View.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Pic_View.Location = New System.Drawing.Point(80, 90)
-        Me.Pic_View.Name = "Pic_View"
-        Me.Pic_View.Size = New System.Drawing.Size(495, 270)
-        Me.Pic_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Pic_View.TabIndex = 19
-        Me.Pic_View.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Black
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(607, 91)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(495, 270)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 20
-        Me.PictureBox1.TabStop = False
         '
         'lblImageFileName
         '
@@ -792,24 +772,6 @@ Partial Class DrivingForm
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
-        'BtnBack
-        '
-        Me.BtnBack.Location = New System.Drawing.Point(1516, 934)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(300, 100)
-        Me.BtnBack.TabIndex = 29
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
-        'btnReceive
-        '
-        Me.btnReceive.Location = New System.Drawing.Point(1187, 934)
-        Me.btnReceive.Name = "btnReceive"
-        Me.btnReceive.Size = New System.Drawing.Size(300, 100)
-        Me.btnReceive.TabIndex = 30
-        Me.btnReceive.Text = "受領証印刷"
-        Me.btnReceive.UseVisualStyleBackColor = True
-        '
         'lblYear
         '
         Me.lblYear.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -881,39 +843,8 @@ Partial Class DrivingForm
         'TimSendCom
         '
         '
-        'Btn_Device
-        '
-        Me.Btn_Device.Font = New System.Drawing.Font("メイリオ", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Btn_Device.Location = New System.Drawing.Point(1107, 876)
-        Me.Btn_Device.Name = "Btn_Device"
-        Me.Btn_Device.Size = New System.Drawing.Size(151, 51)
-        Me.Btn_Device.TabIndex = 46
-        Me.Btn_Device.Text = "カメラ設定"
-        Me.Btn_Device.UseVisualStyleBackColor = True
-        Me.Btn_Device.Visible = False
-        '
-        'Btn_Snap
-        '
-        Me.Btn_Snap.Font = New System.Drawing.Font("メイリオ", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Btn_Snap.Location = New System.Drawing.Point(1107, 785)
-        Me.Btn_Snap.Name = "Btn_Snap"
-        Me.Btn_Snap.Size = New System.Drawing.Size(151, 87)
-        Me.Btn_Snap.TabIndex = 47
-        Me.Btn_Snap.Text = "スナップ"
-        Me.Btn_Snap.UseVisualStyleBackColor = True
-        Me.Btn_Snap.Visible = False
-        '
         'SerialWeightPort
         '
-        '
-        'BtnHandTran
-        '
-        Me.BtnHandTran.Location = New System.Drawing.Point(861, 934)
-        Me.BtnHandTran.Name = "BtnHandTran"
-        Me.BtnHandTran.Size = New System.Drawing.Size(300, 100)
-        Me.BtnHandTran.TabIndex = 49
-        Me.BtnHandTran.Text = "手差処理"
-        Me.BtnHandTran.UseVisualStyleBackColor = True
         '
         'GroupBox5
         '
@@ -1438,15 +1369,6 @@ Partial Class DrivingForm
         Me.Label24.Text = "封筒幅"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BtnOnePage
-        '
-        Me.BtnOnePage.Location = New System.Drawing.Point(543, 934)
-        Me.BtnOnePage.Name = "BtnOnePage"
-        Me.BtnOnePage.Size = New System.Drawing.Size(300, 100)
-        Me.BtnOnePage.TabIndex = 57
-        Me.BtnOnePage.Text = "一通処理"
-        Me.BtnOnePage.UseVisualStyleBackColor = True
-        '
         'GroupBox12
         '
         Me.GroupBox12.Controls.Add(Me.Rdo8Face)
@@ -1753,6 +1675,103 @@ Partial Class DrivingForm
         Me.LblPositiveDirection.Text = "画像表示反転"
         Me.LblPositiveDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'BtnOnePage
+        '
+        Me.BtnOnePage.Image = Global.RecordedDelivery.My.Resources.Resources.one_mail_small
+        Me.BtnOnePage.Location = New System.Drawing.Point(543, 934)
+        Me.BtnOnePage.Name = "BtnOnePage"
+        Me.BtnOnePage.Size = New System.Drawing.Size(300, 100)
+        Me.BtnOnePage.TabIndex = 57
+        Me.BtnOnePage.Text = "一通処理"
+        Me.BtnOnePage.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnOnePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnOnePage.UseVisualStyleBackColor = True
+        '
+        'BtnHandTran
+        '
+        Me.BtnHandTran.Image = Global.RecordedDelivery.My.Resources.Resources.hand_small
+        Me.BtnHandTran.Location = New System.Drawing.Point(861, 934)
+        Me.BtnHandTran.Name = "BtnHandTran"
+        Me.BtnHandTran.Size = New System.Drawing.Size(300, 100)
+        Me.BtnHandTran.TabIndex = 49
+        Me.BtnHandTran.Text = "手差処理"
+        Me.BtnHandTran.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnHandTran.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnHandTran.UseVisualStyleBackColor = True
+        '
+        'Pic_View
+        '
+        Me.Pic_View.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Pic_View.Location = New System.Drawing.Point(80, 90)
+        Me.Pic_View.Name = "Pic_View"
+        Me.Pic_View.Size = New System.Drawing.Size(495, 270)
+        Me.Pic_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Pic_View.TabIndex = 19
+        Me.Pic_View.TabStop = False
+        '
+        'Btn_Device
+        '
+        Me.Btn_Device.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Btn_Device.Image = Global.RecordedDelivery.My.Resources.Resources.setting_small
+        Me.Btn_Device.Location = New System.Drawing.Point(1107, 876)
+        Me.Btn_Device.Name = "Btn_Device"
+        Me.Btn_Device.Size = New System.Drawing.Size(151, 51)
+        Me.Btn_Device.TabIndex = 46
+        Me.Btn_Device.Text = "カメラ設定"
+        Me.Btn_Device.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Device.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Device.UseVisualStyleBackColor = True
+        Me.Btn_Device.Visible = False
+        '
+        'Btn_Snap
+        '
+        Me.Btn_Snap.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Btn_Snap.Image = Global.RecordedDelivery.My.Resources.Resources.camera_small
+        Me.Btn_Snap.Location = New System.Drawing.Point(1107, 785)
+        Me.Btn_Snap.Name = "Btn_Snap"
+        Me.Btn_Snap.Size = New System.Drawing.Size(151, 87)
+        Me.Btn_Snap.TabIndex = 47
+        Me.Btn_Snap.Text = "スナップ"
+        Me.Btn_Snap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Snap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Snap.UseVisualStyleBackColor = True
+        Me.Btn_Snap.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Black
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Location = New System.Drawing.Point(607, 91)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(495, 270)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 20
+        Me.PictureBox1.TabStop = False
+        '
+        'btnReceive
+        '
+        Me.btnReceive.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
+        Me.btnReceive.Location = New System.Drawing.Point(1187, 934)
+        Me.btnReceive.Name = "btnReceive"
+        Me.btnReceive.Size = New System.Drawing.Size(300, 100)
+        Me.btnReceive.TabIndex = 30
+        Me.btnReceive.Text = "受領証印刷"
+        Me.btnReceive.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnReceive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnReceive.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(1516, 934)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(300, 100)
+        Me.BtnBack.TabIndex = 29
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
         'DrivingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(16.0!, 41.0!)
@@ -1803,8 +1822,6 @@ Partial Class DrivingForm
         Me.Name = "DrivingForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "運転画面"
-        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
@@ -1824,6 +1841,8 @@ Partial Class DrivingForm
         Me.Pnl_Pin.PerformLayout()
         Me.Pnl_Filter.ResumeLayout(False)
         Me.Pnl_Filter.PerformLayout()
+        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

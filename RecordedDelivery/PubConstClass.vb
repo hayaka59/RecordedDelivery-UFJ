@@ -34,7 +34,7 @@
 
 #Region "定数定義"
     ''' <summary> バージョン情報</summary>
-    Public Const DEF_VERSION = "Ver.0.10.2.6【大型機／リプレース】"
+    Public Const DEF_VERSION = "Ver.0.10.2.8（大型機）"
     ''' <summary> 暗号化用オープンキー</summary>
     Public Const DEF_OPEN_KEY = "SSKINOSHITASS"
     Public Const USR_JOB_NAME As String = "業務名"
@@ -108,6 +108,8 @@
     Public Shared blnIsOneRound150Flg As Boolean
 #End Region
     '// 2015.12.14 Ver.B04 hayakawa 追加↑ここまで
+
+    Public Shared sClassGroupList As New List(Of String)()
 
 #Region "ログイン画面グローバル変数"
     ''' <summary> ログインオペレータコード</summary>

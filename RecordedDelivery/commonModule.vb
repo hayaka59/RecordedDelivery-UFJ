@@ -2625,4 +2625,55 @@ Module commonModule
 
     End Sub
 
+    ''' <summary>
+    ''' 種別グループファイルの読込み
+    ''' </summary>
+    Public Sub GetClassGroupFile()
+
+        Dim sReadDataPath As String
+        'Dim sClassGroupList As New List(Of String)()
+        Dim sArray() As String
+        Dim sPreviousValue As String
+        Dim sData As String
+
+        Try
+            PubConstClass.sClassGroupList.Clear()
+            sPreviousValue = ""
+            sData = ""
+
+            sReadDataPath = IncludeTrailingPathDelimiter(Application.StartupPath) & "ClassGroupFile.ini"
+            Using sr As New StreamReader(sReadDataPath, Encoding.Default)
+                Do While Not sr.EndOfStream
+                    sArray = sr.ReadLine.ToString.Split(","c)
+                    If sPreviousValue = "" Then
+                        ' 最初のデータの処理
+                        sPreviousValue = sArray(0).Trim()
+                        sData = $"{sArray(0).Trim()},{sArray(1).Trim()}"
+                    Else
+                        If sPreviousValue = sArray(0).Trim() Then
+                            ' 同じ種別コードの場合、データを連結する
+                            sData &= $",{sArray(1).Trim()}"
+                        Else
+                            ' 異なる種別コードの場合、リストに追加し、新しいデータを開始する
+                            PubConstClass.sClassGroupList.Add(sData)
+                            sPreviousValue = sArray(0).Trim()
+                            sData = $"{sArray(0).Trim()},{sArray(1).Trim()}"
+                            OutPutLogFile($"■PubConstClass.sClassGroupList({PubConstClass.sClassGroupList.Count - 1})={PubConstClass.sClassGroupList(PubConstClass.sClassGroupList.Count - 1)}")
+                        End If
+                    End If
+                Loop
+                ' 最後のデータを格納する
+                PubConstClass.sClassGroupList.Add(sData)
+                OutPutLogFile($"■sClassGroupList({PubConstClass.sClassGroupList.Count - 1})={PubConstClass.sClassGroupList(PubConstClass.sClassGroupList.Count - 1)}")
+            End Using
+
+            ' 操作ログの書き込み
+            OutPutLogFile("■読込エラーメッセージ数：" & PubConstClass.intErrCnt.ToString)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
 End Module
