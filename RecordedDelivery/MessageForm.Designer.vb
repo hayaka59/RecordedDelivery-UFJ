@@ -29,11 +29,14 @@ Partial Class MessageForm
         '
         'BtnOK
         '
+        Me.BtnOK.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
         Me.BtnOK.Location = New System.Drawing.Point(155, 117)
         Me.BtnOK.Name = "BtnOK"
         Me.BtnOK.Size = New System.Drawing.Size(177, 53)
         Me.BtnOK.TabIndex = 2
         Me.BtnOK.Text = "はい"
+        Me.BtnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnOK.UseVisualStyleBackColor = True
         '
         'LblMessage
@@ -48,11 +51,14 @@ Partial Class MessageForm
         '
         'BtnNo
         '
+        Me.BtnNo.Image = Global.RecordedDelivery.My.Resources.Resources.cancel
         Me.BtnNo.Location = New System.Drawing.Point(395, 117)
         Me.BtnNo.Name = "BtnNo"
         Me.BtnNo.Size = New System.Drawing.Size(177, 53)
         Me.BtnNo.TabIndex = 4
         Me.BtnNo.Text = "いいえ"
+        Me.BtnNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnNo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnNo.UseVisualStyleBackColor = True
         '
         'MessageForm
