@@ -483,6 +483,27 @@
   <ItemGroup>
     <None Include="icon\check_ok.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\hand_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\yubisasi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\hand_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\one_mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\one_mail_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\camera_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\setting_small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
