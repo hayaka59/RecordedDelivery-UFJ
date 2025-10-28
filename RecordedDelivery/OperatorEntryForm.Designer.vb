@@ -26,7 +26,6 @@ Partial Class OperatorEntryForm
         Me.TxtOpCode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnBack = New System.Windows.Forms.Button()
         Me.BtnEntry = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.TxtOpName = New System.Windows.Forms.TextBox()
@@ -37,9 +36,10 @@ Partial Class OperatorEntryForm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RdoAdmin = New System.Windows.Forms.RadioButton()
         Me.RdoUser = New System.Windows.Forms.RadioButton()
-        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.LblOperatorName = New System.Windows.Forms.Label()
         Me.LblDate = New System.Windows.Forms.Label()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,24 +86,17 @@ Partial Class OperatorEntryForm
         Me.Label1.Text = "オペレーターコード"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(359, 328)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(119, 58)
-        Me.BtnBack.TabIndex = 24
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
         'BtnEntry
         '
         Me.BtnEntry.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnEntry.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
         Me.BtnEntry.Location = New System.Drawing.Point(41, 328)
         Me.BtnEntry.Name = "BtnEntry"
         Me.BtnEntry.Size = New System.Drawing.Size(119, 58)
         Me.BtnEntry.TabIndex = 22
         Me.BtnEntry.Text = "登録"
+        Me.BtnEntry.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnEntry.UseVisualStyleBackColor = True
         '
         'lblTitle
@@ -207,16 +200,6 @@ Partial Class OperatorEntryForm
         Me.RdoUser.Text = "一般"
         Me.RdoUser.UseVisualStyleBackColor = True
         '
-        'BtnDelete
-        '
-        Me.BtnDelete.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(197, 328)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(119, 58)
-        Me.BtnDelete.TabIndex = 23
-        Me.BtnDelete.Text = "削除"
-        Me.BtnDelete.UseVisualStyleBackColor = True
-        '
         'LblOperatorName
         '
         Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -240,6 +223,32 @@ Partial Class OperatorEntryForm
         Me.LblDate.TabIndex = 30
         Me.LblDate.Text = "LblDate"
         Me.LblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDelete.Image = Global.RecordedDelivery.My.Resources.Resources.trash_icon
+        Me.BtnDelete.Location = New System.Drawing.Point(197, 328)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(119, 58)
+        Me.BtnDelete.TabIndex = 23
+        Me.BtnDelete.Text = "削除"
+        Me.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(359, 328)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(119, 58)
+        Me.BtnBack.TabIndex = 24
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
         '
         'OperatorEntryForm
         '
