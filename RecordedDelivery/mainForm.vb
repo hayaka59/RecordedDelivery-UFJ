@@ -112,6 +112,8 @@ Public Class MainForm
             'PubConstClass.intTokuALLCount = 0            ' 特定郵便累計
             'PubConstClass.intMailALLCount = 0            ' ゆうメール累計
 
+            ' 種別グループファイルの読み込み
+            commonModule.GetClassGroupFile()
 
 #Region "ログイン画面で呼び出すように変更"
             '' エラー情報の取得

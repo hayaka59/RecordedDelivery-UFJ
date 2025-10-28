@@ -109,6 +109,8 @@
 #End Region
     '// 2015.12.14 Ver.B04 hayakawa 追加↑ここまで
 
+    Public Shared sClassGroupList As New List(Of String)()
+
 #Region "ログイン画面グローバル変数"
     ''' <summary> ログインオペレータコード</summary>
     Public Shared pblOperatorCode As String
