@@ -65,11 +65,14 @@ Partial Class EntrySitenCodeForm
         'BtnSearch
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
         Me.BtnSearch.Location = New System.Drawing.Point(439, 93)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(120, 50)
         Me.BtnSearch.TabIndex = 168
         Me.BtnSearch.Text = "検索"
+        Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnSearch.UseVisualStyleBackColor = True
         Me.BtnSearch.Visible = False
         '
@@ -146,31 +149,40 @@ Partial Class EntrySitenCodeForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
         Me.BtnBack.Location = New System.Drawing.Point(430, 581)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(120, 50)
         Me.BtnBack.TabIndex = 174
         Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBack.UseVisualStyleBackColor = True
         '
         'BtnUpdate
         '
         Me.BtnUpdate.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnUpdate.Image = Global.RecordedDelivery.My.Resources.Resources.update
         Me.BtnUpdate.Location = New System.Drawing.Point(169, 581)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(120, 50)
         Me.BtnUpdate.TabIndex = 173
         Me.BtnUpdate.Text = "更新"
+        Me.BtnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnUpdate.UseVisualStyleBackColor = True
         '
         'BtnDelete
         '
         Me.BtnDelete.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDelete.Image = Global.RecordedDelivery.My.Resources.Resources.trash_icon
         Me.BtnDelete.Location = New System.Drawing.Point(300, 581)
         Me.BtnDelete.Name = "BtnDelete"
         Me.BtnDelete.Size = New System.Drawing.Size(120, 50)
         Me.BtnDelete.TabIndex = 175
         Me.BtnDelete.Text = "削除"
+        Me.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnDelete.UseVisualStyleBackColor = True
         '
         'LsvDataView
@@ -178,6 +190,7 @@ Partial Class EntrySitenCodeForm
         Me.LsvDataView.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LsvDataView.FullRowSelect = True
         Me.LsvDataView.GridLines = True
+        Me.LsvDataView.HideSelection = False
         Me.LsvDataView.Location = New System.Drawing.Point(39, 211)
         Me.LsvDataView.MultiSelect = False
         Me.LsvDataView.Name = "LsvDataView"
@@ -188,11 +201,14 @@ Partial Class EntrySitenCodeForm
         'BtnNew
         '
         Me.BtnNew.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnNew.Image = Global.RecordedDelivery.My.Resources.Resources.new_small
         Me.BtnNew.Location = New System.Drawing.Point(39, 581)
         Me.BtnNew.Name = "BtnNew"
         Me.BtnNew.Size = New System.Drawing.Size(120, 50)
         Me.BtnNew.TabIndex = 179
         Me.BtnNew.Text = "新規"
+        Me.BtnNew.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnNew.UseVisualStyleBackColor = True
         '
         'LblMessage
