@@ -94,21 +94,27 @@ Partial Class ConfirmKetubanForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
         Me.BtnBack.Location = New System.Drawing.Point(390, 524)
         Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(150, 40)
+        Me.BtnBack.Size = New System.Drawing.Size(170, 45)
         Me.BtnBack.TabIndex = 153
         Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBack.UseVisualStyleBackColor = True
         '
         'BtnPrint
         '
         Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
         Me.BtnPrint.Location = New System.Drawing.Point(212, 524)
         Me.BtnPrint.Name = "BtnPrint"
-        Me.BtnPrint.Size = New System.Drawing.Size(150, 40)
+        Me.BtnPrint.Size = New System.Drawing.Size(170, 45)
         Me.BtnPrint.TabIndex = 152
         Me.BtnPrint.Text = "印刷"
+        Me.BtnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnPrint.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
@@ -146,11 +152,14 @@ Partial Class ConfirmKetubanForm
         'BtnConfNumber
         '
         Me.BtnConfNumber.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnConfNumber.Location = New System.Drawing.Point(390, 129)
+        Me.BtnConfNumber.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
+        Me.BtnConfNumber.Location = New System.Drawing.Point(390, 118)
         Me.BtnConfNumber.Name = "BtnConfNumber"
-        Me.BtnConfNumber.Size = New System.Drawing.Size(150, 40)
+        Me.BtnConfNumber.Size = New System.Drawing.Size(170, 45)
         Me.BtnConfNumber.TabIndex = 157
         Me.BtnConfNumber.Text = "番号帯確認"
+        Me.BtnConfNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnConfNumber.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnConfNumber.UseVisualStyleBackColor = True
         '
         'RdoKakitome
