@@ -38,11 +38,14 @@ Partial Class InformationForm
         '
         'BtnOK
         '
+        Me.BtnOK.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
         Me.BtnOK.Location = New System.Drawing.Point(272, 116)
         Me.BtnOK.Name = "BtnOK"
         Me.BtnOK.Size = New System.Drawing.Size(177, 53)
         Me.BtnOK.TabIndex = 4
         Me.BtnOK.Text = "ＯＫ"
+        Me.BtnOK.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnOK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnOK.UseVisualStyleBackColor = True
         '
         'InformationForm
