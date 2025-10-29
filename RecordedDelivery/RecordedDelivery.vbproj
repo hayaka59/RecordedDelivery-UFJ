@@ -522,6 +522,21 @@
   <ItemGroup>
     <None Include="icon\bank_big.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\entry_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\save_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\check_sheet_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\display_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\new_small.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

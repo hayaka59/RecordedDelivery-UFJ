@@ -25,17 +25,17 @@ Partial Class DataCheckForm
         Me.lstGetDataView = New System.Windows.Forms.ListView()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TxtBranch = New System.Windows.Forms.TextBox()
-        Me.BtnSearch = New System.Windows.Forms.Button()
         Me.LblOperatorName = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
-        Me.BtnBack = New System.Windows.Forms.Button()
-        Me.BtnDisplay = New System.Windows.Forms.Button()
         Me.TxtYoteiTusu = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.LblMessage = New System.Windows.Forms.Label()
+        Me.BtnSearch = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnDisplay = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lstGetDataView
@@ -43,6 +43,7 @@ Partial Class DataCheckForm
         Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstGetDataView.FullRowSelect = True
         Me.lstGetDataView.GridLines = True
+        Me.lstGetDataView.HideSelection = False
         Me.lstGetDataView.Location = New System.Drawing.Point(29, 217)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
@@ -72,16 +73,6 @@ Partial Class DataCheckForm
         Me.TxtBranch.TabIndex = 1
         Me.TxtBranch.Text = "1234567890"
         Me.TxtBranch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'BtnSearch
-        '
-        Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnSearch.Location = New System.Drawing.Point(416, 118)
-        Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(120, 50)
-        Me.BtnSearch.TabIndex = 2
-        Me.BtnSearch.Text = "検索"
-        Me.BtnSearch.UseVisualStyleBackColor = True
         '
         'LblOperatorName
         '
@@ -128,26 +119,6 @@ Partial Class DataCheckForm
         Me.lblCurrentDate.Text = "処理日"
         Me.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(416, 467)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(120, 50)
-        Me.BtnBack.TabIndex = 5
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
-        'BtnDisplay
-        '
-        Me.BtnDisplay.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnDisplay.Location = New System.Drawing.Point(256, 467)
-        Me.BtnDisplay.Name = "BtnDisplay"
-        Me.BtnDisplay.Size = New System.Drawing.Size(120, 50)
-        Me.BtnDisplay.TabIndex = 4
-        Me.BtnDisplay.Text = "画面表示"
-        Me.BtnDisplay.UseVisualStyleBackColor = True
-        '
         'TxtYoteiTusu
         '
         Me.TxtYoteiTusu.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
@@ -192,6 +163,45 @@ Partial Class DataCheckForm
         Me.LblMessage.TabIndex = 164
         Me.LblMessage.Text = "LblMessage"
         Me.LblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnSearch
+        '
+        Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
+        Me.BtnSearch.Location = New System.Drawing.Point(436, 110)
+        Me.BtnSearch.Name = "BtnSearch"
+        Me.BtnSearch.Size = New System.Drawing.Size(150, 50)
+        Me.BtnSearch.TabIndex = 2
+        Me.BtnSearch.Text = "検索"
+        Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSearch.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(436, 473)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(150, 50)
+        Me.BtnBack.TabIndex = 5
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnDisplay
+        '
+        Me.BtnDisplay.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDisplay.Image = Global.RecordedDelivery.My.Resources.Resources.display_small
+        Me.BtnDisplay.Location = New System.Drawing.Point(255, 473)
+        Me.BtnDisplay.Name = "BtnDisplay"
+        Me.BtnDisplay.Size = New System.Drawing.Size(150, 50)
+        Me.BtnDisplay.TabIndex = 4
+        Me.BtnDisplay.Text = "画面表示"
+        Me.BtnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDisplay.UseVisualStyleBackColor = True
         '
         'DataCheckForm
         '

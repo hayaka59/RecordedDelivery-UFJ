@@ -75,6 +75,7 @@ Partial Class OperatorInputForm
         Me.TxtOperator.Name = "TxtOperator"
         Me.TxtOperator.Size = New System.Drawing.Size(188, 36)
         Me.TxtOperator.TabIndex = 1
+        Me.TxtOperator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtPassword
         '
@@ -86,6 +87,7 @@ Partial Class OperatorInputForm
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPassword.Size = New System.Drawing.Size(188, 36)
         Me.TxtPassword.TabIndex = 2
+        Me.TxtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblCurrentDate
         '
