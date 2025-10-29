@@ -24,13 +24,13 @@ Partial Class CsvOutPutForm
     Private Sub InitializeComponent()
         Me.LblOperatorName = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.BtnBack = New System.Windows.Forms.Button()
-        Me.BtnCsvOutPut = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lstGetDataView = New System.Windows.Forms.ListView()
         Me.BtnRef = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnCsvOutPut = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LblOperatorName
@@ -57,26 +57,6 @@ Partial Class CsvOutPutForm
         Me.lblTitle.TabIndex = 147
         Me.lblTitle.Text = "　ＣＳＶ出力"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(442, 72)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(150, 40)
-        Me.BtnBack.TabIndex = 146
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
-        'BtnCsvOutPut
-        '
-        Me.BtnCsvOutPut.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCsvOutPut.Location = New System.Drawing.Point(279, 129)
-        Me.BtnCsvOutPut.Name = "BtnCsvOutPut"
-        Me.BtnCsvOutPut.Size = New System.Drawing.Size(150, 40)
-        Me.BtnCsvOutPut.TabIndex = 145
-        Me.BtnCsvOutPut.Text = "CSV出力"
-        Me.BtnCsvOutPut.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
         '
@@ -126,12 +106,41 @@ Partial Class CsvOutPutForm
         'BtnRef
         '
         Me.BtnRef.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnRef.Image = Global.RecordedDelivery.My.Resources.Resources.check_sheet_small
         Me.BtnRef.Location = New System.Drawing.Point(442, 129)
         Me.BtnRef.Name = "BtnRef"
         Me.BtnRef.Size = New System.Drawing.Size(150, 40)
         Me.BtnRef.TabIndex = 170
         Me.BtnRef.Text = "参照"
+        Me.BtnRef.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRef.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRef.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(442, 72)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(150, 40)
+        Me.BtnBack.TabIndex = 146
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnCsvOutPut
+        '
+        Me.BtnCsvOutPut.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCsvOutPut.Image = Global.RecordedDelivery.My.Resources.Resources.save_icon
+        Me.BtnCsvOutPut.Location = New System.Drawing.Point(279, 129)
+        Me.BtnCsvOutPut.Name = "BtnCsvOutPut"
+        Me.BtnCsvOutPut.Size = New System.Drawing.Size(150, 40)
+        Me.BtnCsvOutPut.TabIndex = 145
+        Me.BtnCsvOutPut.Text = "CSV出力"
+        Me.BtnCsvOutPut.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCsvOutPut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCsvOutPut.UseVisualStyleBackColor = True
         '
         'CsvOutPutForm
         '
