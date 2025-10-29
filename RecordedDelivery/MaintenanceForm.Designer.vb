@@ -23,6 +23,7 @@ Partial Class MaintenanceForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MaintenanceForm))
         Me.SerialPort = New System.IO.Ports.SerialPort(Me.components)
         Me.RcvTextBox = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -669,11 +670,14 @@ Partial Class MaintenanceForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
         Me.BtnBack.Location = New System.Drawing.Point(1217, 925)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(337, 85)
         Me.BtnBack.TabIndex = 4
         Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBack.UseVisualStyleBackColor = True
         '
         'LblOperatorName
@@ -1088,11 +1092,14 @@ Partial Class MaintenanceForm
         'BtnSave
         '
         Me.BtnSave.Font = New System.Drawing.Font("メイリオ", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSave.Image = Global.RecordedDelivery.My.Resources.Resources.save_icon
         Me.BtnSave.Location = New System.Drawing.Point(822, 925)
         Me.BtnSave.Name = "BtnSave"
         Me.BtnSave.Size = New System.Drawing.Size(337, 85)
         Me.BtnSave.TabIndex = 72
-        Me.BtnSave.Text = "保　存"
+        Me.BtnSave.Text = "保存"
+        Me.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnSave.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -1185,21 +1192,27 @@ Partial Class MaintenanceForm
         'BtnRefImage
         '
         Me.BtnRefImage.Font = New System.Drawing.Font("メイリオ", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnRefImage.Image = CType(resources.GetObject("BtnRefImage.Image"), System.Drawing.Image)
         Me.BtnRefImage.Location = New System.Drawing.Point(1030, 92)
         Me.BtnRefImage.Name = "BtnRefImage"
         Me.BtnRefImage.Size = New System.Drawing.Size(125, 48)
         Me.BtnRefImage.TabIndex = 77
         Me.BtnRefImage.Text = "参照"
+        Me.BtnRefImage.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRefImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRefImage.UseVisualStyleBackColor = True
         '
         'BtnRefTran
         '
         Me.BtnRefTran.Font = New System.Drawing.Font("メイリオ", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnRefTran.Image = CType(resources.GetObject("BtnRefTran.Image"), System.Drawing.Image)
         Me.BtnRefTran.Location = New System.Drawing.Point(1030, 30)
         Me.BtnRefTran.Name = "BtnRefTran"
         Me.BtnRefTran.Size = New System.Drawing.Size(125, 48)
         Me.BtnRefTran.TabIndex = 76
         Me.BtnRefTran.Text = "参照"
+        Me.BtnRefTran.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRefTran.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRefTran.UseVisualStyleBackColor = True
         '
         'Label17
