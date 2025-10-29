@@ -22,38 +22,18 @@ Partial Class MasterListOutPutForm
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnBack = New System.Windows.Forms.Button()
-        Me.BtnPrint = New System.Windows.Forms.Button()
         Me.LblOperatorName = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblCurrentDate = New System.Windows.Forms.Label()
         Me.CmbMasterItem = New System.Windows.Forms.ComboBox()
-        Me.BtnDisplay = New System.Windows.Forms.Button()
         Me.LsvDataView = New System.Windows.Forms.ListView()
         Me.BtnInport = New System.Windows.Forms.Button()
-        Me.BtnExport = New System.Windows.Forms.Button()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.BtnExport = New System.Windows.Forms.Button()
+        Me.BtnDisplay = New System.Windows.Forms.Button()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnPrint = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(1043, 613)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(160, 50)
-        Me.BtnBack.TabIndex = 173
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
-        'BtnPrint
-        '
-        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnPrint.Location = New System.Drawing.Point(867, 613)
-        Me.BtnPrint.Name = "BtnPrint"
-        Me.BtnPrint.Size = New System.Drawing.Size(160, 50)
-        Me.BtnPrint.TabIndex = 172
-        Me.BtnPrint.Text = "印刷"
-        Me.BtnPrint.UseVisualStyleBackColor = True
         '
         'LblOperatorName
         '
@@ -102,21 +82,12 @@ Partial Class MasterListOutPutForm
         Me.CmbMasterItem.Size = New System.Drawing.Size(454, 36)
         Me.CmbMasterItem.TabIndex = 174
         '
-        'BtnDisplay
-        '
-        Me.BtnDisplay.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnDisplay.Location = New System.Drawing.Point(488, 47)
-        Me.BtnDisplay.Name = "BtnDisplay"
-        Me.BtnDisplay.Size = New System.Drawing.Size(160, 50)
-        Me.BtnDisplay.TabIndex = 176
-        Me.BtnDisplay.Text = "表示"
-        Me.BtnDisplay.UseVisualStyleBackColor = True
-        '
         'LsvDataView
         '
         Me.LsvDataView.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LsvDataView.FullRowSelect = True
         Me.LsvDataView.GridLines = True
+        Me.LsvDataView.HideSelection = False
         Me.LsvDataView.Location = New System.Drawing.Point(12, 114)
         Me.LsvDataView.MultiSelect = False
         Me.LsvDataView.Name = "LsvDataView"
@@ -126,26 +97,71 @@ Partial Class MasterListOutPutForm
         '
         'BtnInport
         '
-        Me.BtnInport.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnInport.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnInport.Image = Global.RecordedDelivery.My.Resources.Resources.upload
         Me.BtnInport.Location = New System.Drawing.Point(469, 613)
         Me.BtnInport.Name = "BtnInport"
         Me.BtnInport.Size = New System.Drawing.Size(160, 50)
         Me.BtnInport.TabIndex = 178
         Me.BtnInport.Text = "インポート"
+        Me.BtnInport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnInport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnInport.UseVisualStyleBackColor = True
+        '
+        'PrintDocument1
+        '
         '
         'BtnExport
         '
-        Me.BtnExport.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnExport.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnExport.Image = Global.RecordedDelivery.My.Resources.Resources.download
         Me.BtnExport.Location = New System.Drawing.Point(645, 613)
         Me.BtnExport.Name = "BtnExport"
         Me.BtnExport.Size = New System.Drawing.Size(160, 50)
         Me.BtnExport.TabIndex = 179
         Me.BtnExport.Text = "エクスポート"
+        Me.BtnExport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnExport.UseVisualStyleBackColor = True
         '
-        'PrintDocument1
+        'BtnDisplay
         '
+        Me.BtnDisplay.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDisplay.Image = Global.RecordedDelivery.My.Resources.Resources.display_small
+        Me.BtnDisplay.Location = New System.Drawing.Point(488, 47)
+        Me.BtnDisplay.Name = "BtnDisplay"
+        Me.BtnDisplay.Size = New System.Drawing.Size(160, 50)
+        Me.BtnDisplay.TabIndex = 176
+        Me.BtnDisplay.Text = "表示"
+        Me.BtnDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDisplay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDisplay.UseVisualStyleBackColor = True
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(1043, 613)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(160, 50)
+        Me.BtnBack.TabIndex = 173
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnPrint
+        '
+        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
+        Me.BtnPrint.Location = New System.Drawing.Point(867, 613)
+        Me.BtnPrint.Name = "BtnPrint"
+        Me.BtnPrint.Size = New System.Drawing.Size(160, 50)
+        Me.BtnPrint.TabIndex = 172
+        Me.BtnPrint.Text = "印刷"
+        Me.BtnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPrint.UseVisualStyleBackColor = True
         '
         'MasterListOutPutForm
         '

@@ -203,6 +203,16 @@ Namespace My.Resources
         '''<summary>
         '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         '''</summary>
+        Friend ReadOnly Property download() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("download", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
         Friend ReadOnly Property entry_small() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("entry_small", resourceCulture)
@@ -466,6 +476,16 @@ Namespace My.Resources
         Friend ReadOnly Property update() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("update", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        '''</summary>
+        Friend ReadOnly Property upload() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("upload", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
