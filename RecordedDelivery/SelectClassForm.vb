@@ -73,15 +73,6 @@ Public Class SelectClassForm
 
     End Sub
 
-
-
-
-
-
-    Private Sub GetClassGroupFile()
-
-    End Sub
-
     ''' <summary>
     ''' 「戻る」ボタン処理
     ''' </summary>

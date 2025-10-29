@@ -547,31 +547,40 @@ Partial Class ClassMasterForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(874, 668)
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(874, 667)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(120, 50)
         Me.BtnBack.TabIndex = 177
         Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBack.UseVisualStyleBackColor = True
         '
         'BtnEntry
         '
         Me.BtnEntry.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnEntry.Location = New System.Drawing.Point(676, 668)
+        Me.BtnEntry.Image = Global.RecordedDelivery.My.Resources.Resources.entry_small
+        Me.BtnEntry.Location = New System.Drawing.Point(691, 667)
         Me.BtnEntry.Name = "BtnEntry"
         Me.BtnEntry.Size = New System.Drawing.Size(120, 50)
         Me.BtnEntry.TabIndex = 176
         Me.BtnEntry.Text = "登録"
+        Me.BtnEntry.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnEntry.UseVisualStyleBackColor = True
         '
         'BtnSearch
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
         Me.BtnSearch.Location = New System.Drawing.Point(680, 74)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(120, 50)
         Me.BtnSearch.TabIndex = 175
         Me.BtnSearch.Text = "検索"
+        Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnSearch.UseVisualStyleBackColor = True
         Me.BtnSearch.Visible = False
         '
