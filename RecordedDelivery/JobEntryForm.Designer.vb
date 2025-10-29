@@ -23,8 +23,6 @@ Partial Class JobEntryForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.BtnSnapConfirm = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbJobList = New System.Windows.Forms.ComboBox()
         Me.lblTitle = New System.Windows.Forms.Label()
@@ -43,9 +41,7 @@ Partial Class JobEntryForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CmbClassification = New System.Windows.Forms.ComboBox()
-        Me.BtnBack = New System.Windows.Forms.Button()
         Me.LblOperatorName = New System.Windows.Forms.Label()
-        Me.Pic_View = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
@@ -70,8 +66,6 @@ Partial Class JobEntryForm
         Me.RdoTeikei = New System.Windows.Forms.RadioButton()
         Me.TxtJobName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnDevice = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Pnl_Button = New System.Windows.Forms.Panel()
         Me.Btn_Cancel = New System.Windows.Forms.Button()
@@ -100,45 +94,31 @@ Partial Class JobEntryForm
         Me.BtnSendHikiuke = New System.Windows.Forms.Button()
         Me.TxtCd = New System.Windows.Forms.TextBox()
         Me.TxtHikiuke = New System.Windows.Forms.TextBox()
-        Me.BtnCameraAdjust = New System.Windows.Forms.Button()
-        Me.BtnTestLabel = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.BtnCopy = New System.Windows.Forms.Button()
         Me.BtnPaste = New System.Windows.Forms.Button()
-        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.ChkPositiveDirection = New System.Windows.Forms.CheckBox()
         Me.LblPositiveDirection = New System.Windows.Forms.Label()
-        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnCopy = New System.Windows.Forms.Button()
+        Me.BtnTestLabel = New System.Windows.Forms.Button()
+        Me.BtnCameraAdjust = New System.Windows.Forms.Button()
+        Me.BtnDevice = New System.Windows.Forms.Button()
+        Me.Pic_View = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BtnBack = New System.Windows.Forms.Button()
+        Me.BtnSnapConfirm = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.GroupBox10.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Pnl_Button.SuspendLayout()
         Me.Pnl_Format.SuspendLayout()
         Me.Pnl_Pin.SuspendLayout()
         Me.Pnl_Filter.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnSave
-        '
-        Me.btnSave.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnSave.Location = New System.Drawing.Point(1319, 140)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(250, 68)
-        Me.btnSave.TabIndex = 6
-        Me.btnSave.Text = "保存"
-        Me.btnSave.UseVisualStyleBackColor = True
-        '
-        'BtnSnapConfirm
-        '
-        Me.BtnSnapConfirm.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnSnapConfirm.Location = New System.Drawing.Point(1319, 659)
-        Me.BtnSnapConfirm.Name = "BtnSnapConfirm"
-        Me.BtnSnapConfirm.Size = New System.Drawing.Size(250, 68)
-        Me.BtnSnapConfirm.TabIndex = 7
-        Me.BtnSnapConfirm.Text = "撮像確認"
-        Me.BtnSnapConfirm.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -340,16 +320,6 @@ Partial Class JobEntryForm
         Me.CmbClassification.Size = New System.Drawing.Size(351, 36)
         Me.CmbClassification.TabIndex = 84
         '
-        'BtnBack
-        '
-        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnBack.Location = New System.Drawing.Point(1319, 828)
-        Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(250, 68)
-        Me.BtnBack.TabIndex = 88
-        Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = True
-        '
         'LblOperatorName
         '
         Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -361,16 +331,6 @@ Partial Class JobEntryForm
         Me.LblOperatorName.TabIndex = 145
         Me.LblOperatorName.Text = "LblOperatorName"
         Me.LblOperatorName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Pic_View
-        '
-        Me.Pic_View.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Pic_View.Location = New System.Drawing.Point(244, 657)
-        Me.Pic_View.Name = "Pic_View"
-        Me.Pic_View.Size = New System.Drawing.Size(495, 270)
-        Me.Pic_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Pic_View.TabIndex = 153
-        Me.Pic_View.TabStop = False
         '
         'Label7
         '
@@ -658,26 +618,6 @@ Partial Class JobEntryForm
         Me.Label1.TabIndex = 159
         Me.Label1.Text = "業　務　名"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BtnDevice
-        '
-        Me.BtnDevice.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnDevice.Location = New System.Drawing.Point(1319, 739)
-        Me.BtnDevice.Name = "BtnDevice"
-        Me.BtnDevice.Size = New System.Drawing.Size(250, 41)
-        Me.BtnDevice.TabIndex = 161
-        Me.BtnDevice.Text = "カメラ設定"
-        Me.BtnDevice.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Black
-        Me.PictureBox1.Location = New System.Drawing.Point(770, 657)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(495, 270)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 154
-        Me.PictureBox1.TabStop = False
         '
         'Panel1
         '
@@ -978,55 +918,18 @@ Partial Class JobEntryForm
         Me.TxtHikiuke.Text = "1234567890"
         Me.TxtHikiuke.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnCameraAdjust
-        '
-        Me.BtnCameraAdjust.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCameraAdjust.Location = New System.Drawing.Point(1640, 489)
-        Me.BtnCameraAdjust.Name = "BtnCameraAdjust"
-        Me.BtnCameraAdjust.Size = New System.Drawing.Size(236, 53)
-        Me.BtnCameraAdjust.TabIndex = 165
-        Me.BtnCameraAdjust.Text = "カメラ調整"
-        Me.BtnCameraAdjust.UseVisualStyleBackColor = True
-        '
-        'BtnTestLabel
-        '
-        Me.BtnTestLabel.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnTestLabel.Location = New System.Drawing.Point(1640, 555)
-        Me.BtnTestLabel.Name = "BtnTestLabel"
-        Me.BtnTestLabel.Size = New System.Drawing.Size(236, 53)
-        Me.BtnTestLabel.TabIndex = 166
-        Me.BtnTestLabel.Text = "ラベル試貼り"
-        Me.BtnTestLabel.UseVisualStyleBackColor = True
-        '
-        'BtnCopy
-        '
-        Me.BtnCopy.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnCopy.Location = New System.Drawing.Point(248, 70)
-        Me.BtnCopy.Name = "BtnCopy"
-        Me.BtnCopy.Size = New System.Drawing.Size(200, 53)
-        Me.BtnCopy.TabIndex = 167
-        Me.BtnCopy.Text = "全項目コピー"
-        Me.BtnCopy.UseVisualStyleBackColor = True
-        '
         'BtnPaste
         '
         Me.BtnPaste.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPaste.Image = Global.RecordedDelivery.My.Resources.Resources.paste
         Me.BtnPaste.Location = New System.Drawing.Point(454, 70)
         Me.BtnPaste.Name = "BtnPaste"
         Me.BtnPaste.Size = New System.Drawing.Size(200, 53)
         Me.BtnPaste.TabIndex = 168
         Me.BtnPaste.Text = "全項目ペースト"
+        Me.BtnPaste.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPaste.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnPaste.UseVisualStyleBackColor = True
-        '
-        'BtnDelete
-        '
-        Me.BtnDelete.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnDelete.Location = New System.Drawing.Point(1619, 140)
-        Me.BtnDelete.Name = "BtnDelete"
-        Me.BtnDelete.Size = New System.Drawing.Size(250, 68)
-        Me.BtnDelete.TabIndex = 169
-        Me.BtnDelete.Text = "削除"
-        Me.BtnDelete.UseVisualStyleBackColor = True
         '
         'ChkPositiveDirection
         '
@@ -1049,6 +952,130 @@ Partial Class JobEntryForm
         Me.LblPositiveDirection.TabIndex = 173
         Me.LblPositiveDirection.Text = "画像表示反転"
         Me.LblPositiveDirection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'BtnDelete
+        '
+        Me.BtnDelete.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDelete.Image = Global.RecordedDelivery.My.Resources.Resources.trash_icon
+        Me.BtnDelete.Location = New System.Drawing.Point(1619, 140)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(250, 68)
+        Me.BtnDelete.TabIndex = 169
+        Me.BtnDelete.Text = "削除"
+        Me.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnCopy
+        '
+        Me.BtnCopy.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCopy.Image = Global.RecordedDelivery.My.Resources.Resources.copy_icon
+        Me.BtnCopy.Location = New System.Drawing.Point(248, 70)
+        Me.BtnCopy.Name = "BtnCopy"
+        Me.BtnCopy.Size = New System.Drawing.Size(200, 53)
+        Me.BtnCopy.TabIndex = 167
+        Me.BtnCopy.Text = "全項目コピー"
+        Me.BtnCopy.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCopy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCopy.UseVisualStyleBackColor = True
+        '
+        'BtnTestLabel
+        '
+        Me.BtnTestLabel.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnTestLabel.Image = Global.RecordedDelivery.My.Resources.Resources.attach
+        Me.BtnTestLabel.Location = New System.Drawing.Point(1640, 555)
+        Me.BtnTestLabel.Name = "BtnTestLabel"
+        Me.BtnTestLabel.Size = New System.Drawing.Size(236, 53)
+        Me.BtnTestLabel.TabIndex = 166
+        Me.BtnTestLabel.Text = "ラベル試貼り"
+        Me.BtnTestLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnTestLabel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnTestLabel.UseVisualStyleBackColor = True
+        '
+        'BtnCameraAdjust
+        '
+        Me.BtnCameraAdjust.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnCameraAdjust.Image = Global.RecordedDelivery.My.Resources.Resources.setting_small
+        Me.BtnCameraAdjust.Location = New System.Drawing.Point(1640, 489)
+        Me.BtnCameraAdjust.Name = "BtnCameraAdjust"
+        Me.BtnCameraAdjust.Size = New System.Drawing.Size(236, 53)
+        Me.BtnCameraAdjust.TabIndex = 165
+        Me.BtnCameraAdjust.Text = "カメラ調整"
+        Me.BtnCameraAdjust.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnCameraAdjust.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCameraAdjust.UseVisualStyleBackColor = True
+        '
+        'BtnDevice
+        '
+        Me.BtnDevice.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnDevice.Image = Global.RecordedDelivery.My.Resources.Resources.setting_small
+        Me.BtnDevice.Location = New System.Drawing.Point(1319, 739)
+        Me.BtnDevice.Name = "BtnDevice"
+        Me.BtnDevice.Size = New System.Drawing.Size(250, 45)
+        Me.BtnDevice.TabIndex = 161
+        Me.BtnDevice.Text = "カメラ設定"
+        Me.BtnDevice.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnDevice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnDevice.UseVisualStyleBackColor = True
+        '
+        'Pic_View
+        '
+        Me.Pic_View.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Pic_View.Location = New System.Drawing.Point(244, 657)
+        Me.Pic_View.Name = "Pic_View"
+        Me.Pic_View.Size = New System.Drawing.Size(495, 270)
+        Me.Pic_View.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Pic_View.TabIndex = 153
+        Me.Pic_View.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Black
+        Me.PictureBox1.Location = New System.Drawing.Point(770, 657)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(495, 270)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 154
+        Me.PictureBox1.TabStop = False
+        '
+        'BtnBack
+        '
+        Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
+        Me.BtnBack.Location = New System.Drawing.Point(1319, 828)
+        Me.BtnBack.Name = "BtnBack"
+        Me.BtnBack.Size = New System.Drawing.Size(250, 68)
+        Me.BtnBack.TabIndex = 88
+        Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
+        '
+        'BtnSnapConfirm
+        '
+        Me.BtnSnapConfirm.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSnapConfirm.Image = Global.RecordedDelivery.My.Resources.Resources.camera_small
+        Me.BtnSnapConfirm.Location = New System.Drawing.Point(1319, 659)
+        Me.BtnSnapConfirm.Name = "BtnSnapConfirm"
+        Me.BtnSnapConfirm.Size = New System.Drawing.Size(250, 68)
+        Me.BtnSnapConfirm.TabIndex = 7
+        Me.BtnSnapConfirm.Text = "撮像確認"
+        Me.BtnSnapConfirm.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSnapConfirm.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSnapConfirm.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btnSave.Image = Global.RecordedDelivery.My.Resources.Resources.save_icon
+        Me.btnSave.Location = New System.Drawing.Point(1319, 140)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(250, 68)
+        Me.btnSave.TabIndex = 6
+        Me.btnSave.Text = "保存"
+        Me.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnSave.UseVisualStyleBackColor = True
         '
         'JobEntryForm
         '
@@ -1104,11 +1131,9 @@ Partial Class JobEntryForm
         Me.MinimizeBox = False
         Me.Name = "JobEntryForm"
         Me.Text = "業務登録"
-        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox10.ResumeLayout(False)
         Me.GroupBox10.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Pnl_Button.ResumeLayout(False)
         Me.Pnl_Format.ResumeLayout(False)
@@ -1119,6 +1144,8 @@ Partial Class JobEntryForm
         Me.Pnl_Filter.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.Pic_View, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

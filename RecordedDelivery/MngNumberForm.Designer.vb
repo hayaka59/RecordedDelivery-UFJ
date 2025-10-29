@@ -310,11 +310,14 @@ Partial Class MngNumberForm
         'BtnNewEntry
         '
         Me.BtnNewEntry.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnNewEntry.Image = Global.RecordedDelivery.My.Resources.Resources.new_small
         Me.BtnNewEntry.Location = New System.Drawing.Point(12, 376)
         Me.BtnNewEntry.Name = "BtnNewEntry"
-        Me.BtnNewEntry.Size = New System.Drawing.Size(120, 50)
+        Me.BtnNewEntry.Size = New System.Drawing.Size(149, 50)
         Me.BtnNewEntry.TabIndex = 195
         Me.BtnNewEntry.Text = "新規登録"
+        Me.BtnNewEntry.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnNewEntry.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnNewEntry.UseVisualStyleBackColor = True
         Me.BtnNewEntry.Visible = False
         '
