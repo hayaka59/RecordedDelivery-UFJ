@@ -68,27 +68,33 @@ Partial Class BranchTotalForm
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
         Me.BtnBack.Location = New System.Drawing.Point(384, 139)
         Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(150, 40)
+        Me.BtnBack.Size = New System.Drawing.Size(150, 45)
         Me.BtnBack.TabIndex = 136
         Me.BtnBack.Text = "戻る"
-        Me.BtnBack.UseVisualStyleBackColor = true
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnBack.UseVisualStyleBackColor = True
         '
         'BtnPrint
         '
-        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
         Me.BtnPrint.Location = New System.Drawing.Point(221, 139)
         Me.BtnPrint.Name = "BtnPrint"
-        Me.BtnPrint.Size = New System.Drawing.Size(150, 40)
+        Me.BtnPrint.Size = New System.Drawing.Size(150, 45)
         Me.BtnPrint.TabIndex = 135
         Me.BtnPrint.Text = "印刷"
-        Me.BtnPrint.UseVisualStyleBackColor = true
+        Me.BtnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPrint.UseVisualStyleBackColor = True
         '
         'lblTitle
         '
-        Me.lblTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.lblTitle.Font = New System.Drawing.Font("メイリオ", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.lblTitle.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblTitle.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.White
         Me.lblTitle.Location = New System.Drawing.Point(0, 0)
         Me.lblTitle.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
@@ -100,8 +106,8 @@ Partial Class BranchTotalForm
         '
         'LblOperatorName
         '
-        Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128,Byte),Integer), CType(CType(128,Byte),Integer), CType(CType(255,Byte),Integer))
-        Me.LblOperatorName.Font = New System.Drawing.Font("メイリオ", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
+        Me.LblOperatorName.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblOperatorName.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LblOperatorName.ForeColor = System.Drawing.Color.White
         Me.LblOperatorName.Location = New System.Drawing.Point(375, 3)
         Me.LblOperatorName.Name = "LblOperatorName"
@@ -112,9 +118,10 @@ Partial Class BranchTotalForm
         '
         'lstGetDataView
         '
-        Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 12!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128,Byte))
-        Me.lstGetDataView.FullRowSelect = true
-        Me.lstGetDataView.GridLines = true
+        Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lstGetDataView.FullRowSelect = True
+        Me.lstGetDataView.GridLines = True
+        Me.lstGetDataView.HideSelection = False
         Me.lstGetDataView.Location = New System.Drawing.Point(6, 198)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
