@@ -405,6 +405,7 @@ Partial Class SearchResultForm
         Me.lstGetDataView.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.lstGetDataView.FullRowSelect = True
         Me.lstGetDataView.GridLines = True
+        Me.lstGetDataView.HideSelection = False
         Me.lstGetDataView.Location = New System.Drawing.Point(782, 228)
         Me.lstGetDataView.MultiSelect = False
         Me.lstGetDataView.Name = "lstGetDataView"
@@ -457,20 +458,26 @@ Partial Class SearchResultForm
         '
         'BtnBack
         '
+        Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_arrow
         Me.BtnBack.Location = New System.Drawing.Point(1194, 935)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(300, 100)
         Me.BtnBack.TabIndex = 152
         Me.BtnBack.Text = "戻る"
+        Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnBack.UseVisualStyleBackColor = True
         '
         'BtnEnd
         '
+        Me.BtnEnd.Image = Global.RecordedDelivery.My.Resources.Resources.cancel
         Me.BtnEnd.Location = New System.Drawing.Point(1511, 935)
         Me.BtnEnd.Name = "BtnEnd"
         Me.BtnEnd.Size = New System.Drawing.Size(300, 100)
         Me.BtnEnd.TabIndex = 153
         Me.BtnEnd.Text = "終了"
+        Me.BtnEnd.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnEnd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnEnd.UseVisualStyleBackColor = True
         '
         'DateTimeTimer
@@ -583,11 +590,14 @@ Partial Class SearchResultForm
         '
         'BtnRePrint
         '
+        Me.BtnRePrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
         Me.BtnRePrint.Location = New System.Drawing.Point(414, 821)
         Me.BtnRePrint.Name = "BtnRePrint"
         Me.BtnRePrint.Size = New System.Drawing.Size(300, 100)
         Me.BtnRePrint.TabIndex = 164
         Me.BtnRePrint.Text = "受領証再作成"
+        Me.BtnRePrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRePrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRePrint.UseVisualStyleBackColor = True
         '
         'Label9
@@ -601,6 +611,9 @@ Partial Class SearchResultForm
         Me.Label9.TabIndex = 165
         Me.Label9.Text = "↑抜取する引受番号のチェックボックスにチェックを入れてください"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'PrintDocument1
+        '
         '
         'SearchResultForm
         '
