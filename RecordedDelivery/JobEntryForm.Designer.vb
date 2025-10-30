@@ -45,8 +45,6 @@ Partial Class JobEntryForm
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.BtnRecieveSetData = New System.Windows.Forms.Button()
-        Me.BtnSendSetData = New System.Windows.Forms.Button()
         Me.TxtPosXCapture = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.TxtPosYCapture = New System.Windows.Forms.TextBox()
@@ -95,14 +93,16 @@ Partial Class JobEntryForm
         Me.TxtCd = New System.Windows.Forms.TextBox()
         Me.TxtHikiuke = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.BtnPaste = New System.Windows.Forms.Button()
         Me.ChkPositiveDirection = New System.Windows.Forms.CheckBox()
         Me.LblPositiveDirection = New System.Windows.Forms.Label()
         Me.BtnDelete = New System.Windows.Forms.Button()
+        Me.BtnPaste = New System.Windows.Forms.Button()
         Me.BtnCopy = New System.Windows.Forms.Button()
         Me.BtnTestLabel = New System.Windows.Forms.Button()
         Me.BtnCameraAdjust = New System.Windows.Forms.Button()
         Me.BtnDevice = New System.Windows.Forms.Button()
+        Me.BtnRecieveSetData = New System.Windows.Forms.Button()
+        Me.BtnSendSetData = New System.Windows.Forms.Button()
         Me.Pic_View = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnBack = New System.Windows.Forms.Button()
@@ -379,26 +379,6 @@ Partial Class JobEntryForm
         Me.GroupBox10.Size = New System.Drawing.Size(304, 430)
         Me.GroupBox10.TabIndex = 157
         Me.GroupBox10.TabStop = False
-        '
-        'BtnRecieveSetData
-        '
-        Me.BtnRecieveSetData.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnRecieveSetData.Location = New System.Drawing.Point(161, 340)
-        Me.BtnRecieveSetData.Name = "BtnRecieveSetData"
-        Me.BtnRecieveSetData.Size = New System.Drawing.Size(121, 52)
-        Me.BtnRecieveSetData.TabIndex = 48
-        Me.BtnRecieveSetData.Text = "現在値要求"
-        Me.BtnRecieveSetData.UseVisualStyleBackColor = True
-        '
-        'BtnSendSetData
-        '
-        Me.BtnSendSetData.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnSendSetData.Location = New System.Drawing.Point(19, 340)
-        Me.BtnSendSetData.Name = "BtnSendSetData"
-        Me.BtnSendSetData.Size = New System.Drawing.Size(121, 52)
-        Me.BtnSendSetData.TabIndex = 47
-        Me.BtnSendSetData.Text = "設定送信"
-        Me.BtnSendSetData.UseVisualStyleBackColor = True
         '
         'TxtPosXCapture
         '
@@ -918,19 +898,6 @@ Partial Class JobEntryForm
         Me.TxtHikiuke.Text = "1234567890"
         Me.TxtHikiuke.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'BtnPaste
-        '
-        Me.BtnPaste.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnPaste.Image = Global.RecordedDelivery.My.Resources.Resources.paste
-        Me.BtnPaste.Location = New System.Drawing.Point(454, 70)
-        Me.BtnPaste.Name = "BtnPaste"
-        Me.BtnPaste.Size = New System.Drawing.Size(200, 53)
-        Me.BtnPaste.TabIndex = 168
-        Me.BtnPaste.Text = "全項目ペースト"
-        Me.BtnPaste.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BtnPaste.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.BtnPaste.UseVisualStyleBackColor = True
-        '
         'ChkPositiveDirection
         '
         Me.ChkPositiveDirection.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -965,6 +932,19 @@ Partial Class JobEntryForm
         Me.BtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnDelete.UseVisualStyleBackColor = True
+        '
+        'BtnPaste
+        '
+        Me.BtnPaste.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnPaste.Image = Global.RecordedDelivery.My.Resources.Resources.paste
+        Me.BtnPaste.Location = New System.Drawing.Point(454, 70)
+        Me.BtnPaste.Name = "BtnPaste"
+        Me.BtnPaste.Size = New System.Drawing.Size(200, 53)
+        Me.BtnPaste.TabIndex = 168
+        Me.BtnPaste.Text = "全項目ペースト"
+        Me.BtnPaste.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnPaste.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnPaste.UseVisualStyleBackColor = True
         '
         'BtnCopy
         '
@@ -1017,6 +997,32 @@ Partial Class JobEntryForm
         Me.BtnDevice.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.BtnDevice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnDevice.UseVisualStyleBackColor = True
+        '
+        'BtnRecieveSetData
+        '
+        Me.BtnRecieveSetData.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnRecieveSetData.Image = Global.RecordedDelivery.My.Resources.Resources.getdata
+        Me.BtnRecieveSetData.Location = New System.Drawing.Point(157, 349)
+        Me.BtnRecieveSetData.Name = "BtnRecieveSetData"
+        Me.BtnRecieveSetData.Size = New System.Drawing.Size(130, 52)
+        Me.BtnRecieveSetData.TabIndex = 48
+        Me.BtnRecieveSetData.Text = "現在値要求"
+        Me.BtnRecieveSetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnRecieveSetData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnRecieveSetData.UseVisualStyleBackColor = True
+        '
+        'BtnSendSetData
+        '
+        Me.BtnSendSetData.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.BtnSendSetData.Image = Global.RecordedDelivery.My.Resources.Resources.putdata
+        Me.BtnSendSetData.Location = New System.Drawing.Point(24, 350)
+        Me.BtnSendSetData.Name = "BtnSendSetData"
+        Me.BtnSendSetData.Size = New System.Drawing.Size(130, 50)
+        Me.BtnSendSetData.TabIndex = 47
+        Me.BtnSendSetData.Text = "設定送信"
+        Me.BtnSendSetData.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnSendSetData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSendSetData.UseVisualStyleBackColor = True
         '
         'Pic_View
         '
