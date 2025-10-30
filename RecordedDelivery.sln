@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "RecordedDelivery", "RecordedDelivery\RecordedDelivery.vbproj", "{339C0F61-F8EA-4241-887C-A96F027F5292}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ADPシミュレータ", "ADPシミュレータ\ADPシミュレータ.vbproj", "{02FB9C16-E268-40CF-A07A-65D76F8DB309}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{339C0F61-F8EA-4241-887C-A96F027F5292}.Debug|x86.Build.0 = Debug|x86
 		{339C0F61-F8EA-4241-887C-A96F027F5292}.Release|x86.ActiveCfg = Release|x86
 		{339C0F61-F8EA-4241-887C-A96F027F5292}.Release|x86.Build.0 = Release|x86
+		{02FB9C16-E268-40CF-A07A-65D76F8DB309}.Debug|x86.ActiveCfg = Debug|x86
+		{02FB9C16-E268-40CF-A07A-65D76F8DB309}.Debug|x86.Build.0 = Debug|x86
+		{02FB9C16-E268-40CF-A07A-65D76F8DB309}.Release|x86.ActiveCfg = Release|x86
+		{02FB9C16-E268-40CF-A07A-65D76F8DB309}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
