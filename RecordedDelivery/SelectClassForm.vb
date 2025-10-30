@@ -54,18 +54,7 @@ Public Class SelectClassForm
                 sAray = sData.Split(","c)
                 CmbClassFilter.Items.Add(sAray(0))
             Next
-            'CmbClassFilter.Items.Add("簡易書留")
-            'CmbClassFilter.Items.Add("特定記録")
-            'CmbClassFilter.Items.Add("ゆうメール簡易")
-            'CmbClassFilter.Items.Add("一般書留・配達証明")
             CmbClassFilter.SelectedIndex = 0
-
-            '' 種別ファイルの表示
-            'CmbClassification.Items.Clear()
-            'For N = 0 To PubConstClass.pblClassDataIndex - 1
-            '    CmbClassification.Items.Add(PubConstClass.pblClassData(N))
-            'Next
-            'CmbClassification.SelectedIndex = 0
 
         Catch ex As Exception
             MsgBox("【SelectClassForm_Load】" & ex.Message)

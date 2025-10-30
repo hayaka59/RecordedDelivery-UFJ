@@ -271,7 +271,7 @@ Partial Class SelectClassForm
         'BtnNext
         '
         Me.BtnNext.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnNext.Image = Global.RecordedDelivery.My.Resources.Resources.next_small
+        Me.BtnNext.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
         Me.BtnNext.Location = New System.Drawing.Point(65, 469)
         Me.BtnNext.Name = "BtnNext"
         Me.BtnNext.Size = New System.Drawing.Size(150, 45)
