@@ -129,6 +129,16 @@
   <metadata name="TimWeight.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>392, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAONJREFUWEfN
+        lzEKAkEQBO9pxjuTCgqKgiKHiIKioOCH/IRP02Q3sJ3eQO3FgkmOgi6OS67rvsTMbmY2xOdNyOOPfG0j
+        YLxtBBkfoSeBjE/Qk0DGZ+hJIOML9CSQ8RV6Esj4Gj0J0XhKaYueBDK+R08CGT+iJyEad/czehKicTO7
+        oieBjN+V5+6D2rj8/iegEvH22n55LwGViDYfYYFEXNCTEkW4+wk9KVGEmR3QkxJFuPsOPSkkYoOeFBLR
+        oyclikgpLdGTQiLm6EkhEVP0pJCIMXpSoohmv2YFiGg7XsgRH48/ASwM3wJTqAdQAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>46</value>
   </metadata>

@@ -23,6 +23,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.SerialPort = New System.IO.Ports.SerialPort(Me.components)
         Me.BtnEnd = New System.Windows.Forms.Button()
         Me.BtnCmdA = New System.Windows.Forms.Button()
@@ -60,6 +61,7 @@ Partial Class MainForm
         Me.TimWeight = New System.Windows.Forms.Timer(Me.components)
         Me.BtnWeightRenzoku = New System.Windows.Forms.Button()
         Me.lblVersion = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'SerialPort
@@ -71,7 +73,8 @@ Partial Class MainForm
         '
         Me.BtnEnd.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.BtnEnd.Font = New System.Drawing.Font("メイリオ", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnEnd.Location = New System.Drawing.Point(218, 394)
+        Me.BtnEnd.Image = Global.ADPシミュレータ.My.Resources.Resources.cancel
+        Me.BtnEnd.Location = New System.Drawing.Point(215, 438)
         Me.BtnEnd.Name = "BtnEnd"
         Me.BtnEnd.Size = New System.Drawing.Size(181, 69)
         Me.BtnEnd.TabIndex = 0
@@ -324,7 +327,7 @@ Partial Class MainForm
         '
         Me.BtnRenzoku.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.BtnRenzoku.Font = New System.Drawing.Font("メイリオ", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.BtnRenzoku.Location = New System.Drawing.Point(218, 300)
+        Me.BtnRenzoku.Location = New System.Drawing.Point(216, 353)
         Me.BtnRenzoku.Name = "BtnRenzoku"
         Me.BtnRenzoku.Size = New System.Drawing.Size(181, 79)
         Me.BtnRenzoku.TabIndex = 33
@@ -429,12 +432,25 @@ Partial Class MainForm
         Me.lblVersion.Text = "lblVersion"
         Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Button1
+        '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Font = New System.Drawing.Font("メイリオ", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(216, 268)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(181, 79)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "一通処理"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(1270, 817)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblVersion)
         Me.Controls.Add(Me.BtnWeightRenzoku)
         Me.Controls.Add(Me.BtnADPmode)
@@ -515,4 +531,5 @@ Partial Class MainForm
     Friend WithEvents TimWeight As System.Windows.Forms.Timer
     Friend WithEvents BtnWeightRenzoku As System.Windows.Forms.Button
     Friend WithEvents lblVersion As Label
+    Friend WithEvents Button1 As Button
 End Class

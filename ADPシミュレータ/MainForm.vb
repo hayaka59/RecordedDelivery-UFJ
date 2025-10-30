@@ -848,4 +848,13 @@ Public Class MainForm
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        BtnCmdB.PerformClick()
+        BtnCmdD.PerformClick()
+        BtnCmdC.PerformClick()
+        BtnCmdW.PerformClick()
+
+    End Sub
+
 End Class
