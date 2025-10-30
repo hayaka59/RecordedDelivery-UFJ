@@ -59,6 +59,7 @@ Partial Class MainForm
         Me.BtnADPmode = New System.Windows.Forms.Button()
         Me.TimWeight = New System.Windows.Forms.Timer(Me.components)
         Me.BtnWeightRenzoku = New System.Windows.Forms.Button()
+        Me.lblVersion = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'SerialPort
@@ -405,6 +406,9 @@ Partial Class MainForm
         Me.BtnADPmode.Text = "大型機通信変更"
         Me.BtnADPmode.UseVisualStyleBackColor = True
         '
+        'TimWeight
+        '
+        '
         'BtnWeightRenzoku
         '
         Me.BtnWeightRenzoku.Location = New System.Drawing.Point(206, 578)
@@ -414,12 +418,24 @@ Partial Class MainForm
         Me.BtnWeightRenzoku.Text = "重量連続送信"
         Me.BtnWeightRenzoku.UseVisualStyleBackColor = True
         '
+        'lblVersion
+        '
+        Me.lblVersion.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblVersion.Location = New System.Drawing.Point(970, 776)
+        Me.lblVersion.Margin = New System.Windows.Forms.Padding(6, 0, 6, 0)
+        Me.lblVersion.Name = "lblVersion"
+        Me.lblVersion.Size = New System.Drawing.Size(285, 32)
+        Me.lblVersion.TabIndex = 42
+        Me.lblVersion.Text = "lblVersion"
+        Me.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(1270, 817)
+        Me.Controls.Add(Me.lblVersion)
         Me.Controls.Add(Me.BtnWeightRenzoku)
         Me.Controls.Add(Me.BtnADPmode)
         Me.Controls.Add(Me.BtnWeightMode)
@@ -457,7 +473,7 @@ Partial Class MainForm
         Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ADPシミュレータ"
+        Me.Text = "ADP（大型機）シミュレータ"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -498,5 +514,5 @@ Partial Class MainForm
     Friend WithEvents BtnADPmode As System.Windows.Forms.Button
     Friend WithEvents TimWeight As System.Windows.Forms.Timer
     Friend WithEvents BtnWeightRenzoku As System.Windows.Forms.Button
-
+    Friend WithEvents lblVersion As Label
 End Class

@@ -19,10 +19,10 @@ Public Class MainForm
 
             ' 操作ログの書き込み
             OutPutLogFile("〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓")
-            OutPutLogFile("【" + Me.Text + "】プログラム起動")
+            OutPutLogFile($"【{Me.Text}】プログラム起動（{PubConstClass.DEF_VERSION}）")
 
             '二重起動のチェック
-            If Diagnostics.Process.GetProcessesByName( _
+            If Diagnostics.Process.GetProcessesByName(
                 Diagnostics.Process.GetCurrentProcess.ProcessName).Length > 1 Then
                 'すでに起動していると判断する
                 OutPutLogFile("二重起動はできません。")
@@ -30,6 +30,7 @@ Public Class MainForm
                 Me.Dispose()
             End If
 
+            lblVersion.Text = PubConstClass.DEF_VERSION
             CmbM1C.Items.Clear()
             For N = 1 To 9
                 CmbM1C.Items.Add(N.ToString("0"c))
@@ -55,7 +56,7 @@ Public Class MainForm
             SerialPort.Open()
 
             Dim strSendData As String
-            strSendData = PubConstClass.CMD_SEND_C
+            strSendData = PubConstClass.CMD_SEND_P  ' 停止要求コマンド送信
             Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(strSendData & vbCr)
             SerialPort.Write(dat, 0, dat.GetLength(0))
             ' 通信ログの保存
