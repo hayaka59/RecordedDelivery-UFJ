@@ -78,6 +78,15 @@ Public Class ReceiptReprintForm
             TxtBranch.ImeMode = ImeMode.Off
             TxtBranch.MaxLength = 10
 
+            ' 種別ファイルフィルターの設定
+            Dim sAray() As String
+            CmbClassFilter.Items.Clear()
+            For Each sData In PubConstClass.sClassGroupList
+                sAray = sData.Split(","c)
+                CmbClassFilter.Items.Add(sAray(0))
+            Next
+            CmbClassFilter.SelectedIndex = 0
+
             ' CSV出力対象ファイルの表示処理
             Call DispCsvOutFile()
 
