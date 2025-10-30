@@ -36,7 +36,7 @@
     Public Const CMD_RECIEVE_s As String = "Zs"
     Public Const CMD_RECIEVE_t As String = "Zt"
 
-    Public Const DEF_VERSION = "Ver.A01a"
+    Public Const DEF_VERSION = "Ver.2025.10.30"
     Public Const DEF_FILENAME = "ADPsim.def"
     Public Const DEF_ERROR_FILENAME = "ErrorMessageList.txt"
 
