@@ -1477,43 +1477,27 @@ Public Class MainForm
     Private Sub BtnMaintenance_Click(sender As System.Object, e As System.EventArgs) Handles BtnMaintenance.Click
 
         Try
-            OperatorInputForm.bIsCloseFlag = False
-            ' オペレータ入力画面表示
-            OperatorInputForm.ShowDialog()
+            If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
+                ' 保守員以外の場合はオペレータ入力画面を表示
+                OperatorInputForm.bIsCloseFlag = False
+                ' オペレータ入力画面表示
+                OperatorInputForm.ShowDialog()
 
-            If PubConstClass.pblIsOkayFlag = True Then
+                If PubConstClass.pblIsOkayFlag = True Then
 
-                If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
-                    OutPutLogFile("■「保守員」以外の権限では保守メニューは操作できません")
-                    MsgBox("「保守員」以外の権限では保守メニューは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
-                    Exit Sub
+                    If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
+                        OutPutLogFile("■「保守員」以外の権限では保守メニューは操作できません")
+                        MsgBox("「保守員」以外の権限では保守メニューは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                        Exit Sub
+                    End If
+                    ' 保守メニュー表示処理
+                    DisplayMaitenaceForm()
                 End If
 
-                If SerialPort.IsOpen = False Then
-                    ' シリアルポートのオープン
-                    SerialPort.Open()
-                End If
-
-                ' シリアルポートにデータ送信（起動コマンド）
-                Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(PubConstClass.CMD_ACK & vbCr)
-
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-                SerialPort.Write(dat, 0, dat.GetLength(0))
-
-                ' シリアルポートのクローズ
-                SerialPort.Close()
-
-                OutPutLogFile("〓「保守メニュー」呼び出し〓")
-                ' 運用記録ログ格納
-                Call OutPutUseLogFile(LblOperatorName.Text & ":「保守メニュー」呼び出し")
-
-                MaintenanceForm.Show()
-                'Me.Hide()
             Else
-                'Me.Activate()
+                ' 保守員の場合はそのまま保守メニューへ
+                DisplayMaitenaceForm()
             End If
-
 
         Catch ex As Exception
             MsgBox("【BtnMaintenance_Click】" & ex.Message)
@@ -1522,6 +1506,38 @@ Public Class MainForm
 
     End Sub
 
+    ''' <summary>
+    ''' 保守メニュー表示処理
+    ''' </summary>
+    ''' <remarks></remarks
+    ''' </summary>
+    Private Sub DisplayMaitenaceForm()
+        Try
+            If SerialPort.IsOpen = False Then
+                ' シリアルポートのオープン
+                SerialPort.Open()
+            End If
+
+            ' シリアルポートにデータ送信（起動コマンド）
+            Dim dat As Byte() = System.Text.Encoding.GetEncoding("SHIFT-JIS").GetBytes(PubConstClass.CMD_ACK & vbCr)
+
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+            SerialPort.Write(dat, 0, dat.GetLength(0))
+
+            ' シリアルポートのクローズ
+            SerialPort.Close()
+
+            OutPutLogFile("〓「保守メニュー」呼び出し〓")
+            ' 運用記録ログ格納
+            Call OutPutUseLogFile(LblOperatorName.Text & ":「保守メニュー」呼び出し")
+
+            MaintenanceForm.Show()
+
+        Catch ex As Exception
+            MsgBox("【BtnMaintenance_Click】" & ex.Message)
+        End Try
+    End Sub
 
     ''' <summary>
     ''' 「受領証発行処理」ボタン処理
