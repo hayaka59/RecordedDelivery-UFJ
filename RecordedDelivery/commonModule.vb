@@ -2677,9 +2677,25 @@ Module commonModule
             OutPutLogFile("■読込エラーメッセージ数：" & PubConstClass.intErrCnt.ToString)
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("【GetClassGroupFile】" & ex.Message)
         End Try
 
+    End Sub
+
+    Public Sub SetComboBoxForClassFile(cmbClassFilter As ComboBox)
+        Try
+            ' 種別ファイルフィルターの設定
+            Dim sAray() As String
+            cmbClassFilter.Items.Clear()
+            For Each sData In PubConstClass.sClassGroupList
+                sAray = sData.Split(","c)
+                cmbClassFilter.Items.Add(sAray(0))
+            Next
+            cmbClassFilter.SelectedIndex = 0
+
+        Catch ex As Exception
+            MsgBox("【SetComboBoxForClassFile】" & ex.Message)
+        End Try
     End Sub
 
 End Module
