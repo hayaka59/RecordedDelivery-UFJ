@@ -34,7 +34,7 @@
 
 #Region "定数定義"
     ''' <summary> バージョン情報</summary>
-    Public Const DEF_VERSION = "Ver.0.10.3.0（大型機）"
+    Public Const DEF_VERSION = "Ver.0.10.3.1（大型機）"
     ''' <summary> 暗号化用オープンキー</summary>
     Public Const DEF_OPEN_KEY = "SSKINOSHITASS"
     Public Const USR_JOB_NAME As String = "業務名"
@@ -180,10 +180,10 @@
 #End Region
 
 #Region "引受番号管理グローバル変数"
-    Public Shared strNumberInfo(3) As String        ' 引受番号帯コードと種別（表示用）
-    Public Shared strStartNumber(3) As String       ' 開始番号
-    Public Shared strEndNumber(3) As String         ' 終了番号
-    Public Shared strCurrentNumber(3) As String     ' 番号帯の中でのスタート番号
+    Public Shared strNumberInfo(4) As String        ' 引受番号帯コードと種別（表示用）
+    Public Shared strStartNumber(4) As String       ' 開始番号
+    Public Shared strEndNumber(4) As String         ' 終了番号
+    Public Shared strCurrentNumber(4) As String     ' 番号帯の中でのスタート番号
 #End Region
 
 #Region "種別マスターグローバル変数"

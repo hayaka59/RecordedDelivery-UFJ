@@ -107,6 +107,7 @@ Public Class MngNumberForm
 
         Dim intArrayIndex As Integer
         Dim strMessage As String
+        Dim strCmpCD As String
 
         Try
             If TxtStNum1.Text.Trim = "" Or TxtStNum2.Text.Trim = "" Or _
@@ -123,14 +124,20 @@ Public Class MngNumberForm
                 Exit Sub
             End If
 
-            If CDbl(TxtStNum1.Text & TxtStNum2.Text & TxtStNum3.Text) Mod 7 <> CDbl(TxtStNum4.Text) Then
-                MsgBox("開始番号のＣＤに誤りがあります", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+            strCmpCD = (CDbl(TxtStNum1.Text & TxtStNum2.Text & TxtStNum3.Text) Mod 7).ToString("0"c)
+            'If CDbl(TxtStNum1.Text & TxtStNum2.Text & TxtStNum3.Text) Mod 7 <> CDbl(TxtStNum4.Text) Then
+            If strCmpCD <> TxtStNum4.Text Then
+                'MsgBox("開始番号のＣＤに誤りがあります", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                MsgBox($"開始番号のＣＤは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
                 TxtStNum4.Focus()
                 Exit Sub
             End If
 
-            If CDbl(TxtEnNum1.Text & TxtEnNum2.Text & TxtEnNum3.Text) Mod 7 <> CDbl(TxtEnNum4.Text) Then
-                MsgBox("終了番号のＣＤに誤りがあります", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+            strCmpCD = (CDbl(TxtEnNum1.Text & TxtEnNum2.Text & TxtEnNum3.Text) Mod 7).ToString("0"c)
+            'If CDbl(TxtEnNum1.Text & TxtEnNum2.Text & TxtEnNum3.Text) Mod 7 <> CDbl(TxtEnNum4.Text) Then
+            If strCmpCD <> TxtEnNum4.Text Then
+                'MsgBox("終了番号のＣＤに誤りがあります", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                MsgBox($"終了番号のＣＤは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
                 TxtEnNum4.Focus()
                 Exit Sub
             End If
@@ -221,6 +228,15 @@ Public Class MngNumberForm
             WritePrivateProfileString("Class150", "EndNum", PubConstClass.strEndNumber(2), strOutPutFileName)
             ' 番号帯の中でのスタート番号
             WritePrivateProfileString("Class150", "CurrentNum", PubConstClass.strCurrentNumber(2), strOutPutFileName)
+
+            ' 引受番号帯コードと種別（表示用）
+            WritePrivateProfileString("Class70", "ClassName", PubConstClass.strNumberInfo(3), strOutPutFileName)
+            ' 開始番号
+            WritePrivateProfileString("Class70", "StartNum", PubConstClass.strStartNumber(3), strOutPutFileName)
+            ' 終了番号
+            WritePrivateProfileString("Class70", "EndNum", PubConstClass.strEndNumber(3), strOutPutFileName)
+            ' 番号帯の中でのスタート番号
+            WritePrivateProfileString("Class70", "CurrentNum", PubConstClass.strCurrentNumber(3), strOutPutFileName)
 
             ' 引受番号データの再取得
             Call GetUnderWritingNumber()

@@ -91,14 +91,14 @@ Partial Class MaintenanceForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.LblStartNumber1 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LblStartNumber3 = New System.Windows.Forms.Label()
         Me.TxtSt3Num4 = New System.Windows.Forms.TextBox()
         Me.TxtSt3Num3 = New System.Windows.Forms.TextBox()
         Me.TxtSt3Num2 = New System.Windows.Forms.TextBox()
         Me.TxtSt3Num1 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LblStartNumber2 = New System.Windows.Forms.Label()
         Me.TxtSt2Num4 = New System.Windows.Forms.TextBox()
         Me.TxtSt2Num3 = New System.Windows.Forms.TextBox()
         Me.TxtSt2Num2 = New System.Windows.Forms.TextBox()
@@ -132,6 +132,11 @@ Partial Class MaintenanceForm
         Me.Label22 = New System.Windows.Forms.Label()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.BtnProcessListOutPut = New System.Windows.Forms.Button()
+        Me.LblStartNumber4 = New System.Windows.Forms.Label()
+        Me.TxtSt4Num4 = New System.Windows.Forms.TextBox()
+        Me.TxtSt4Num3 = New System.Windows.Forms.TextBox()
+        Me.TxtSt4Num2 = New System.Windows.Forms.TextBox()
+        Me.TxtSt4Num1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -671,9 +676,9 @@ Partial Class MaintenanceForm
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
-        Me.BtnBack.Location = New System.Drawing.Point(1217, 925)
+        Me.BtnBack.Location = New System.Drawing.Point(1217, 935)
         Me.BtnBack.Name = "BtnBack"
-        Me.BtnBack.Size = New System.Drawing.Size(337, 85)
+        Me.BtnBack.Size = New System.Drawing.Size(337, 70)
         Me.BtnBack.TabIndex = 4
         Me.BtnBack.Text = "戻る"
         Me.BtnBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -749,9 +754,9 @@ Partial Class MaintenanceForm
         Me.GroupBox6.Controls.Add(Me.Label4)
         Me.GroupBox6.Controls.Add(Me.TxtHeader1)
         Me.GroupBox6.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(689, 515)
+        Me.GroupBox6.Location = New System.Drawing.Point(689, 545)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(1052, 224)
+        Me.GroupBox6.Size = New System.Drawing.Size(1032, 210)
         Me.GroupBox6.TabIndex = 34
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "受領証印刷設定"
@@ -761,7 +766,7 @@ Partial Class MaintenanceForm
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(33, 154)
+        Me.Label7.Location = New System.Drawing.Point(33, 143)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(141, 49)
         Me.Label7.TabIndex = 76
@@ -771,7 +776,7 @@ Partial Class MaintenanceForm
         'TxtFooter2
         '
         Me.TxtFooter2.Font = New System.Drawing.Font("メイリオ", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtFooter2.Location = New System.Drawing.Point(176, 154)
+        Me.TxtFooter2.Location = New System.Drawing.Point(176, 143)
         Me.TxtFooter2.MaxLength = 30
         Me.TxtFooter2.Name = "TxtFooter2"
         Me.TxtFooter2.Size = New System.Drawing.Size(836, 48)
@@ -783,7 +788,7 @@ Partial Class MaintenanceForm
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(33, 98)
+        Me.Label6.Location = New System.Drawing.Point(33, 87)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(141, 49)
         Me.Label6.TabIndex = 74
@@ -793,7 +798,7 @@ Partial Class MaintenanceForm
         'TxtFooter1
         '
         Me.TxtFooter1.Font = New System.Drawing.Font("メイリオ", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtFooter1.Location = New System.Drawing.Point(176, 98)
+        Me.TxtFooter1.Location = New System.Drawing.Point(176, 87)
         Me.TxtFooter1.MaxLength = 30
         Me.TxtFooter1.Name = "TxtFooter1"
         Me.TxtFooter1.Size = New System.Drawing.Size(836, 48)
@@ -847,7 +852,7 @@ Partial Class MaintenanceForm
         'TxtSt1Num4
         '
         Me.TxtSt1Num4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt1Num4.Location = New System.Drawing.Point(493, 65)
+        Me.TxtSt1Num4.Location = New System.Drawing.Point(493, 50)
         Me.TxtSt1Num4.MaxLength = 1
         Me.TxtSt1Num4.Name = "TxtSt1Num4"
         Me.TxtSt1Num4.Size = New System.Drawing.Size(34, 39)
@@ -858,34 +863,34 @@ Partial Class MaintenanceForm
         'TxtSt1Num3
         '
         Me.TxtSt1Num3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt1Num3.Location = New System.Drawing.Point(397, 65)
+        Me.TxtSt1Num3.Location = New System.Drawing.Point(397, 50)
         Me.TxtSt1Num3.MaxLength = 5
         Me.TxtSt1Num3.Name = "TxtSt1Num3"
         Me.TxtSt1Num3.Size = New System.Drawing.Size(90, 39)
         Me.TxtSt1Num3.TabIndex = 201
-        Me.TxtSt1Num3.Text = "00001"
+        Me.TxtSt1Num3.Text = "10000"
         Me.TxtSt1Num3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt1Num2
         '
         Me.TxtSt1Num2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt1Num2.Location = New System.Drawing.Point(340, 65)
+        Me.TxtSt1Num2.Location = New System.Drawing.Point(340, 50)
         Me.TxtSt1Num2.MaxLength = 2
         Me.TxtSt1Num2.Name = "TxtSt1Num2"
         Me.TxtSt1Num2.Size = New System.Drawing.Size(51, 39)
         Me.TxtSt1Num2.TabIndex = 200
-        Me.TxtSt1Num2.Text = "79"
+        Me.TxtSt1Num2.Text = "12"
         Me.TxtSt1Num2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt1Num1
         '
         Me.TxtSt1Num1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt1Num1.Location = New System.Drawing.Point(264, 65)
+        Me.TxtSt1Num1.Location = New System.Drawing.Point(264, 50)
         Me.TxtSt1Num1.MaxLength = 3
         Me.TxtSt1Num1.Name = "TxtSt1Num1"
         Me.TxtSt1Num1.Size = New System.Drawing.Size(70, 39)
         Me.TxtSt1Num1.TabIndex = 199
-        Me.TxtSt1Num1.Text = "358"
+        Me.TxtSt1Num1.Text = "030"
         Me.TxtSt1Num1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
@@ -893,7 +898,7 @@ Partial Class MaintenanceForm
         Me.Label8.BackColor = System.Drawing.SystemColors.Control
         Me.Label8.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(481, 27)
+        Me.Label8.Location = New System.Drawing.Point(481, 21)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(98, 30)
         Me.Label8.TabIndex = 198
@@ -905,7 +910,7 @@ Partial Class MaintenanceForm
         Me.Label9.BackColor = System.Drawing.SystemColors.Control
         Me.Label9.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(406, 27)
+        Me.Label9.Location = New System.Drawing.Point(406, 21)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(64, 30)
         Me.Label9.TabIndex = 197
@@ -917,7 +922,7 @@ Partial Class MaintenanceForm
         Me.Label10.BackColor = System.Drawing.SystemColors.Control
         Me.Label10.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(331, 27)
+        Me.Label10.Location = New System.Drawing.Point(331, 21)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(62, 30)
         Me.Label10.TabIndex = 196
@@ -929,38 +934,43 @@ Partial Class MaintenanceForm
         Me.Label11.BackColor = System.Drawing.SystemColors.Control
         Me.Label11.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(265, 27)
+        Me.Label11.Location = New System.Drawing.Point(265, 21)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(57, 30)
         Me.Label11.TabIndex = 195
         Me.Label11.Text = "３桁"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label12
+        'LblStartNumber1
         '
-        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label12.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(32, 67)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(226, 35)
-        Me.Label12.TabIndex = 194
-        Me.Label12.Text = "030：簡易書留"
-        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblStartNumber1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblStartNumber1.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStartNumber1.ForeColor = System.Drawing.Color.Black
+        Me.LblStartNumber1.Location = New System.Drawing.Point(32, 52)
+        Me.LblStartNumber1.Name = "LblStartNumber1"
+        Me.LblStartNumber1.Size = New System.Drawing.Size(226, 35)
+        Me.LblStartNumber1.TabIndex = 194
+        Me.LblStartNumber1.Text = "030：簡易書留"
+        Me.LblStartNumber1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'GroupBox7
         '
-        Me.GroupBox7.Controls.Add(Me.Label14)
+        Me.GroupBox7.Controls.Add(Me.LblStartNumber4)
+        Me.GroupBox7.Controls.Add(Me.TxtSt4Num4)
+        Me.GroupBox7.Controls.Add(Me.TxtSt4Num3)
+        Me.GroupBox7.Controls.Add(Me.TxtSt4Num2)
+        Me.GroupBox7.Controls.Add(Me.TxtSt4Num1)
+        Me.GroupBox7.Controls.Add(Me.LblStartNumber3)
         Me.GroupBox7.Controls.Add(Me.TxtSt3Num4)
         Me.GroupBox7.Controls.Add(Me.TxtSt3Num3)
         Me.GroupBox7.Controls.Add(Me.TxtSt3Num2)
         Me.GroupBox7.Controls.Add(Me.TxtSt3Num1)
-        Me.GroupBox7.Controls.Add(Me.Label13)
+        Me.GroupBox7.Controls.Add(Me.LblStartNumber2)
         Me.GroupBox7.Controls.Add(Me.TxtSt2Num4)
         Me.GroupBox7.Controls.Add(Me.TxtSt2Num3)
         Me.GroupBox7.Controls.Add(Me.TxtSt2Num2)
         Me.GroupBox7.Controls.Add(Me.TxtSt2Num1)
-        Me.GroupBox7.Controls.Add(Me.Label12)
+        Me.GroupBox7.Controls.Add(Me.LblStartNumber1)
         Me.GroupBox7.Controls.Add(Me.TxtSt1Num4)
         Me.GroupBox7.Controls.Add(Me.Label11)
         Me.GroupBox7.Controls.Add(Me.TxtSt1Num3)
@@ -970,132 +980,132 @@ Partial Class MaintenanceForm
         Me.GroupBox7.Controls.Add(Me.TxtSt1Num1)
         Me.GroupBox7.Controls.Add(Me.Label8)
         Me.GroupBox7.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox7.Location = New System.Drawing.Point(689, 299)
+        Me.GroupBox7.Location = New System.Drawing.Point(689, 305)
         Me.GroupBox7.Name = "GroupBox7"
-        Me.GroupBox7.Size = New System.Drawing.Size(620, 207)
+        Me.GroupBox7.Size = New System.Drawing.Size(620, 232)
         Me.GroupBox7.TabIndex = 71
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "引受番号のスタート番号"
         '
-        'Label14
+        'LblStartNumber3
         '
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label14.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.Black
-        Me.Label14.Location = New System.Drawing.Point(32, 156)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(226, 35)
-        Me.Label14.TabIndex = 208
-        Me.Label14.Text = "150：ゆうメール"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblStartNumber3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblStartNumber3.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStartNumber3.ForeColor = System.Drawing.Color.Black
+        Me.LblStartNumber3.Location = New System.Drawing.Point(31, 138)
+        Me.LblStartNumber3.Name = "LblStartNumber3"
+        Me.LblStartNumber3.Size = New System.Drawing.Size(226, 35)
+        Me.LblStartNumber3.TabIndex = 208
+        Me.LblStartNumber3.Text = "150：ゆうメール"
+        Me.LblStartNumber3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TxtSt3Num4
         '
         Me.TxtSt3Num4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt3Num4.Location = New System.Drawing.Point(493, 154)
+        Me.TxtSt3Num4.Location = New System.Drawing.Point(492, 136)
         Me.TxtSt3Num4.MaxLength = 1
         Me.TxtSt3Num4.Name = "TxtSt3Num4"
         Me.TxtSt3Num4.Size = New System.Drawing.Size(34, 39)
         Me.TxtSt3Num4.TabIndex = 212
-        Me.TxtSt3Num4.Text = "1"
+        Me.TxtSt3Num4.Text = "4"
         Me.TxtSt3Num4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt3Num3
         '
         Me.TxtSt3Num3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt3Num3.Location = New System.Drawing.Point(397, 154)
+        Me.TxtSt3Num3.Location = New System.Drawing.Point(396, 136)
         Me.TxtSt3Num3.MaxLength = 5
         Me.TxtSt3Num3.Name = "TxtSt3Num3"
         Me.TxtSt3Num3.Size = New System.Drawing.Size(90, 39)
         Me.TxtSt3Num3.TabIndex = 211
-        Me.TxtSt3Num3.Text = "20001"
+        Me.TxtSt3Num3.Text = "10000"
         Me.TxtSt3Num3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt3Num2
         '
         Me.TxtSt3Num2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt3Num2.Location = New System.Drawing.Point(340, 154)
+        Me.TxtSt3Num2.Location = New System.Drawing.Point(339, 136)
         Me.TxtSt3Num2.MaxLength = 2
         Me.TxtSt3Num2.Name = "TxtSt3Num2"
         Me.TxtSt3Num2.Size = New System.Drawing.Size(51, 39)
         Me.TxtSt3Num2.TabIndex = 210
-        Me.TxtSt3Num2.Text = "79"
+        Me.TxtSt3Num2.Text = "78"
         Me.TxtSt3Num2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt3Num1
         '
         Me.TxtSt3Num1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt3Num1.Location = New System.Drawing.Point(264, 154)
+        Me.TxtSt3Num1.Location = New System.Drawing.Point(263, 136)
         Me.TxtSt3Num1.MaxLength = 3
         Me.TxtSt3Num1.Name = "TxtSt3Num1"
         Me.TxtSt3Num1.Size = New System.Drawing.Size(70, 39)
         Me.TxtSt3Num1.TabIndex = 209
-        Me.TxtSt3Num1.Text = "358"
+        Me.TxtSt3Num1.Text = "150"
         Me.TxtSt3Num1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label13
+        'LblStartNumber2
         '
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label13.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.Black
-        Me.Label13.Location = New System.Drawing.Point(32, 112)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(226, 35)
-        Me.Label13.TabIndex = 203
-        Me.Label13.Text = "050：特定記録"
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LblStartNumber2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblStartNumber2.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStartNumber2.ForeColor = System.Drawing.Color.Black
+        Me.LblStartNumber2.Location = New System.Drawing.Point(32, 95)
+        Me.LblStartNumber2.Name = "LblStartNumber2"
+        Me.LblStartNumber2.Size = New System.Drawing.Size(226, 35)
+        Me.LblStartNumber2.TabIndex = 203
+        Me.LblStartNumber2.Text = "050：特定記録"
+        Me.LblStartNumber2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TxtSt2Num4
         '
         Me.TxtSt2Num4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt2Num4.Location = New System.Drawing.Point(493, 110)
+        Me.TxtSt2Num4.Location = New System.Drawing.Point(493, 93)
         Me.TxtSt2Num4.MaxLength = 1
         Me.TxtSt2Num4.Name = "TxtSt2Num4"
         Me.TxtSt2Num4.Size = New System.Drawing.Size(34, 39)
         Me.TxtSt2Num4.TabIndex = 207
-        Me.TxtSt2Num4.Text = "4"
+        Me.TxtSt2Num4.Text = "2"
         Me.TxtSt2Num4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt2Num3
         '
         Me.TxtSt2Num3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt2Num3.Location = New System.Drawing.Point(397, 110)
+        Me.TxtSt2Num3.Location = New System.Drawing.Point(397, 93)
         Me.TxtSt2Num3.MaxLength = 5
         Me.TxtSt2Num3.Name = "TxtSt2Num3"
         Me.TxtSt2Num3.Size = New System.Drawing.Size(90, 39)
         Me.TxtSt2Num3.TabIndex = 206
-        Me.TxtSt2Num3.Text = "10001"
+        Me.TxtSt2Num3.Text = "10000"
         Me.TxtSt2Num3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt2Num2
         '
         Me.TxtSt2Num2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt2Num2.Location = New System.Drawing.Point(340, 110)
+        Me.TxtSt2Num2.Location = New System.Drawing.Point(340, 93)
         Me.TxtSt2Num2.MaxLength = 2
         Me.TxtSt2Num2.Name = "TxtSt2Num2"
         Me.TxtSt2Num2.Size = New System.Drawing.Size(51, 39)
         Me.TxtSt2Num2.TabIndex = 205
-        Me.TxtSt2Num2.Text = "79"
+        Me.TxtSt2Num2.Text = "34"
         Me.TxtSt2Num2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TxtSt2Num1
         '
         Me.TxtSt2Num1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtSt2Num1.Location = New System.Drawing.Point(264, 110)
+        Me.TxtSt2Num1.Location = New System.Drawing.Point(264, 93)
         Me.TxtSt2Num1.MaxLength = 3
         Me.TxtSt2Num1.Name = "TxtSt2Num1"
         Me.TxtSt2Num1.Size = New System.Drawing.Size(70, 39)
         Me.TxtSt2Num1.TabIndex = 204
-        Me.TxtSt2Num1.Text = "358"
+        Me.TxtSt2Num1.Text = "050"
         Me.TxtSt2Num1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'BtnSave
         '
         Me.BtnSave.Font = New System.Drawing.Font("メイリオ", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnSave.Image = Global.RecordedDelivery.My.Resources.Resources.save_icon
-        Me.BtnSave.Location = New System.Drawing.Point(822, 925)
+        Me.BtnSave.Location = New System.Drawing.Point(822, 935)
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(337, 85)
+        Me.BtnSave.Size = New System.Drawing.Size(337, 70)
         Me.BtnSave.TabIndex = 72
         Me.BtnSave.Text = "保存"
         Me.BtnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -1182,9 +1192,9 @@ Partial Class MaintenanceForm
         Me.GroupBox9.Controls.Add(Me.Label16)
         Me.GroupBox9.Controls.Add(Me.TxtTranLog)
         Me.GroupBox9.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox9.Location = New System.Drawing.Point(689, 744)
+        Me.GroupBox9.Location = New System.Drawing.Point(689, 765)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(1178, 162)
+        Me.GroupBox9.Size = New System.Drawing.Size(1178, 160)
         Me.GroupBox9.TabIndex = 75
         Me.GroupBox9.TabStop = False
         Me.GroupBox9.Text = "ログ保存フォルダ"
@@ -1193,7 +1203,7 @@ Partial Class MaintenanceForm
         '
         Me.BtnRefImage.Font = New System.Drawing.Font("メイリオ", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnRefImage.Image = CType(resources.GetObject("BtnRefImage.Image"), System.Drawing.Image)
-        Me.BtnRefImage.Location = New System.Drawing.Point(1030, 92)
+        Me.BtnRefImage.Location = New System.Drawing.Point(1030, 85)
         Me.BtnRefImage.Name = "BtnRefImage"
         Me.BtnRefImage.Size = New System.Drawing.Size(125, 48)
         Me.BtnRefImage.TabIndex = 77
@@ -1220,7 +1230,7 @@ Partial Class MaintenanceForm
         Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label17.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.Black
-        Me.Label17.Location = New System.Drawing.Point(33, 96)
+        Me.Label17.Location = New System.Drawing.Point(33, 89)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(141, 47)
         Me.Label17.TabIndex = 72
@@ -1230,7 +1240,7 @@ Partial Class MaintenanceForm
         'TxtImageLog
         '
         Me.TxtImageLog.Font = New System.Drawing.Font("メイリオ", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtImageLog.Location = New System.Drawing.Point(176, 95)
+        Me.TxtImageLog.Location = New System.Drawing.Point(176, 88)
         Me.TxtImageLog.MaxLength = 0
         Me.TxtImageLog.Name = "TxtImageLog"
         Me.TxtImageLog.Size = New System.Drawing.Size(836, 48)
@@ -1430,6 +1440,62 @@ Partial Class MaintenanceForm
         Me.BtnProcessListOutPut.Text = "プロセス一覧出力"
         Me.BtnProcessListOutPut.UseVisualStyleBackColor = True
         '
+        'LblStartNumber4
+        '
+        Me.LblStartNumber4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.LblStartNumber4.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.LblStartNumber4.ForeColor = System.Drawing.Color.Black
+        Me.LblStartNumber4.Location = New System.Drawing.Point(31, 182)
+        Me.LblStartNumber4.Name = "LblStartNumber4"
+        Me.LblStartNumber4.Size = New System.Drawing.Size(226, 35)
+        Me.LblStartNumber4.TabIndex = 213
+        Me.LblStartNumber4.Text = "070：書留"
+        Me.LblStartNumber4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TxtSt4Num4
+        '
+        Me.TxtSt4Num4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtSt4Num4.Location = New System.Drawing.Point(492, 180)
+        Me.TxtSt4Num4.MaxLength = 1
+        Me.TxtSt4Num4.Name = "TxtSt4Num4"
+        Me.TxtSt4Num4.Size = New System.Drawing.Size(34, 39)
+        Me.TxtSt4Num4.TabIndex = 217
+        Me.TxtSt4Num4.Text = "1"
+        Me.TxtSt4Num4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtSt4Num3
+        '
+        Me.TxtSt4Num3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtSt4Num3.Location = New System.Drawing.Point(396, 180)
+        Me.TxtSt4Num3.MaxLength = 5
+        Me.TxtSt4Num3.Name = "TxtSt4Num3"
+        Me.TxtSt4Num3.Size = New System.Drawing.Size(90, 39)
+        Me.TxtSt4Num3.TabIndex = 216
+        Me.TxtSt4Num3.Text = "10000"
+        Me.TxtSt4Num3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtSt4Num2
+        '
+        Me.TxtSt4Num2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtSt4Num2.Location = New System.Drawing.Point(339, 180)
+        Me.TxtSt4Num2.MaxLength = 2
+        Me.TxtSt4Num2.Name = "TxtSt4Num2"
+        Me.TxtSt4Num2.Size = New System.Drawing.Size(51, 39)
+        Me.TxtSt4Num2.TabIndex = 215
+        Me.TxtSt4Num2.Text = "56"
+        Me.TxtSt4Num2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'TxtSt4Num1
+        '
+        Me.TxtSt4Num1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.TxtSt4Num1.Location = New System.Drawing.Point(263, 180)
+        Me.TxtSt4Num1.MaxLength = 3
+        Me.TxtSt4Num1.Name = "TxtSt4Num1"
+        Me.TxtSt4Num1.Size = New System.Drawing.Size(70, 39)
+        Me.TxtSt4Num1.TabIndex = 214
+        Me.TxtSt4Num1.Text = "070"
+        Me.TxtSt4Num1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'MaintenanceForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 28.0!)
@@ -1532,14 +1598,14 @@ Partial Class MaintenanceForm
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents LblStartNumber1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents LblStartNumber3 As System.Windows.Forms.Label
     Friend WithEvents TxtSt3Num4 As System.Windows.Forms.TextBox
     Friend WithEvents TxtSt3Num3 As System.Windows.Forms.TextBox
     Friend WithEvents TxtSt3Num2 As System.Windows.Forms.TextBox
     Friend WithEvents TxtSt3Num1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents LblStartNumber2 As System.Windows.Forms.Label
     Friend WithEvents TxtSt2Num4 As System.Windows.Forms.TextBox
     Friend WithEvents TxtSt2Num3 As System.Windows.Forms.TextBox
     Friend WithEvents TxtSt2Num2 As System.Windows.Forms.TextBox
@@ -1597,4 +1663,9 @@ Partial Class MaintenanceForm
     Friend WithEvents TxtBarCode As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox13 As System.Windows.Forms.GroupBox
     Friend WithEvents BtnProcessListOutPut As Button
+    Friend WithEvents LblStartNumber4 As Label
+    Friend WithEvents TxtSt4Num4 As TextBox
+    Friend WithEvents TxtSt4Num3 As TextBox
+    Friend WithEvents TxtSt4Num2 As TextBox
+    Friend WithEvents TxtSt4Num1 As TextBox
 End Class

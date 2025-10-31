@@ -73,6 +73,13 @@ Public Class MaintenanceForm
             TxtSt3Num2.Text = strSubArray(1)
             TxtSt3Num3.Text = strSubArray(2)
             TxtSt3Num4.Text = strSubArray(3)
+            ' 070：書留（スタート番号）
+            strArray = PubConstClass.strCurrentNumber(3).Split(","c)
+            strSubArray = strArray(1).Split("-"c)
+            TxtSt4Num1.Text = strSubArray(0)
+            TxtSt4Num2.Text = strSubArray(1)
+            TxtSt4Num3.Text = strSubArray(2)
+            TxtSt4Num4.Text = strSubArray(3)
 
             txtVersion.Text = ""
             txtInput1.Text = ""
@@ -513,19 +520,28 @@ Public Class MaintenanceForm
         Try
             strCmpCD = (CDbl(TxtSt1Num1.Text & TxtSt1Num2.Text & TxtSt1Num3.Text) Mod 7).ToString("0"c)
             If TxtSt1Num4.Text <> strCmpCD Then
-                MsgBox("「030：簡易書留」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                'MsgBox("「030：簡易書留」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                MsgBox($"「{LblStartNumber1.Text}」のチェックデジットは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
                 Exit Sub
             End If
 
             strCmpCD = (CDbl(TxtSt2Num1.Text & TxtSt2Num2.Text & TxtSt2Num3.Text) Mod 7).ToString("0"c)
             If TxtSt2Num4.Text <> strCmpCD Then
-                MsgBox("「050：特定記録」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                'MsgBox("「050：特定記録」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                MsgBox($"「{LblStartNumber2.Text}」のチェックデジットは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
                 Exit Sub
             End If
 
             strCmpCD = (CDbl(TxtSt3Num1.Text & TxtSt3Num2.Text & TxtSt3Num3.Text) Mod 7).ToString("0"c)
             If TxtSt3Num4.Text <> strCmpCD Then
-                MsgBox("「150：ゆうメール」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                'MsgBox("「150：ゆうメール」のチェックデジットは「" & strCmpCD & "」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                MsgBox($"「{LblStartNumber3.Text}」のチェックデジットは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                Exit Sub
+            End If
+
+            strCmpCD = (CDbl(TxtSt4Num1.Text & TxtSt4Num2.Text & TxtSt4Num3.Text) Mod 7).ToString("0"c)
+            If TxtSt4Num4.Text <> strCmpCD Then
+                MsgBox($"「{LblStartNumber4.Text}」のチェックデジットは「{strCmpCD}」です", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
                 Exit Sub
             End If
 
@@ -564,6 +580,9 @@ Public Class MaintenanceForm
             WritePrivateProfileString("Class50", "CurrentNum", strPutData, strIniFilePath)
             strPutData = "スタート番号," & TxtSt3Num1.Text & "-" & TxtSt3Num2.Text & "-" & TxtSt3Num3.Text & "-" & TxtSt3Num4.Text
             WritePrivateProfileString("Class150", "CurrentNum", strPutData, strIniFilePath)
+
+            strPutData = "スタート番号," & TxtSt4Num1.Text & "-" & TxtSt4Num2.Text & "-" & TxtSt4Num3.Text & "-" & TxtSt4Num4.Text
+            WritePrivateProfileString("Class70", "CurrentNum", strPutData, strIniFilePath)
 
             ' 引受番号データの再取得
             Call GetUnderWritingNumber()
