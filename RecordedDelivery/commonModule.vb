@@ -681,7 +681,7 @@ Module commonModule
             Dim intArrayIndex As Integer = 0
             Dim strReadDataFileName As String = IncludeTrailingPathDelimiter(Application.StartupPath) & PubConstClass.DEF_UNDER_WRITING_NUMBER
 
-            ' 引受番号帯コードと種別（表示用）
+            ' 引受番号帯コードと種別（表示用）【030,簡易書留】
             PubConstClass.strNumberInfo(0) = myGetPrivateProfileString("Class30", "ClassName", "999,ＸＸＸ", strReadDataFileName)
             ' 開始番号
             PubConstClass.strStartNumber(0) = myGetPrivateProfileString("Class30", "StartNum", "開始番号,999-99-99999-9", strReadDataFileName)
@@ -690,8 +690,7 @@ Module commonModule
             ' 番号帯の中でのスタート番号
             PubConstClass.strCurrentNumber(0) = myGetPrivateProfileString("Class30", "CurrentNum", "スタート番号,999-99-99999-9", strReadDataFileName)
 
-
-            ' 引受番号帯コードと種別（表示用）
+            ' 引受番号帯コードと種別（表示用）【050,特定記録】
             PubConstClass.strNumberInfo(1) = myGetPrivateProfileString("Class50", "ClassName", "999,ＸＸＸ", strReadDataFileName)
             ' 開始番号
             PubConstClass.strStartNumber(1) = myGetPrivateProfileString("Class50", "StartNum", "開始番号,999-99-99999-9", strReadDataFileName)
@@ -700,8 +699,7 @@ Module commonModule
             ' 番号帯の中でのスタート番号
             PubConstClass.strCurrentNumber(1) = myGetPrivateProfileString("Class50", "CurrentNum", "スタート番号,999-99-99999-9", strReadDataFileName)
 
-
-            ' 引受番号帯コードと種別（表示用）
+            ' 引受番号帯コードと種別（表示用）【150,ゆうメール】
             PubConstClass.strNumberInfo(2) = myGetPrivateProfileString("Class150", "ClassName", "999,ＸＸＸ", strReadDataFileName)
             ' 開始番号
             PubConstClass.strStartNumber(2) = myGetPrivateProfileString("Class150", "StartNum", "開始番号,999-99-99999-9", strReadDataFileName)
@@ -710,6 +708,14 @@ Module commonModule
             ' 番号帯の中でのスタート番号
             PubConstClass.strCurrentNumber(2) = myGetPrivateProfileString("Class150", "CurrentNum", "スタート番号,999-99-99999-9", strReadDataFileName)
 
+            ' 引受番号帯コードと種別（表示用）【070,書留】
+            PubConstClass.strNumberInfo(3) = myGetPrivateProfileString("Class70", "ClassName", "999,ＸＸＸ", strReadDataFileName)
+            ' 開始番号
+            PubConstClass.strStartNumber(3) = myGetPrivateProfileString("Class70", "StartNum", "開始番号,999-99-99999-9", strReadDataFileName)
+            ' 終了番号
+            PubConstClass.strEndNumber(3) = myGetPrivateProfileString("Class70", "EndNum", "終了番号,999-99-99999-9", strReadDataFileName)
+            ' 番号帯の中でのスタート番号
+            PubConstClass.strCurrentNumber(3) = myGetPrivateProfileString("Class70", "CurrentNum", "スタート番号,999-99-99999-9", strReadDataFileName)
 
             'Using sr As New System.IO.StreamReader(strReadDataFileName, System.Text.Encoding.Default)
             '    Do While Not sr.EndOfStream
