@@ -47,13 +47,16 @@ Public Class SelectClassForm
             TxtBranchCd.ImeMode = ImeMode.Off
             TxtBranchCd.MaxLength = 10
 
-            ' 種別ファイルフィルターの設定
-            Dim sAray() As String
-            CmbClassFilter.Items.Clear()
-            For Each sData In PubConstClass.sClassGroupList
-                sAray = sData.Split(","c)
-                CmbClassFilter.Items.Add(sAray(0))
-            Next
+            '' 種別ファイルフィルターの設定
+            'Dim sAray() As String
+            'CmbClassFilter.Items.Clear()
+            'For Each sData In PubConstClass.sClassGroupList
+            '    sAray = sData.Split(","c)
+            '    CmbClassFilter.Items.Add(sAray(0))
+            'Next
+
+            ' 種別コンボボックスの設定
+            SetComboBoxForClassFile(CmbClassFilter)
             CmbClassFilter.SelectedIndex = 0
 
         Catch ex As Exception

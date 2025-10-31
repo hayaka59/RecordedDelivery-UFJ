@@ -27,12 +27,15 @@ Public Class ClassMasterForm
             ' 現在の年月日を取得する
             lblCurrentDate.Text = GetCurrentDate()
 
-            CmbNumberBand.Items.Clear()
-            CmbNumberBand.Items.Add("030：簡易書留")
-            CmbNumberBand.Items.Add("050：特定記録")
-            CmbNumberBand.Items.Add("150：ゆうメール")
-            CmbNumberBand.SelectedIndex = 0
+            'CmbNumberBand.Items.Clear()
+            'CmbNumberBand.Items.Add("030：簡易書留")
+            'CmbNumberBand.Items.Add("050：特定記録")
+            'CmbNumberBand.Items.Add("150：ゆうメール")
+            'CmbNumberBand.SelectedIndex = 0
 
+            ' 「種別」コンボボックスの設定
+            SetComboBoxForClassFile(CmbNumberBand)
+            CmbNumberBand.SelectedIndex = 0
 
             ' 種別ファイルの読込とコンボボックスへの登録
             Dim strReadDataFileName As String = IncludeTrailingPathDelimiter(Application.StartupPath) & PubConstClass.DEF_CLASS_FILE_NAME

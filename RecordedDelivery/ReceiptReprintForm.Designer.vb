@@ -330,9 +330,9 @@ Partial Class ReceiptReprintForm
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
-        Me.BtnSearch.Location = New System.Drawing.Point(455, 137)
+        Me.BtnSearch.Location = New System.Drawing.Point(498, 137)
         Me.BtnSearch.Name = "BtnSearch"
-        Me.BtnSearch.Size = New System.Drawing.Size(190, 68)
+        Me.BtnSearch.Size = New System.Drawing.Size(147, 68)
         Me.BtnSearch.TabIndex = 2
         Me.BtnSearch.Text = "検索"
         Me.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -385,7 +385,7 @@ Partial Class ReceiptReprintForm
         Me.CmbClassFilter.FormattingEnabled = True
         Me.CmbClassFilter.Location = New System.Drawing.Point(224, 137)
         Me.CmbClassFilter.Name = "CmbClassFilter"
-        Me.CmbClassFilter.Size = New System.Drawing.Size(183, 36)
+        Me.CmbClassFilter.Size = New System.Drawing.Size(257, 36)
         Me.CmbClassFilter.TabIndex = 150
         '
         'ReceiptReprintForm
