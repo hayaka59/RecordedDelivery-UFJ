@@ -43,7 +43,7 @@ Partial Class OperatorInputForm
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(485, 36)
         Me.lblTitle.TabIndex = 9
-        Me.lblTitle.Text = "　オペレーター入力"
+        Me.lblTitle.Text = "　ログイン画面"
         Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Label1
@@ -162,7 +162,7 @@ Partial Class OperatorInputForm
         Me.MinimizeBox = False
         Me.Name = "OperatorInputForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "オペレータ入力"
+        Me.Text = "ログイン画面"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
