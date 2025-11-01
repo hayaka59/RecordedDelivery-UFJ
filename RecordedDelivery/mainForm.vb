@@ -1478,22 +1478,24 @@ Public Class MainForm
 
         Try
             If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
-                ' 保守員以外の場合はオペレータ入力画面を表示
-                OperatorInputForm.bIsCloseFlag = False
-                ' オペレータ入力画面表示
-                OperatorInputForm.ShowDialog()
 
-                If PubConstClass.pblIsOkayFlag = True Then
+                MsgBox("「保守員」以外の権限では保守メニューは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
 
-                    If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
-                        OutPutLogFile("■「保守員」以外の権限では保守メニューは操作できません")
-                        MsgBox("「保守員」以外の権限では保守メニューは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
-                        Exit Sub
-                    End If
-                    ' 保守メニュー表示処理
-                    DisplayMaitenaceForm()
-                End If
+                '' 保守員以外の場合はオペレータ入力画面を表示
+                'OperatorInputForm.bIsCloseFlag = False
+                '' オペレータ入力画面表示
+                'OperatorInputForm.ShowDialog()
 
+                'If PubConstClass.pblIsOkayFlag = True Then
+
+                '    If PubConstClass.pblOperatorAuthorityh <> "保守員" Then
+                '        OutPutLogFile("■「保守員」以外の権限では保守メニューは操作できません")
+                '        MsgBox("「保守員」以外の権限では保守メニューは操作できません", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly, MsgBoxStyle), "確認")
+                '        Exit Sub
+                '    End If
+                '    ' 保守メニュー表示処理
+                '    DisplayMaitenaceForm()
+                'End If
             Else
                 ' 保守員の場合はそのまま保守メニューへ
                 DisplayMaitenaceForm()
@@ -1502,7 +1504,6 @@ Public Class MainForm
         Catch ex As Exception
             MsgBox("【BtnMaintenance_Click】" & ex.Message)
         End Try
-
 
     End Sub
 
