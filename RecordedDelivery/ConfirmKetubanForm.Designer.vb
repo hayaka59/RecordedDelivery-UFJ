@@ -64,6 +64,17 @@ Partial Class ConfirmKetubanForm
         Me.Label26 = New System.Windows.Forms.Label()
         Me.lblTokuAcNumS1 = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.lblHaitatuNumE4 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumE3 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumE2 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumE1 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumS4 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumS3 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumS2 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblHaitatuNumS1 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'LblOperatorName
@@ -95,7 +106,7 @@ Partial Class ConfirmKetubanForm
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
-        Me.BtnBack.Location = New System.Drawing.Point(390, 524)
+        Me.BtnBack.Location = New System.Drawing.Point(390, 636)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(170, 45)
         Me.BtnBack.TabIndex = 153
@@ -108,7 +119,7 @@ Partial Class ConfirmKetubanForm
         '
         Me.BtnPrint.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnPrint.Image = Global.RecordedDelivery.My.Resources.Resources.printer_small
-        Me.BtnPrint.Location = New System.Drawing.Point(212, 524)
+        Me.BtnPrint.Location = New System.Drawing.Point(212, 636)
         Me.BtnPrint.Name = "BtnPrint"
         Me.BtnPrint.Size = New System.Drawing.Size(170, 45)
         Me.BtnPrint.TabIndex = 152
@@ -170,12 +181,12 @@ Partial Class ConfirmKetubanForm
         Me.RdoKakitome.Size = New System.Drawing.Size(316, 28)
         Me.RdoKakitome.TabIndex = 158
         Me.RdoKakitome.TabStop = True
-        Me.RdoKakitome.Text = "書留郵便引受番号の番号帯"
+        Me.RdoKakitome.Text = "簡易書留引受番号の番号帯"
         Me.RdoKakitome.UseVisualStyleBackColor = True
         '
         'RdoYuMail
         '
-        Me.RdoYuMail.Location = New System.Drawing.Point(56, 382)
+        Me.RdoYuMail.Location = New System.Drawing.Point(56, 383)
         Me.RdoYuMail.Name = "RdoYuMail"
         Me.RdoYuMail.Size = New System.Drawing.Size(316, 28)
         Me.RdoYuMail.TabIndex = 159
@@ -316,7 +327,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumE4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumE4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumE4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumE4.Location = New System.Drawing.Point(446, 453)
+        Me.lblYumeAcNumE4.Location = New System.Drawing.Point(446, 454)
         Me.lblYumeAcNumE4.Name = "lblYumeAcNumE4"
         Me.lblYumeAcNumE4.Size = New System.Drawing.Size(34, 30)
         Me.lblYumeAcNumE4.TabIndex = 179
@@ -328,7 +339,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumE3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumE3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumE3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumE3.Location = New System.Drawing.Point(350, 453)
+        Me.lblYumeAcNumE3.Location = New System.Drawing.Point(350, 454)
         Me.lblYumeAcNumE3.Name = "lblYumeAcNumE3"
         Me.lblYumeAcNumE3.Size = New System.Drawing.Size(90, 30)
         Me.lblYumeAcNumE3.TabIndex = 178
@@ -340,7 +351,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumE2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumE2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumE2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumE2.Location = New System.Drawing.Point(293, 453)
+        Me.lblYumeAcNumE2.Location = New System.Drawing.Point(293, 454)
         Me.lblYumeAcNumE2.Name = "lblYumeAcNumE2"
         Me.lblYumeAcNumE2.Size = New System.Drawing.Size(51, 30)
         Me.lblYumeAcNumE2.TabIndex = 177
@@ -352,7 +363,7 @@ Partial Class ConfirmKetubanForm
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label10.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(78, 453)
+        Me.Label10.Location = New System.Drawing.Point(78, 454)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(134, 30)
         Me.Label10.TabIndex = 180
@@ -364,7 +375,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumE1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumE1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumE1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumE1.Location = New System.Drawing.Point(218, 453)
+        Me.lblYumeAcNumE1.Location = New System.Drawing.Point(218, 454)
         Me.lblYumeAcNumE1.Name = "lblYumeAcNumE1"
         Me.lblYumeAcNumE1.Size = New System.Drawing.Size(69, 30)
         Me.lblYumeAcNumE1.TabIndex = 176
@@ -376,7 +387,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumS4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumS4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumS4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumS4.Location = New System.Drawing.Point(446, 414)
+        Me.lblYumeAcNumS4.Location = New System.Drawing.Point(446, 415)
         Me.lblYumeAcNumS4.Name = "lblYumeAcNumS4"
         Me.lblYumeAcNumS4.Size = New System.Drawing.Size(34, 30)
         Me.lblYumeAcNumS4.TabIndex = 174
@@ -388,7 +399,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumS3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumS3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumS3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumS3.Location = New System.Drawing.Point(350, 414)
+        Me.lblYumeAcNumS3.Location = New System.Drawing.Point(350, 415)
         Me.lblYumeAcNumS3.Name = "lblYumeAcNumS3"
         Me.lblYumeAcNumS3.Size = New System.Drawing.Size(90, 30)
         Me.lblYumeAcNumS3.TabIndex = 173
@@ -400,7 +411,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumS2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumS2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumS2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumS2.Location = New System.Drawing.Point(293, 414)
+        Me.lblYumeAcNumS2.Location = New System.Drawing.Point(293, 415)
         Me.lblYumeAcNumS2.Name = "lblYumeAcNumS2"
         Me.lblYumeAcNumS2.Size = New System.Drawing.Size(51, 30)
         Me.lblYumeAcNumS2.TabIndex = 172
@@ -412,7 +423,7 @@ Partial Class ConfirmKetubanForm
         Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label16.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(78, 414)
+        Me.Label16.Location = New System.Drawing.Point(78, 415)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(134, 30)
         Me.Label16.TabIndex = 175
@@ -424,7 +435,7 @@ Partial Class ConfirmKetubanForm
         Me.lblYumeAcNumS1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.lblYumeAcNumS1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblYumeAcNumS1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblYumeAcNumS1.Location = New System.Drawing.Point(218, 414)
+        Me.lblYumeAcNumS1.Location = New System.Drawing.Point(218, 415)
         Me.lblYumeAcNumS1.Name = "lblYumeAcNumS1"
         Me.lblYumeAcNumS1.Size = New System.Drawing.Size(69, 30)
         Me.lblYumeAcNumS1.TabIndex = 171
@@ -554,12 +565,152 @@ Partial Class ConfirmKetubanForm
         'PrintDocument1
         '
         '
+        'lblHaitatuNumE4
+        '
+        Me.lblHaitatuNumE4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumE4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumE4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumE4.Location = New System.Drawing.Point(448, 570)
+        Me.lblHaitatuNumE4.Name = "lblHaitatuNumE4"
+        Me.lblHaitatuNumE4.Size = New System.Drawing.Size(34, 30)
+        Me.lblHaitatuNumE4.TabIndex = 200
+        Me.lblHaitatuNumE4.Text = "9"
+        Me.lblHaitatuNumE4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumE3
+        '
+        Me.lblHaitatuNumE3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumE3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumE3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumE3.Location = New System.Drawing.Point(352, 570)
+        Me.lblHaitatuNumE3.Name = "lblHaitatuNumE3"
+        Me.lblHaitatuNumE3.Size = New System.Drawing.Size(90, 30)
+        Me.lblHaitatuNumE3.TabIndex = 199
+        Me.lblHaitatuNumE3.Text = "99999"
+        Me.lblHaitatuNumE3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumE2
+        '
+        Me.lblHaitatuNumE2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumE2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumE2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumE2.Location = New System.Drawing.Point(295, 570)
+        Me.lblHaitatuNumE2.Name = "lblHaitatuNumE2"
+        Me.lblHaitatuNumE2.Size = New System.Drawing.Size(51, 30)
+        Me.lblHaitatuNumE2.TabIndex = 198
+        Me.lblHaitatuNumE2.Text = "99"
+        Me.lblHaitatuNumE2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.White
+        Me.Label6.Location = New System.Drawing.Point(80, 570)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(134, 30)
+        Me.Label6.TabIndex = 201
+        Me.Label6.Text = "終 了 番 号"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumE1
+        '
+        Me.lblHaitatuNumE1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumE1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumE1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumE1.Location = New System.Drawing.Point(220, 570)
+        Me.lblHaitatuNumE1.Name = "lblHaitatuNumE1"
+        Me.lblHaitatuNumE1.Size = New System.Drawing.Size(69, 30)
+        Me.lblHaitatuNumE1.TabIndex = 197
+        Me.lblHaitatuNumE1.Text = "999"
+        Me.lblHaitatuNumE1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumS4
+        '
+        Me.lblHaitatuNumS4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumS4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumS4.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumS4.Location = New System.Drawing.Point(448, 531)
+        Me.lblHaitatuNumS4.Name = "lblHaitatuNumS4"
+        Me.lblHaitatuNumS4.Size = New System.Drawing.Size(34, 30)
+        Me.lblHaitatuNumS4.TabIndex = 195
+        Me.lblHaitatuNumS4.Text = "9"
+        Me.lblHaitatuNumS4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumS3
+        '
+        Me.lblHaitatuNumS3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumS3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumS3.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumS3.Location = New System.Drawing.Point(352, 531)
+        Me.lblHaitatuNumS3.Name = "lblHaitatuNumS3"
+        Me.lblHaitatuNumS3.Size = New System.Drawing.Size(90, 30)
+        Me.lblHaitatuNumS3.TabIndex = 194
+        Me.lblHaitatuNumS3.Text = "99999"
+        Me.lblHaitatuNumS3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumS2
+        '
+        Me.lblHaitatuNumS2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumS2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumS2.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumS2.Location = New System.Drawing.Point(295, 531)
+        Me.lblHaitatuNumS2.Name = "lblHaitatuNumS2"
+        Me.lblHaitatuNumS2.Size = New System.Drawing.Size(51, 30)
+        Me.lblHaitatuNumS2.TabIndex = 193
+        Me.lblHaitatuNumS2.Text = "99"
+        Me.lblHaitatuNumS2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label12.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(80, 531)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(134, 30)
+        Me.Label12.TabIndex = 196
+        Me.Label12.Text = "開 始 番 号"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lblHaitatuNumS1
+        '
+        Me.lblHaitatuNumS1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.lblHaitatuNumS1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblHaitatuNumS1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblHaitatuNumS1.Location = New System.Drawing.Point(220, 531)
+        Me.lblHaitatuNumS1.Name = "lblHaitatuNumS1"
+        Me.lblHaitatuNumS1.Size = New System.Drawing.Size(69, 30)
+        Me.lblHaitatuNumS1.TabIndex = 192
+        Me.lblHaitatuNumS1.Text = "999"
+        Me.lblHaitatuNumS1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.Location = New System.Drawing.Point(58, 499)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(405, 28)
+        Me.RadioButton1.TabIndex = 191
+        Me.RadioButton1.Text = "一般書留・配達証明引受番号の番号帯"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
         'ConfirmKetubanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 28.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(604, 620)
+        Me.ClientSize = New System.Drawing.Size(604, 707)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblHaitatuNumE4)
+        Me.Controls.Add(Me.lblHaitatuNumE3)
+        Me.Controls.Add(Me.lblHaitatuNumE2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.lblHaitatuNumE1)
+        Me.Controls.Add(Me.lblHaitatuNumS4)
+        Me.Controls.Add(Me.lblHaitatuNumS3)
+        Me.Controls.Add(Me.lblHaitatuNumS2)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.lblHaitatuNumS1)
+        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.BtnConfNumber)
         Me.Controls.Add(Me.lblTokuAcNumE4)
         Me.Controls.Add(Me.lblTokuAcNumE3)
@@ -654,4 +805,15 @@ Partial Class ConfirmKetubanForm
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents lblTokuAcNumS1 As System.Windows.Forms.Label
     Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents lblHaitatuNumE4 As Label
+    Friend WithEvents lblHaitatuNumE3 As Label
+    Friend WithEvents lblHaitatuNumE2 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents lblHaitatuNumE1 As Label
+    Friend WithEvents lblHaitatuNumS4 As Label
+    Friend WithEvents lblHaitatuNumS3 As Label
+    Friend WithEvents lblHaitatuNumS2 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents lblHaitatuNumS1 As Label
+    Friend WithEvents RadioButton1 As RadioButton
 End Class
