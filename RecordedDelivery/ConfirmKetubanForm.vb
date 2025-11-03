@@ -74,35 +74,46 @@ Public Class ConfirmKetubanForm
     Private Sub InitDisplayData()
 
         Try
+            ' 簡易書留引受番号（開始）
             lblKakiAcNumS1.Text = ""
             lblKakiAcNumS2.Text = ""
             lblKakiAcNumS3.Text = ""
             lblKakiAcNumS4.Text = ""
-
+            ' 簡易書留引受番号（終了）
             lblKakiAcNumE1.Text = ""
             lblKakiAcNumE2.Text = ""
             lblKakiAcNumE3.Text = ""
             lblKakiAcNumE4.Text = ""
-
+            ' 特定記録引受番号（開始）
             lblYumeAcNumS1.Text = ""
             lblYumeAcNumS2.Text = ""
             lblYumeAcNumS3.Text = ""
             lblYumeAcNumS4.Text = ""
-
+            ' 特定記録引受番号（終了）
             lblYumeAcNumE1.Text = ""
             lblYumeAcNumE2.Text = ""
             lblYumeAcNumE3.Text = ""
             lblYumeAcNumE4.Text = ""
-
+            ' ゆうメール引受番号（開始）
             lblTokuAcNumS1.Text = ""
             lblTokuAcNumS2.Text = ""
             lblTokuAcNumS3.Text = ""
             lblTokuAcNumS4.Text = ""
-
+            ' ゆうメール引受番号（終了）
             lblTokuAcNumE1.Text = ""
             lblTokuAcNumE2.Text = ""
             lblTokuAcNumE3.Text = ""
             lblTokuAcNumE4.Text = ""
+            ' 一般書留・配達証明引受番号（開始）
+            lblHaitatuNumS1.Text = ""
+            lblHaitatuNumS2.Text = ""
+            lblHaitatuNumS3.Text = ""
+            lblHaitatuNumS4.Text = ""
+            ' 一般書留・配達証明引受番号（終了）
+            lblHaitatuNumE1.Text = ""
+            lblHaitatuNumE2.Text = ""
+            lblHaitatuNumE3.Text = ""
+            lblHaitatuNumE4.Text = ""
 
         Catch ex As Exception
             MsgBox("【InitDisplayData】" & ex.Message)
