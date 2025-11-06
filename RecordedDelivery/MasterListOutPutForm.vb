@@ -71,18 +71,22 @@ Public Class MasterListOutPutForm
         Try
             Select Case CmbMasterItem.SelectedIndex
                 Case 0
+                    ' 支店コード
                     BtnExport.Enabled = True
                     BtnInport.Enabled = True
                     Call DisplayBranchMaster()
                 Case 1
+                    ' 種別マスター
                     BtnExport.Enabled = True
                     BtnInport.Enabled = True
                     Call DisplayClassMaster()
                 Case 2
+                    ' オペレーター
                     BtnExport.Enabled = False
                     BtnInport.Enabled = False
                     Call DisplayOperatorList()
                 Case Else
+                    ' 業務マスター
                     BtnExport.Enabled = False
                     BtnInport.Enabled = False
                     Call DisplayJobList()
@@ -229,6 +233,16 @@ Public Class MasterListOutPutForm
             Call DisplayClassMasterSub("60：特定記録速達.txt")
             Call DisplayClassMasterSub("150：ゆうメール（簡易書留）.txt")
             Call DisplayClassMasterSub("160：ゆうメール（簡易書留）速達.txt")
+
+            Call DisplayClassMasterSub("70：書留.txt")
+            Call DisplayClassMasterSub("80：書留速達.txt")
+            Call DisplayClassMasterSub("90：配達証明.txt")
+            Call DisplayClassMasterSub("100：配達証明速達.txt")
+            Call DisplayClassMasterSub("75：書留（本人限定）.txt")
+            Call DisplayClassMasterSub("85：書留速達（本人限定）.txt")
+            Call DisplayClassMasterSub("95：配達証明（本人限定）.txt")
+            Call DisplayClassMasterSub("105：配達証明速達（本人限定）.txt")
+
             LsvDataView.Items(0).Selected = True
             LsvDataView.Items(0).Focused = True
             LsvDataView.Select()
