@@ -1,5 +1,6 @@
 ﻿Option Explicit On
 Option Strict On
+Imports System.Threading.Tasks
 
 Public Class MainForm
     '--------------------------------------------------------------------------
@@ -848,12 +849,19 @@ Public Class MainForm
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         BtnCmdB.PerformClick()
+        Await Task.Delay(700)
+
         BtnCmdD.PerformClick()
+        Await Task.Delay(100)
+
         BtnCmdC.PerformClick()
+        Await Task.Delay(100)
+
         BtnCmdW.PerformClick()
+        Await Task.Delay(100)
 
     End Sub
 
