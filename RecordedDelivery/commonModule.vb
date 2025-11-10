@@ -2333,6 +2333,14 @@ Module commonModule
         '60：特定記録速達
         '150：ゆうメール(簡易書留)
         '160：ゆうメール（簡易書留）速達
+        '70：書留
+        '80：書留速達
+        '90：配達証明
+        '100：配達証明速達
+        '75：書留（本人限定）
+        '85：書留速達（本人限定）
+        '95：配達証明（本人限定）
+        '105：配達証明速達（本人限定）
 
         Try
             strCmp1Array = strClass.Split("："c)
@@ -2345,9 +2353,15 @@ Module commonModule
             ElseIf strCmp1Array(0) = "160" Then
                 ' 「160」は「150」と同じ扱いとする
                 strCmp1Array(0) = "150"
+            ElseIf strCmp1Array(0) = "80" Or strCmp1Array(0) = "90" Or strCmp1Array(0) = "100" Then
+                ' 「80」「90」「100」は「70」と同じ扱いとする
+                strCmp1Array(0) = "70"
+            ElseIf strCmp1Array(0) = "75" Or strCmp1Array(0) = "85" Or strCmp1Array(0) = "95" Or strCmp1Array(0) = "105" Then
+                ' 「75」「85」「95」「105」は「70」と同じ扱いとする
+                strCmp1Array(0) = "70"
             End If
 
-            For N = 0 To 2
+            For N = 0 To 3
                 strCmp2Array = PubConstClass.strNumberInfo(N).Split(","c)
 
                 If CInt(strCmp1Array(0)) = CInt(strCmp2Array(0)) Then
