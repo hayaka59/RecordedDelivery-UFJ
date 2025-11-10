@@ -34,7 +34,7 @@
 
 #Region "定数定義"
     ''' <summary> バージョン情報</summary>
-    Public Const DEF_VERSION = "Ver.0.11.0.6（大型機）"
+    Public Const DEF_VERSION = "Ver.0.11.1.0（大型機）"
     ''' <summary> 暗号化用オープンキー</summary>
     Public Const DEF_OPEN_KEY = "SSKINOSHITASS"
     Public Const USR_JOB_NAME As String = "業務名"
@@ -95,17 +95,23 @@
     Public Shared pblUsed50ToUnderWrittingNumber As Double      ' 使用済み引受番号（特定記録）のTO
     Public Shared pblUsed150FromUnderWrittingNumber As Double   ' 使用済み引受番号（ゆうメール）のFROM
     Public Shared pblUsed150ToUnderWrittingNumber As Double     ' 使用済み引受番号（ゆうメール）のTO
+    Public Shared pblUsed70FromUnderWrittingNumber As Double    '【今回追加分】使用済み引受番号（書留）のFROM
+    Public Shared pblUsed70ToUnderWrittingNumber As Double      '【今回追加分】使用済み引受番号（書留）のTO
+
     ' 引受番号が一周した時の格納変数
     Public Shared pblUsed30FromUnderWrittingNumber2 As Double   ' 
-    Public Shared pblUsed30ToUnderWrittingNumber2 As Double
-    Public Shared pblUsed50FromUnderWrittingNumber2 As Double
-    Public Shared pblUsed50ToUnderWrittingNumber2 As Double
-    Public Shared pblUsed150FromUnderWrittingNumber2 As Double
-    Public Shared pblUsed150ToUnderWrittingNumber2 As Double
+    Public Shared pblUsed30ToUnderWrittingNumber2 As Double     ' 
+    Public Shared pblUsed50FromUnderWrittingNumber2 As Double   ' 
+    Public Shared pblUsed50ToUnderWrittingNumber2 As Double     ' 
+    Public Shared pblUsed150FromUnderWrittingNumber2 As Double  ' 
+    Public Shared pblUsed150ToUnderWrittingNumber2 As Double    ' 
+    Public Shared pblUsed70FromUnderWrittingNumber2 As Double   '【今回追加分】
+    Public Shared pblUsed70ToUnderWrittingNumber2 As Double     '【今回追加分】
 
     Public Shared blnIsOneRound30Flg As Boolean
     Public Shared blnIsOneRound50Flg As Boolean
     Public Shared blnIsOneRound150Flg As Boolean
+    Public Shared blnIsOneRound70Flg As Boolean                 '【今回追加分】
 #End Region
     '// 2015.12.14 Ver.B04 hayakawa 追加↑ここまで
 
