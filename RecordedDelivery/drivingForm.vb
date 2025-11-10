@@ -881,6 +881,13 @@ Public Class DrivingForm
                     WritePrivateProfileString("Class150", "CurrentNum", strPutData, strIniFilePath)
                 Case "160"
                     WritePrivateProfileString("Class150", "CurrentNum", strPutData, strIniFilePath)
+
+                Case "70", "80", "90", "100"
+                    WritePrivateProfileString("Class70", "CurrentNum", strPutData, strIniFilePath)
+
+                Case "75", "85", "95", "105"
+                    WritePrivateProfileString("Class70", "CurrentNum", strPutData, strIniFilePath)
+
                 Case Else
                     OutPutLogFile("■種別（" & strClass & "）対象外により（" & strPutData & "）が更新できませんでした")
             End Select
