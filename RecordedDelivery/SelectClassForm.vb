@@ -180,6 +180,33 @@ Public Class SelectClassForm
                         End If
                     End If
 
+                Case "70", "80", "90", "100"
+                Case "75", "85", "95", "105"
+                    ' 書留
+                    If PubConstClass.pblUsed70FromUnderWrittingNumber <= PubConstClass.dblStartUnderWritingNumber And
+                        PubConstClass.dblStartUnderWritingNumber <= PubConstClass.pblUsed70ToUnderWrittingNumber Then
+                        strMessage &= PubConstClass.pblUsed70FromUnderWrittingNumber.ToString("000-00-00000") & "-" &
+                                         (PubConstClass.pblUsed70FromUnderWrittingNumber Mod 7).ToString("0") & " ～ " &
+                                         PubConstClass.pblUsed70ToUnderWrittingNumber.ToString("000-00-00000") & "-" &
+                                         (PubConstClass.pblUsed70ToUnderWrittingNumber Mod 7).ToString("0") & vbCr &
+                                            "の引受番号が過去10日分の間に使用されています。"
+                        MsgBox(strMessage, CType(MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, MsgBoxStyle), "システムエラー")
+                        Exit Sub
+                    End If
+
+                    If PubConstClass.blnIsOneRound70Flg = True Then
+                        If PubConstClass.pblUsed70FromUnderWrittingNumber2 <= PubConstClass.dblStartUnderWritingNumber And
+                            PubConstClass.dblStartUnderWritingNumber <= PubConstClass.pblUsed70ToUnderWrittingNumber2 Then
+                            strMessage &= PubConstClass.pblUsed70FromUnderWrittingNumber2.ToString("000-00-00000") & "-" &
+                                             (PubConstClass.pblUsed70FromUnderWrittingNumber2 Mod 7).ToString("0") & " ～ " &
+                                             PubConstClass.pblUsed70ToUnderWrittingNumber2.ToString("000-00-00000") & "-" &
+                                             (PubConstClass.pblUsed70ToUnderWrittingNumber2 Mod 7).ToString("0") & vbCr &
+                                                "の引受番号が過去10日分の間に使用されています。"
+                            MsgBox(strMessage, CType(MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, MsgBoxStyle), "システムエラー")
+                            Exit Sub
+                        End If
+                    End If
+
                 Case Else
             End Select
             '// 2015.12.16 Ver.B04 hayakawa 追加↑ここまで
