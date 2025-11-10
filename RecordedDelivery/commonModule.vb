@@ -1937,25 +1937,33 @@ Module commonModule
             Dim arUsed30WrittingList As ArrayList = New ArrayList()
             Dim arUsed50WrittingList As ArrayList = New ArrayList()
             Dim arUsed150WrittingList As ArrayList = New ArrayList()
+            Dim arUsed70WrittingList As ArrayList = New ArrayList()        '【今回追加】
+
             Dim arUsed30WrittingList2 As ArrayList = New ArrayList()
             Dim arUsed50WrittingList2 As ArrayList = New ArrayList()
             Dim arUsed150WrittingList2 As ArrayList = New ArrayList()
+            Dim arUsed70WrittingList2 As ArrayList = New ArrayList()       '【今回追加】
 
             arUsed30WrittingList.Clear()
             arUsed50WrittingList.Clear()
             arUsed150WrittingList.Clear()
+            arUsed70WrittingList.Clear()                    '【今回追加】
+
             arUsed30WrittingList2.Clear()
             arUsed50WrittingList2.Clear()
             arUsed150WrittingList2.Clear()
+            arUsed70WrittingList2.Clear()                   '【今回追加】
 
             PubConstClass.blnIsOneRound30Flg = False
             PubConstClass.blnIsOneRound50Flg = False
             PubConstClass.blnIsOneRound150Flg = False
+            PubConstClass.blnIsOneRound70Flg = False        '【今回追加】
             Dim strArrayClass() As String
 
-            Dim strMaxHikiukeKan() As String = PubConstClass.strEndNumber(0).Split(","c)
-            Dim strMaxHikiukeTok() As String = PubConstClass.strEndNumber(1).Split(","c)
-            Dim strMaxHikiukeYou() As String = PubConstClass.strEndNumber(2).Split(","c)
+            Dim strMaxHikiukeKan() As String = PubConstClass.strEndNumber(0).Split(","c)        ' 簡易書留
+            Dim strMaxHikiukeTok() As String = PubConstClass.strEndNumber(1).Split(","c)        ' 特定記録
+            Dim strMaxHikiukeYou() As String = PubConstClass.strEndNumber(2).Split(","c)        ' ゆうメール簡易
+            Dim strMaxHikiukeKakitome() As String = PubConstClass.strEndNumber(3).Split(","c)   '【今回追加】書留
 
             Dim subFolderArray(200) As String
             Dim subFolderIndex As Integer = 0
@@ -1995,6 +2003,7 @@ Module commonModule
                                     If IsNumeric(strUsedWrittingNumber) = True And IsNumeric(strArrayClass(0)) = True Then
                                         ' 数値に変換できる値のみ追加する
                                         Select Case strArrayClass(0)
+                                            '【簡易書留】
                                             Case "30", "40"
                                                 If CDbl(strMaxHikiukeKan(1).Replace("-", "").Substring(0, 10)) <= CDbl(strUsedWrittingNumber) Then
                                                     PubConstClass.blnIsOneRound30Flg = True
@@ -2008,6 +2017,7 @@ Module commonModule
                                                     End If
                                                 End If
 
+                                            '【特定記録】
                                             Case "50", "60"
                                                 If CDbl(strMaxHikiukeTok(1).Replace("-", "").Substring(0, 10)) <= CDbl(strUsedWrittingNumber) Then
                                                     PubConstClass.blnIsOneRound50Flg = True
@@ -2021,6 +2031,7 @@ Module commonModule
                                                     End If
                                                 End If
 
+                                            '【ゆうメール簡易】
                                             Case "150", "160"
                                                 If CDbl(strMaxHikiukeYou(1).Replace("-", "").Substring(0, 10)) <= CDbl(strUsedWrittingNumber) Then
                                                     PubConstClass.blnIsOneRound150Flg = True
@@ -2031,6 +2042,21 @@ Module commonModule
                                                         arUsed150WrittingList.Add(strUsedWrittingNumber)
                                                     Else
                                                         arUsed150WrittingList2.Add(strUsedWrittingNumber)
+                                                    End If
+                                                End If
+
+                                            '【書留】
+                                            Case "70", "80", "90", "100"
+                                            Case "75", "85", "95", "105"
+                                                If CDbl(strMaxHikiukeKakitome(1).Replace("-", "").Substring(0, 10)) <= CDbl(strUsedWrittingNumber) Then
+                                                    PubConstClass.blnIsOneRound70Flg = True
+                                                    arUsed70WrittingList.Add(strUsedWrittingNumber)
+                                                Else
+                                                    ' 引受番号が一周したかを判断し格納するアレイリストを判断する
+                                                    If PubConstClass.blnIsOneRound70Flg = False Then
+                                                        arUsed70WrittingList.Add(strUsedWrittingNumber)
+                                                    Else
+                                                        arUsed70WrittingList2.Add(strUsedWrittingNumber)
                                                     End If
                                                 End If
 
@@ -2050,10 +2076,12 @@ Module commonModule
             arUsed30WrittingList.Sort()
             arUsed50WrittingList.Sort()
             arUsed150WrittingList.Sort()
+            arUsed70WrittingList.Sort()         '【今回追加】
 
             arUsed30WrittingList2.Sort()
             arUsed50WrittingList2.Sort()
             arUsed150WrittingList2.Sort()
+            arUsed70WrittingList2.Sort()        '【今回追加】
 
             If arUsed30WrittingList.Count > 0 Then
                 For N = 0 To arUsed30WrittingList.Count - 1
@@ -2104,6 +2132,22 @@ Module commonModule
                 PubConstClass.pblUsed150ToUnderWrittingNumber2 = CLng(arUsed150WrittingList2(arUsed150WrittingList2.Count - 1))
             End If
 
+            If arUsed70WrittingList.Count > 0 Then
+                For N = 0 To arUsed150WrittingList.Count - 1
+                    OutPutLogFile("書留１【" & (N + 1).ToString("0000") & "】" & CLng(arUsed70WrittingList.Item(N)).ToString("000-00-00000") & "-" & (CLng(arUsed70WrittingList.Item(N)) Mod 7).ToString("0"))
+                Next
+                PubConstClass.pblUsed70FromUnderWrittingNumber = CLng(arUsed70WrittingList(0))
+                PubConstClass.pblUsed70ToUnderWrittingNumber = CLng(arUsed70WrittingList(arUsed70WrittingList.Count - 1))
+            End If
+
+            If arUsed70WrittingList2.Count > 0 Then
+                For N = 0 To arUsed70WrittingList2.Count - 1
+                    OutPutLogFile("書留２【" & (N + 1).ToString("0000") & "】" & CLng(arUsed70WrittingList2.Item(N)).ToString("000-00-00000") & "-" & (CLng(arUsed70WrittingList2.Item(N)) Mod 7).ToString("0"))
+                Next
+                PubConstClass.pblUsed70FromUnderWrittingNumber2 = CLng(arUsed70WrittingList2(0))
+                PubConstClass.pblUsed70ToUnderWrittingNumber2 = CLng(arUsed70WrittingList2(arUsed70WrittingList2.Count - 1))
+            End If
+
             Dim strMessage As String
 
             strMessage = "簡易書留１：" & Format(PubConstClass.pblUsed30FromUnderWrittingNumber, "000-00-00000") & "-" & _
@@ -2140,18 +2184,32 @@ Module commonModule
                                             Format((PubConstClass.pblUsed150FromUnderWrittingNumber2 Mod 7).ToString("0"))
             strMessage = strMessage & " ～ " & Format(PubConstClass.pblUsed150ToUnderWrittingNumber2, "000-00-00000") & "-" & _
                                                Format((PubConstClass.pblUsed150ToUnderWrittingNumber2 Mod 7).ToString("0"))
+
+            strMessage = "書留１：" & Format(PubConstClass.pblUsed70FromUnderWrittingNumber, "000-00-00000") & "-" &
+                                            Format((PubConstClass.pblUsed70FromUnderWrittingNumber Mod 7).ToString("0"))
+            strMessage = strMessage & " ～ " & Format(PubConstClass.pblUsed70ToUnderWrittingNumber, "000-00-00000") & "-" &
+                                               Format((PubConstClass.pblUsed70ToUnderWrittingNumber Mod 7).ToString("0"))
+            OutPutLogFile(strMessage)
+
+            strMessage = "書留２：" & Format(PubConstClass.pblUsed70FromUnderWrittingNumber2, "000-00-00000") & "-" &
+                                            Format((PubConstClass.pblUsed70FromUnderWrittingNumber2 Mod 7).ToString("0"))
+            strMessage = strMessage & " ～ " & Format(PubConstClass.pblUsed70ToUnderWrittingNumber2, "000-00-00000") & "-" &
+                                               Format((PubConstClass.pblUsed70ToUnderWrittingNumber2 Mod 7).ToString("0"))
+
             OutPutLogFile(strMessage)
 
             arUsed30WrittingList.Clear()
             arUsed50WrittingList.Clear()
             arUsed150WrittingList.Clear()
+            arUsed70WrittingList.Clear()    '【今回追加】
 
             arUsed30WrittingList2.Clear()
             arUsed50WrittingList2.Clear()
             arUsed150WrittingList2.Clear()
+            arUsed70WrittingList2.Clear()   '【今回追加】
 
         Catch ex As Exception
-            MsgBox("【GetUsedUnderWritingNumber】" & ex.Message)
+            MsgBox("【GetUsedUnderWritingNumber】" & ex.Message + Environment.NewLine + ex.StackTrace)
         End Try
 
     End Sub
