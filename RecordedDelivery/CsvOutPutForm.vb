@@ -603,9 +603,9 @@ Public Class CsvOutPutForm
                     '// 2017.05.24 Ver.B08 hayakawa 修正↓ここから
                     If blnIsAdp = True Then
                         'strPutData = "作業日,店舗番号,店舗名,種別コード,種別名,重量範囲,重量コード,金額,通数,合計金額"
-                        strPutData = "作業日,店舗番号,店舗名,種別コード,種別名,料金区分,重量範囲,重量コード,規格区分,金額,通数"
+                        strPutData = "作業日,店舗番号,店舗名,種別コード,種別名,料金区分,重量範囲,重量コード,規格区分,金額,通数,本人限定"
                     Else
-                        strPutData = "作業日,店舗番号,店舗名,種別コード,種別名,料金区分,重量範囲,重量コード,規格区分,金額,通数"
+                        strPutData = "作業日,店舗番号,店舗名,種別コード,種別名,料金区分,重量範囲,重量コード,規格区分,金額,通数,本人限定"
                     End If
                     '// 2017.05.24 Ver.B08 hayakawa 修正↑ここまで
                     sw.WriteLine(strPutData)
@@ -628,31 +628,58 @@ Public Class CsvOutPutForm
                             '              PubConstClass.strPriceArray(N) & "," & _
                             '              strTranCnt(N) & "," & _
                             '              strAmount(N)
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "1," & _
-                                          PubConstClass.strWeightArray(N) & "," & _
-                                          PubConstClass.strWeightArray(N) & "," & _
-                                          "0," & _
-                                          PubConstClass.strPriceArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "1," &
+                                          PubConstClass.strWeightArray(N) & "," &
+                                          PubConstClass.strWeightArray(N) & "," &
+                                          "0," &
+                                          PubConstClass.strPriceArray(N) & "," &
                                           strTranCnt(N)
                         Else
                             ' 三菱電機集計用フォーマット
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "1," & _
-                                          PubConstClass.strWeightArray(N) & "," & _
-                                          PubConstClass.strWeightArray(N) & "," & _
-                                          "0," & _
-                                          PubConstClass.strPriceArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "1," &
+                                          PubConstClass.strWeightArray(N) & "," &
+                                          PubConstClass.strWeightArray(N) & "," &
+                                          "0," &
+                                          PubConstClass.strPriceArray(N) & "," &
                                           strTranCnt(N)
                         End If
+
+                        ' 本人限定文字列
+                        Dim aryPersonal As String() = New String() {",75,書留（本人限定）,", ",85,書留速達（本人限定）,",
+                                                                    ",95,配達証明（本人限定）,", ",105,配達証明速達（本人限定）,"}
+
+                        Dim aryNonPersonal As String() = New String() {",70,書留,", ",80,書留速達,",
+                                                                       ",90,配達証明,", ",10,配達証明速達,"}
+
+                        '  本人限定フラグ
+                        Dim bPersonalFlag As Boolean = False
+
+                        For iPersonal = 0 To aryPersonal.Length - 1
+                            If strPutData.Contains(aryPersonal(iPersonal)) Then
+                                ' 本人限定あり
+                                strPutData = strPutData.Replace(aryPersonal(iPersonal), aryNonPersonal(iPersonal))
+                                bPersonalFlag = True
+                                Exit For
+                            End If
+                        Next iPersonal
+
+                        If bPersonalFlag = True Then
+                            ' 本人限定
+                            strPutData += ",1"
+                        Else
+                            strPutData += ",0"
+                        End If
+
                         sw.WriteLine(strPutData)
                         ' 操作履歴ログに格納
                         OutPutLogFile("【CSV出力】" & strPutData)
