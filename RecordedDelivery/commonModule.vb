@@ -2133,7 +2133,7 @@ Module commonModule
             End If
 
             If arUsed70WrittingList.Count > 0 Then
-                For N = 0 To arUsed150WrittingList.Count - 1
+                For N = 0 To arUsed70WrittingList.Count - 1
                     OutPutLogFile("書留１【" & (N + 1).ToString("0000") & "】" & CLng(arUsed70WrittingList.Item(N)).ToString("000-00-00000") & "-" & (CLng(arUsed70WrittingList.Item(N)) Mod 7).ToString("0"))
                 Next
                 PubConstClass.pblUsed70FromUnderWrittingNumber = CLng(arUsed70WrittingList(0))
@@ -2763,7 +2763,7 @@ Module commonModule
                 sAray = sData.Split(","c)
                 cmbClassFilter.Items.Add(sAray(0))
             Next
-            cmbClassFilter.SelectedIndex = 0
+            'cmbClassFilter.SelectedIndex = 0
 
         Catch ex As Exception
             MsgBox("【SetComboBoxForClassFile】" & ex.Message)
