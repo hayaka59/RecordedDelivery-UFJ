@@ -167,7 +167,7 @@ Partial Class ReceiptReprintForm
         Me.lstRePrintView.Location = New System.Drawing.Point(27, 228)
         Me.lstRePrintView.MultiSelect = False
         Me.lstRePrintView.Name = "lstRePrintView"
-        Me.lstRePrintView.Size = New System.Drawing.Size(618, 762)
+        Me.lstRePrintView.Size = New System.Drawing.Size(618, 797)
         Me.lstRePrintView.TabIndex = 5
         Me.lstRePrintView.UseCompatibleStateImageBehavior = False
         '
@@ -356,7 +356,7 @@ Partial Class ReceiptReprintForm
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_arrow
-        Me.BtnBack.Location = New System.Drawing.Point(668, 922)
+        Me.BtnBack.Location = New System.Drawing.Point(668, 958)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(190, 68)
         Me.BtnBack.TabIndex = 14
@@ -393,7 +393,7 @@ Partial Class ReceiptReprintForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(880, 1007)
+        Me.ClientSize = New System.Drawing.Size(880, 1037)
         Me.ControlBox = False
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.CmbClassFilter)
