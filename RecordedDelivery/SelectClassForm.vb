@@ -1,5 +1,6 @@
 ﻿Option Explicit On
 Option Strict On
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class SelectClassForm
 
@@ -47,22 +48,42 @@ Public Class SelectClassForm
             TxtBranchCd.ImeMode = ImeMode.Off
             TxtBranchCd.MaxLength = 10
 
-            '' 種別ファイルフィルターの設定
-            'Dim sAray() As String
-            'CmbClassFilter.Items.Clear()
-            'For Each sData In PubConstClass.sClassGroupList
-            '    sAray = sData.Split(","c)
-            '    CmbClassFilter.Items.Add(sAray(0))
-            'Next
-
-            ' 種別コンボボックスの設定
+            ' 種別①コンボボックスの設定
             SetComboBoxForClassFile(CmbClassFilter)
-            CmbClassFilter.SelectedIndex = 0
+            'CmbClassFilter.SelectedIndex = 0
+
+            ' 前回選択した値があればコンボボックスに設定
+            If Not String.IsNullOrEmpty(My.Settings.SelectedCmbClassFilterValue) Then
+                CmbClassFilter.SelectedItem = My.Settings.SelectedCmbClassFilterValue
+            Else
+                CmbClassFilter.SelectedIndex = 0
+            End If
 
         Catch ex As Exception
             MsgBox("【SelectClassForm_Load】" & ex.Message)
         End Try
 
+    End Sub
+
+    Private Sub CmbClassFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbClassFilter.SelectedIndexChanged
+
+        Dim sAray As String()
+
+        Try
+            sAray = PubConstClass.sClassGroupList(CmbClassFilter.SelectedIndex).Split(","c)
+            CmbClassification.Items.Clear()
+            For N = 1 To sAray.Length - 1
+                CmbClassification.Items.Add(sAray(N))
+            Next
+            CmbClassification.SelectedIndex = 0
+
+            ' 種別①コンボボックスの選択した値を保存
+            My.Settings.SelectedCmbClassFilterValue = CmbClassFilter.SelectedItem.ToString()
+            My.Settings.Save()
+
+        Catch ex As Exception
+            MsgBox("【CmbClassFilter_SelectedIndexChanged】" & ex.Message)
+        End Try
     End Sub
 
     ''' <summary>
@@ -371,21 +392,21 @@ Public Class SelectClassForm
 
     End Sub
 
-    Private Sub CmbClassFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbClassFilter.SelectedIndexChanged
+    'Private Sub CmbClassFilter_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbClassFilter.SelectedIndexChanged
 
-        Dim sAray As String()
+    '    Dim sAray As String()
 
-        Try
-            sAray = PubConstClass.sClassGroupList(CmbClassFilter.SelectedIndex).Split(","c)
-            CmbClassification.Items.Clear()
-            For N = 1 To sAray.Length - 1
-                CmbClassification.Items.Add(sAray(N))
-            Next
-            CmbClassification.SelectedIndex = 0
+    '    Try
+    '        sAray = PubConstClass.sClassGroupList(CmbClassFilter.SelectedIndex).Split(","c)
+    '        CmbClassification.Items.Clear()
+    '        For N = 1 To sAray.Length - 1
+    '            CmbClassification.Items.Add(sAray(N))
+    '        Next
+    '        CmbClassification.SelectedIndex = 0
 
-        Catch ex As Exception
-            MsgBox("【CmbClassFilter_SelectedIndexChanged】" & ex.Message)
-        End Try
-    End Sub
+    '    Catch ex As Exception
+    '        MsgBox("【CmbClassFilter_SelectedIndexChanged】" & ex.Message)
+    '    End Try
+    'End Sub
 
 End Class

@@ -2763,7 +2763,7 @@ Module commonModule
                 sAray = sData.Split(","c)
                 cmbClassFilter.Items.Add(sAray(0))
             Next
-            cmbClassFilter.SelectedIndex = 0
+            'cmbClassFilter.SelectedIndex = 0
 
         Catch ex As Exception
             MsgBox("【SetComboBoxForClassFile】" & ex.Message)
