@@ -53,16 +53,16 @@ Partial Class SelectClassForm
         Me.CmbClassification.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CmbClassification.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.CmbClassification.FormattingEnabled = True
-        Me.CmbClassification.Location = New System.Drawing.Point(239, 277)
+        Me.CmbClassification.Location = New System.Drawing.Point(222, 277)
         Me.CmbClassification.Name = "CmbClassification"
-        Me.CmbClassification.Size = New System.Drawing.Size(273, 39)
+        Me.CmbClassification.Size = New System.Drawing.Size(314, 39)
         Me.CmbClassification.TabIndex = 3
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.SystemColors.Control
         Me.Label5.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label5.Location = New System.Drawing.Point(362, 330)
+        Me.Label5.Location = New System.Drawing.Point(345, 330)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 31)
         Me.Label5.TabIndex = 98
@@ -73,7 +73,7 @@ Partial Class SelectClassForm
         '
         Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label4.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label4.Location = New System.Drawing.Point(61, 325)
+        Me.Label4.Location = New System.Drawing.Point(44, 325)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 38)
         Me.Label4.TabIndex = 97
@@ -84,7 +84,7 @@ Partial Class SelectClassForm
         '
         Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label3.Location = New System.Drawing.Point(61, 235)
+        Me.Label3.Location = New System.Drawing.Point(44, 235)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(177, 31)
         Me.Label3.TabIndex = 96
@@ -94,7 +94,7 @@ Partial Class SelectClassForm
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(240, 89)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(222, 89)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(198, 39)
         Me.DateTimePicker1.TabIndex = 10
@@ -103,10 +103,10 @@ Partial Class SelectClassForm
         '
         Me.TxtBranchCd.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.TxtBranchCd.ImeMode = System.Windows.Forms.ImeMode.Off
-        Me.TxtBranchCd.Location = New System.Drawing.Point(240, 189)
+        Me.TxtBranchCd.Location = New System.Drawing.Point(223, 187)
         Me.TxtBranchCd.MaxLength = 4
         Me.TxtBranchCd.Name = "TxtBranchCd"
-        Me.TxtBranchCd.Size = New System.Drawing.Size(161, 39)
+        Me.TxtBranchCd.Size = New System.Drawing.Size(198, 39)
         Me.TxtBranchCd.TabIndex = 1
         Me.TxtBranchCd.Text = "1234567890"
         Me.TxtBranchCd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -115,7 +115,7 @@ Partial Class SelectClassForm
         '
         Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(61, 189)
+        Me.Label2.Location = New System.Drawing.Point(44, 186)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(178, 38)
         Me.Label2.TabIndex = 92
@@ -127,7 +127,7 @@ Partial Class SelectClassForm
         Me.LblCurrentDate.BackColor = System.Drawing.SystemColors.Control
         Me.LblCurrentDate.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.LblCurrentDate.ForeColor = System.Drawing.Color.Black
-        Me.LblCurrentDate.Location = New System.Drawing.Point(326, 48)
+        Me.LblCurrentDate.Location = New System.Drawing.Point(337, 48)
         Me.LblCurrentDate.Name = "LblCurrentDate"
         Me.LblCurrentDate.Size = New System.Drawing.Size(199, 27)
         Me.LblCurrentDate.TabIndex = 91
@@ -137,7 +137,7 @@ Partial Class SelectClassForm
         'TxtTranCnt
         '
         Me.TxtTranCnt.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.TxtTranCnt.Location = New System.Drawing.Point(240, 324)
+        Me.TxtTranCnt.Location = New System.Drawing.Point(223, 324)
         Me.TxtTranCnt.MaxLength = 6
         Me.TxtTranCnt.Name = "TxtTranCnt"
         Me.TxtTranCnt.Size = New System.Drawing.Size(114, 39)
@@ -148,7 +148,7 @@ Partial Class SelectClassForm
         '
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(61, 90)
+        Me.Label1.Location = New System.Drawing.Point(44, 90)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(178, 38)
         Me.Label1.TabIndex = 89
@@ -184,7 +184,7 @@ Partial Class SelectClassForm
         '
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label6.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label6.Location = New System.Drawing.Point(61, 277)
+        Me.Label6.Location = New System.Drawing.Point(44, 278)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(178, 38)
         Me.Label6.TabIndex = 101
@@ -195,7 +195,7 @@ Partial Class SelectClassForm
         '
         Me.LblBranchName.BackColor = System.Drawing.SystemColors.Control
         Me.LblBranchName.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.LblBranchName.Location = New System.Drawing.Point(238, 235)
+        Me.LblBranchName.Location = New System.Drawing.Point(221, 235)
         Me.LblBranchName.Name = "LblBranchName"
         Me.LblBranchName.Size = New System.Drawing.Size(275, 31)
         Me.LblBranchName.TabIndex = 102
@@ -206,7 +206,7 @@ Partial Class SelectClassForm
         Me.GroupBox1.Controls.Add(Me.Rdo8Face)
         Me.GroupBox1.Controls.Add(Me.Rdo15Face)
         Me.GroupBox1.Font = New System.Drawing.Font("メイリオ", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(65, 380)
+        Me.GroupBox1.Location = New System.Drawing.Point(49, 383)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(306, 64)
         Me.GroupBox1.TabIndex = 5
@@ -237,7 +237,7 @@ Partial Class SelectClassForm
         '
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label7.Location = New System.Drawing.Point(60, 138)
+        Me.Label7.Location = New System.Drawing.Point(44, 138)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(178, 38)
         Me.Label7.TabIndex = 104
@@ -250,16 +250,16 @@ Partial Class SelectClassForm
         Me.CmbClassFilter.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CmbClassFilter.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.CmbClassFilter.FormattingEnabled = True
-        Me.CmbClassFilter.Location = New System.Drawing.Point(238, 137)
+        Me.CmbClassFilter.Location = New System.Drawing.Point(221, 137)
         Me.CmbClassFilter.Name = "CmbClassFilter"
-        Me.CmbClassFilter.Size = New System.Drawing.Size(273, 39)
+        Me.CmbClassFilter.Size = New System.Drawing.Size(315, 39)
         Me.CmbClassFilter.TabIndex = 103
         '
         'BtnBack
         '
         Me.BtnBack.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnBack.Image = Global.RecordedDelivery.My.Resources.Resources.back_small
-        Me.BtnBack.Location = New System.Drawing.Point(375, 469)
+        Me.BtnBack.Location = New System.Drawing.Point(386, 469)
         Me.BtnBack.Name = "BtnBack"
         Me.BtnBack.Size = New System.Drawing.Size(150, 45)
         Me.BtnBack.TabIndex = 9
@@ -272,7 +272,7 @@ Partial Class SelectClassForm
         '
         Me.BtnNext.Font = New System.Drawing.Font("メイリオ", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnNext.Image = Global.RecordedDelivery.My.Resources.Resources.check_ok
-        Me.BtnNext.Location = New System.Drawing.Point(65, 469)
+        Me.BtnNext.Location = New System.Drawing.Point(49, 469)
         Me.BtnNext.Name = "BtnNext"
         Me.BtnNext.Size = New System.Drawing.Size(150, 45)
         Me.BtnNext.TabIndex = 8
@@ -285,7 +285,7 @@ Partial Class SelectClassForm
         '
         Me.BtnSearch.Font = New System.Drawing.Font("メイリオ", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.BtnSearch.Image = Global.RecordedDelivery.My.Resources.Resources.search_file
-        Me.BtnSearch.Location = New System.Drawing.Point(410, 186)
+        Me.BtnSearch.Location = New System.Drawing.Point(435, 186)
         Me.BtnSearch.Name = "BtnSearch"
         Me.BtnSearch.Size = New System.Drawing.Size(101, 45)
         Me.BtnSearch.TabIndex = 2
