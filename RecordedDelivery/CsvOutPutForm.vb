@@ -654,39 +654,14 @@ Public Class CsvOutPutForm
                                           strTranCnt(N)
                         End If
 
-                        ' 本人限定文字列
-                        Dim aryPersonal As String() = New String() {",75,書留（本人限定）,", ",85,書留速達（本人限定）,",
-                                                                    ",95,配達証明（本人限定）,", ",105,配達証明速達（本人限定）,"}
-
-                        Dim aryNonPersonal As String() = New String() {",70,書留,", ",80,書留速達,",
-                                                                       ",90,配達証明,", ",10,配達証明速達,"}
-
-                        '  本人限定フラグ
-                        Dim bPersonalFlag As Boolean = False
-
-                        For iPersonal = 0 To aryPersonal.Length - 1
-                            If strPutData.Contains(aryPersonal(iPersonal)) Then
-                                ' 本人限定あり
-                                strPutData = strPutData.Replace(aryPersonal(iPersonal), aryNonPersonal(iPersonal))
-                                bPersonalFlag = True
-                                Exit For
-                            End If
-                        Next iPersonal
-
-                        If bPersonalFlag = True Then
-                            ' 本人限定
-                            strPutData += ",1"
-                        Else
-                            strPutData += ",0"
-                        End If
-
+                        ' 本人限定のチェックと置換を行う
+                        strPutData = CheckPersonLimited(strPutData)
                         sw.WriteLine(strPutData)
                         ' 操作履歴ログに格納
                         OutPutLogFile("【CSV出力】" & strPutData)
+
                     End If
-
                 Next
-
 
                 For N = 0 To strTranCntGai.Length - 1
                     If strTranCntGai(N) = "0" Or strTranCntGai(N) = "" Then
@@ -705,32 +680,37 @@ Public Class CsvOutPutForm
                             '              PubConstClass.strPriceGaiArray(N) & "," & _
                             '              strTranCntGai(N) & "," & _
                             '              strAmountGai(N)
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "1," & _
-                                          PubConstClass.strWeightGaiArray(N) & "," & _
-                                          PubConstClass.strWeightGaiArray(N) & "," & _
-                                          "1," & _
-                                          PubConstClass.strPriceGaiArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "1," &
+                                          PubConstClass.strWeightGaiArray(N) & "," &
+                                          PubConstClass.strWeightGaiArray(N) & "," &
+                                          "1," &
+                                          PubConstClass.strPriceGaiArray(N) & "," &
                                           strTranCntGai(N)
 
                         Else
                             ' 三菱電機集計用フォーマット
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "1," & _
-                                          PubConstClass.strWeightGaiArray(N) & "," & _
-                                          PubConstClass.strWeightGaiArray(N) & "," & _
-                                          "1," & _
-                                          PubConstClass.strPriceGaiArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "1," &
+                                          PubConstClass.strWeightGaiArray(N) & "," &
+                                          PubConstClass.strWeightGaiArray(N) & "," &
+                                          "1," &
+                                          PubConstClass.strPriceGaiArray(N) & "," &
                                           strTranCntGai(N)
                         End If
+
+
+                        ' 本人限定のチェックと置換を行う
+                        strPutData = CheckPersonLimited(strPutData)
+
                         sw.WriteLine(strPutData)
                         ' 操作履歴ログに格納
                         OutPutLogFile("【CSV出力】" & strPutData)
@@ -754,32 +734,36 @@ Public Class CsvOutPutForm
                             '              PubConstClass.strPriceNonSArray(N) & "," & _
                             '              strTranCntNonS(N) & "," & _
                             '              strAmountNonS(N)
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "2," & _
-                                          PubConstClass.strWeightNonSArray(N) & "," & _
-                                          PubConstClass.strWeightNonSArray(N) & "," & _
-                                          "2," & _
-                                          PubConstClass.strPriceNonSArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "2," &
+                                          PubConstClass.strWeightNonSArray(N) & "," &
+                                          PubConstClass.strWeightNonSArray(N) & "," &
+                                          "2," &
+                                          PubConstClass.strPriceNonSArray(N) & "," &
                                           strTranCntNonS(N)
 
                         Else
                             ' 三菱電機集計用フォーマット
-                            strPutData = strTranDate & "," & _
-                                          strSitenCode & "," & _
-                                          strSitenName & "," & _
-                                          strArray(0) & "," & _
-                                          strArray(1) & "," & _
-                                          "2," & _
-                                          PubConstClass.strWeightNonSArray(N) & "," & _
-                                          PubConstClass.strWeightNonSArray(N) & "," & _
-                                          "2," & _
-                                          PubConstClass.strPriceNonSArray(N) & "," & _
+                            strPutData = strTranDate & "," &
+                                          strSitenCode & "," &
+                                          strSitenName & "," &
+                                          strArray(0) & "," &
+                                          strArray(1) & "," &
+                                          "2," &
+                                          PubConstClass.strWeightNonSArray(N) & "," &
+                                          PubConstClass.strWeightNonSArray(N) & "," &
+                                          "2," &
+                                          PubConstClass.strPriceNonSArray(N) & "," &
                                           strTranCntNonS(N)
                         End If
+
+                        ' 本人限定のチェックと置換を行う
+                        strPutData = CheckPersonLimited(strPutData)
+
                         sw.WriteLine(strPutData)
                         ' 操作履歴ログに格納
                         OutPutLogFile("【CSV出力】" & strPutData)
@@ -793,6 +777,52 @@ Public Class CsvOutPutForm
         End Try
 
     End Sub
+
+
+    ''' <summary>
+    ''' 本人限定のチェックと置換を行う
+    ''' </summary>
+    ''' <param name="sData"></param>
+    ''' <returns></returns>
+    Private Function CheckPersonLimited(sData As String) As String
+
+        Try
+            ' デバッグの為に取り敢えず何もせずに返す
+            'Return sData
+
+            ' 本人限定文字列
+            Dim aryPersonal As String() = New String() {",75,書留（本人限定）,", ",85,書留速達（本人限定）,",
+                                                        ",95,配達証明（本人限定）,", ",105,配達証明速達（本人限定）,"}
+
+            Dim aryNonPersonal As String() = New String() {",70,書留,", ",80,書留速達,",
+                                                           ",90,配達証明,", ",100,配達証明速達,"}
+            '  本人限定フラグ
+            Dim bPersonalFlag As Boolean = False
+
+            For iPersonal = 0 To aryPersonal.Length - 1
+                If sData.Contains(aryPersonal(iPersonal)) Then
+                    ' 本人限定あり
+                    sData = sData.Replace(aryPersonal(iPersonal), aryNonPersonal(iPersonal))
+                    bPersonalFlag = True
+                    Exit For
+                End If
+            Next iPersonal
+
+            If bPersonalFlag = True Then
+                ' 本人限定
+                sData += ",1"
+            Else
+                sData += ",0"
+            End If
+
+            Return sData
+
+        Catch ex As Exception
+            MsgBox("【CheckPersonLimited】" & ex.Message)
+            Return sData
+        End Try
+
+    End Function
 
     ' ''' <summary>
     ' ''' 重量から通数をカウントアップする
